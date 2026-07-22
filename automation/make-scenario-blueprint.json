@@ -1,0 +1,119 @@
+{
+  "name": "RAWx LJ — Drive to Journal Auto-Publish",
+  "description": "Watches designated Google Drive category folders. When a new photo/video lands, tags it, appends a new entry to blog-data.json (via GitHub API commit), and logs it to Airtable for editorial review. Import this as a starting blueprint in Make.com — module IDs are illustrative; reconnect each module to your own Drive, GitHub, and Airtable accounts after import.",
+  "modules": [
+    {
+      "id": 1,
+      "type": "google-drive:watchFiles",
+      "label": "Watch Category Folders",
+      "notes": "One watcher per category folder: /RAWx-LJ-Journal/factory, /materials, /biker, /bomber, /varsity, /trench-shearling, /qc-export, /team-bts. Trigger: file created.",
+      "config": {
+        "folderIds": ["<factory_folder_id>", "<materials_folder_id>", "<biker_folder_id>", "<bomber_folder_id>", "<varsity_folder_id>", "<trench_shearling_folder_id>", "<qc_export_folder_id>", "<team_bts_folder_id>"],
+        "watchType": "created"
+      }
+    },
+    {
+      "id": 2,
+      "type": "tools:setVariable",
+      "label": "Derive Category + Naming",
+      "notes": "Category = parent folder name. New filename follows blog-[category]-[NN].jpg convention; NN = next sequence number for that category (lookup via Airtable count).",
+      "config": {
+        "variables": [
+          { "name": "category", "value": "{{1.folder.name}}" },
+          { "name": "fileType", "value": "{{if(contains(1.mimeType; \"video\"); \"video\"; \"image\")}}" }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "type": "airtable:searchRecords",
+      "label": "Get Next Sequence Number",
+      "notes": "Query 'Journal Entries' table, filter by Category, count existing rows to compute next -01/-02/... suffix.",
+      "config": {
+        "base": "<airtable_base_id>",
+        "table": "Journal Entries",
+        "filterByFormula": "{Category} = '{{2.category}}'"
+      }
+    },
+    {
+      "id": 4,
+      "type": "google-drive:downloadFile",
+      "label": "Download New File",
+      "config": { "fileId": "{{1.id}}" }
+    },
+    {
+      "id": 5,
+      "type": "github:uploadFile",
+      "label": "Commit Media to Repo",
+      "notes": "Writes the binary into assets/blog/{{category}}/ using the derived filename. Requires a GitHub PAT with repo write scope, stored as a Make.com connection (never hard-code the token in the scenario).",
+      "config": {
+        "repo": "<github_username>/rawx-lj",
+        "path": "assets/blog/{{2.category}}/blog-{{2.category}}-{{3.nextSeq}}.{{2.fileExt}}",
+        "content": "{{4.data}}",
+        "commitMessage": "auto: add journal entry {{2.category}}-{{3.nextSeq}}"
+      }
+    },
+    {
+      "id": 6,
+      "type": "github:getFile",
+      "label": "Fetch Current blog-data.json",
+      "config": { "repo": "<github_username>/rawx-lj", "path": "assets/blog/blog-data.json" }
+    },
+    {
+      "id": 7,
+      "type": "tools:jsonParse",
+      "label": "Parse Manifest",
+      "config": { "json": "{{6.content}}" }
+    },
+    {
+      "id": 8,
+      "type": "tools:arrayAggregator",
+      "label": "Append New Entry",
+      "notes": "Pushes { id, category, type, file, caption, linked_catalog, date } onto entries[]. Caption defaults to empty string, filled in later via Airtable editorial review (module 10).",
+      "config": {
+        "newEntry": {
+          "id": "{{2.category}}-{{3.nextSeq}}",
+          "category": "{{2.category}}",
+          "type": "{{2.fileType}}",
+          "file": "assets/blog/{{2.category}}/blog-{{2.category}}-{{3.nextSeq}}.{{2.fileExt}}",
+          "caption": "",
+          "linked_catalog": "catalog.html#{{2.category}}",
+          "date": "{{formatDate(now; \"YYYY-MM-DD\")}}"
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": "github:updateFile",
+      "label": "Commit Updated Manifest",
+      "config": {
+        "repo": "<github_username>/rawx-lj",
+        "path": "assets/blog/blog-data.json",
+        "content": "{{8.updatedJson}}",
+        "commitMessage": "auto: append {{2.category}}-{{3.nextSeq}} to journal manifest"
+      }
+    },
+    {
+      "id": 10,
+      "type": "airtable:createRecord",
+      "label": "Log to Airtable for Editorial Review",
+      "notes": "Editorial fills in the real caption + verifies category/linked_catalog, then a lightweight follow-up scenario (not included here) patches blog-data.json again on Airtable row update.",
+      "config": {
+        "base": "<airtable_base_id>",
+        "table": "Journal Entries",
+        "fields": {
+          "Entry ID": "{{2.category}}-{{3.nextSeq}}",
+          "Category": "{{2.category}}",
+          "Type": "{{2.fileType}}",
+          "Drive File": "{{1.webViewLink}}",
+          "Status": "Needs Caption",
+          "Date Added": "{{formatDate(now; \"YYYY-MM-DD\")}}"
+        }
+      }
+    }
+  ],
+  "error_handling": {
+    "note": "Add a Make.com error handler on modules 5, 6, 9 (GitHub API) to retry once on 409/conflict (concurrent commit) before alerting via email/Slack.",
+    "recommended_channel": "Slack DM or email to Jessika on any 2nd-retry failure"
+  }
+}

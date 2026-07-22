@@ -1,0 +1,77 @@
+{
+  "_schema_note": "One object per media item under 'entries'. category must match a filter-bar data-filter value (factory, materials, biker, bomber, varsity, trench-shearling, qc-export, team-bts). type is 'image' or 'video'. linked_catalog deep-links into catalog.html. Phase 3 wires Make.com to append new entries here automatically when new files land in the matching Google Drive folder — see /automation/make-scenario-blueprint.json.",
+  "entries": [
+    {
+      "id": "factory-01",
+      "category": "factory",
+      "type": "image",
+      "file": "assets/blog/factory/blog-factory-01.jpg",
+      "caption": "Cutting floor, Tejgaon facility — full-grain hide layout before pattern cut.",
+      "linked_catalog": "catalog.html#biker",
+      "date": "2026-07-10"
+    },
+    {
+      "id": "materials-01",
+      "category": "materials",
+      "type": "image",
+      "file": "assets/blog/materials/blog-materials-01.jpg",
+      "caption": "Full-grain cowhide selection, graded by thickness for outerwear vs. accessories.",
+      "linked_catalog": "catalog.html#biker",
+      "date": "2026-07-08"
+    },
+    {
+      "id": "biker-01",
+      "category": "biker",
+      "type": "image",
+      "file": "assets/blog/biker/blog-biker-01.jpg",
+      "caption": "Biker jacket, asymmetric zip — sample-stage QC check.",
+      "linked_catalog": "catalog.html#biker",
+      "date": "2026-07-15"
+    },
+    {
+      "id": "bomber-01",
+      "category": "bomber",
+      "type": "image",
+      "file": "assets/blog/bomber/blog-bomber-01.jpg",
+      "caption": "Bomber jacket ribbed hem and cuff — private-label hardware swap.",
+      "linked_catalog": "catalog.html#bomber",
+      "date": "2026-07-14"
+    },
+    {
+      "id": "varsity-01",
+      "category": "varsity",
+      "type": "image",
+      "file": "assets/blog/varsity/blog-varsity-01.jpg",
+      "caption": "Varsity jacket wool-body / leather-sleeve combo, chenille patch mockup.",
+      "linked_catalog": "catalog.html#varsity",
+      "date": "2026-07-12"
+    },
+    {
+      "id": "trench-shearling-01",
+      "category": "trench-shearling",
+      "type": "image",
+      "file": "assets/blog/trench-shearling/blog-trench-shearling-01.jpg",
+      "caption": "Shearling-lined trench, pre-finishing stage.",
+      "linked_catalog": "catalog.html#shearling",
+      "date": "2026-07-05"
+    },
+    {
+      "id": "qc-export-01",
+      "category": "qc-export",
+      "type": "image",
+      "file": "assets/blog/qc-export/blog-qc-export-01.jpg",
+      "caption": "Final QC pass and export carton labeling before container load-out.",
+      "linked_catalog": "catalog.html",
+      "date": "2026-07-18"
+    },
+    {
+      "id": "team-bts-01",
+      "category": "team-bts",
+      "type": "image",
+      "file": "assets/blog/team-bts/blog-team-bts-01.jpg",
+      "caption": "Pattern-cutting team, Tejgaon Industrial Area workshop.",
+      "linked_catalog": "about.html",
+      "date": "2026-07-01"
+    }
+  ]
+}
