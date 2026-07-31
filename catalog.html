@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catalog — Wholesale Leather Jacket Styles | RAWx LJ</title>
-<meta name="description" content="Browse RAWx LJ's wholesale leather jacket catalog: biker, bomber, varsity, vests, trench coats and shearling — MOQ from 30 units.">
+<title>Catalog — Wholesale Leather Jacket Styles | RAWx Leather Jacket Div.</title>
+<meta name="description" content="Browse RAWx Leather Jacket Div.'s wholesale leather jacket catalog: biker, bomber, varsity, vests, trench coats and shearling — MOQ from 30 units.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ==========================================================================
-   RAWx LJ — Design System
+   RAWx Leather Jacket Div. — Design System
    Display: Big Shoulders Display (condensed industrial / stamped signage)
    Body:    Archivo
    Utility: IBM Plex Mono (spec tags, data, work-order feel)
@@ -134,25 +134,43 @@ header.site{
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
-.nav-strip{
+.marquee-bar{
+  background: var(--charcoal);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-track{
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  padding: 9px 0;
+  animation: marquee-scroll 26s linear infinite;
+}
+.marquee-bar:hover .marquee-track{ animation-play-state: paused; }
+.marquee-item{
   font-family: var(--mono);
   font-size: 0.68rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--bone-dim);
-  background: var(--charcoal);
-  border-bottom: 1px solid var(--line);
+  padding: 0 20px;
 }
-.nav-strip .container{
-  display:flex; justify-content: space-between; align-items:center;
-  padding-top:8px; padding-bottom:8px;
-  gap: 16px; flex-wrap: wrap;
+.marquee-item b{ color: var(--hide-tan); font-weight:500; }
+.marquee-sep{ color: var(--hide-tan); opacity:0.6; }
+@keyframes marquee-scroll{
+  0%{ transform: translateX(0); }
+  100%{ transform: translateX(-50%); }
 }
-.nav-strip span{ color: var(--hide-tan); }
+@media (prefers-reduced-motion: reduce){
+  .marquee-track{ animation: none; }
+}
 
 .navbar{
   display:flex; align-items:center; justify-content: space-between;
   padding: 18px 0;
+  flex-wrap: wrap;
+  row-gap: 14px;
 }
 .logo{
   font-family: var(--display);
@@ -196,6 +214,17 @@ header.site{
     background: var(--black); border-bottom:1px solid var(--line);
     padding: 26px 32px;
   }
+}
+@media (max-width: 560px){
+  .navbar{ align-items: flex-start; }
+  .logo{ font-size: 1.4rem; }
+  .nav-actions{
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .nav-actions .btn{ padding: 12px 16px; font-size: 0.72rem; flex: 1; text-align:center; justify-content:center; }
+  .burger{ flex: 0 0 auto; padding: 12px 14px; }
 }
 
 /* ---------- spec tag (signature element) ---------- */
@@ -248,8 +277,8 @@ header.site{
 @keyframes spin{ to{ transform: rotate(360deg);} }
 
 /* ---------- section scaffolding ---------- */
-section{ padding: 100px 0; border-bottom: 1px solid var(--line); }
-section.tight{ padding: 60px 0; }
+section{ padding: 72px 0; border-bottom: 1px solid var(--line); }
+section.tight{ padding: 44px 0; }
 section:last-of-type{ border-bottom:none; }
 .section-head{
   display:flex; justify-content: space-between; align-items:flex-end;
@@ -398,7 +427,7 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
 
 /* ---------- page hero (interior pages) ---------- */
 .page-hero{
-  padding: 60px 0 60px;
+  padding: 44px 0 44px;
   border-bottom: 1px solid var(--line);
 }
 .breadcrumb{
@@ -442,13 +471,13 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
 @media (max-width: 720px){ .lang-switch{ display:none; } }
 </style>
 <style>
-  .filter-bar{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:56px; }
+  .filter-bar{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:36px; }
   .filter-bar a{
     font-family: var(--mono); font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase;
     border:1px solid var(--line-strong); padding:10px 18px; color: var(--bone-dim);
   }
   .filter-bar a:hover{ border-color: var(--hide-tan); color: var(--hide-tan); }
-  .cat-block{ padding: 70px 0; border-bottom:1px solid var(--line); scroll-margin-top: 130px; }
+  .cat-block{ padding: 52px 0; border-bottom:1px solid var(--line); scroll-margin-top: 130px; }
   .cat-block-head{ display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:40px; flex-wrap:wrap; gap:20px;}
   .item-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:2px; background:var(--line); }
   @media (max-width:900px){ .item-grid{ grid-template-columns: repeat(2,1fr);} }
@@ -523,14 +552,20 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
 </svg>
 
 <header class="site">
-  <div class="nav-strip">
-    <div class="container">
-      <span data-i18n="topbar.brand_line"></span>
-      <span data-i18n="topbar.moq_line"></span>
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span class="marquee-item" data-i18n="topbar.brand_line"></span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.moq_line"></span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.brand_line"></span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.moq_line"></span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.brand_line"></span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.moq_line"></span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.brand_line"></span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.moq_line"></span><span class="marquee-sep">◆</span>
     </div>
   </div>
   <div class="container navbar">
-    <a href="index.html" class="logo">RAW<span class="x">x</span>LJ<small>Leather Jacket Co. — B2B</small></a>
+    <a href="index.html" class="logo">RAW<span class="x">x</span><small>Leather Jacket Div.</small></a>
     <nav class="navlinks">
       <a href="index.html" data-i18n="nav.home"></a>
       <a href="catalog.html" class="active" data-i18n="nav.catalog"></a>
@@ -541,7 +576,7 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" data-lang-mount></div>
-      <a href="contact.html" class="btn btn-tan" data-i18n="nav.cta_quote"></a>
+      <a href="contact.html" class="btn btn-tan">RFQ</a>
       <button class="burger">MENU</button>
     </div>
   </div>
@@ -723,6 +758,16 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
         </div>
       </div>
+      <div class="item-card">
+        <div class="thumb"><img src="assets/62640.jpg" alt="Buckled Trail Vest — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
+        <svg class="icon"><use href="#icon-jacket"/></svg>
+        <div class="name">Buckled Trail Vest</div>
+        <p class="desc">Four-pocket front, brass buckle straps, full zip.</p>
+        <div class="specs"><span>Leather: <b>Suede Split</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>18 Days</b></span></div>
+        <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -752,6 +797,16 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
         <div class="name">Double-Breasted Overcoat</div>
         <p class="desc">Wide lapel, six-button front, back vent.</p>
         <div class="specs"><span>Leather: <b>Lambskin</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>25 Days</b></span></div>
+        <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="thumb"><img src="assets/62642.jpg" alt="Notch Lapel Car Coat — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
+        <svg class="icon"><use href="#icon-jacket"/></svg>
+        <div class="name">Notch Lapel Car Coat</div>
+        <p class="desc">Mid-length, four-button front, slant welt pockets.</p>
+        <div class="specs"><span>Leather: <b>Full-Grain Cowhide</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>25 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
         </div>
       </div>
@@ -787,6 +842,16 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
         </div>
       </div>
+      <div class="item-card">
+        <div class="thumb"><img src="assets/62641.jpg" alt="Buckle-Strap Shearling Aviator — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
+        <svg class="icon"><use href="#icon-jacket"/></svg>
+        <div class="name">Buckle-Strap Shearling Aviator</div>
+        <p class="desc">Twin shoulder buckle tabs, belted waist hem.</p>
+        <div class="specs"><span>Leather: <b>Full-Grain Cowhide</b></span><span>MOQ: <b>30 units</b></span><span>Lead Time: <b>28 Days</b></span></div>
+        <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -801,7 +866,7 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
 <footer class="site">
   <div class="container footer-top">
     <div>
-      <a href="index.html" class="logo">RAW<span class="x">x</span>LJ</a>
+      <a href="index.html" class="logo">RAW<span class="x">x</span></a>
       <p style="margin-top:16px; max-width:260px; font-size:0.9rem;" data-i18n="footer.tagline"></p>
     </div>
     <div>
