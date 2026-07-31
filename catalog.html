@@ -453,9 +453,13 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
   .item-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:2px; background:var(--line); }
   @media (max-width:900px){ .item-grid{ grid-template-columns: repeat(2,1fr);} }
   @media (max-width:560px){ .item-grid{ grid-template-columns: 1fr;} }
-  .item-card{ background: var(--charcoal); padding: 30px 26px; display:flex; flex-direction:column; gap:16px; }
+  .item-card{ background: var(--charcoal); padding: 0 0 26px; display:flex; flex-direction:column; gap:16px; }
   .item-card:hover{ background: var(--charcoal-2); }
-  .item-card .icon{ width:52px; height:52px; color: var(--hide-tan); }
+  .item-card .thumb{ width:100%; aspect-ratio: 4/5; overflow:hidden; background:var(--charcoal-2); }
+  .item-card .thumb img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; filter:saturate(0.92) contrast(1.03); transition:transform .4s ease; }
+  .item-card:hover .thumb img{ transform:scale(1.04); }
+  .item-card .body{ padding:20px 26px 0; display:flex; flex-direction:column; gap:16px; flex:1; }
+  .item-card .icon{ display:none; }
   .item-card .name{ font-family:var(--display); font-size:1.25rem; text-transform:uppercase; }
   .item-card .desc{ font-size:0.88rem; margin:0; }
   .item-card .specs{ font-family:var(--mono); font-size:0.7rem; color:var(--bone-dim); display:flex; flex-direction:column; gap:6px; border-top:1px solid var(--line); padding-top:14px; margin-top:auto;}
@@ -574,25 +578,34 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
     </div>
     <div class="item-grid">
       <div class="item-card">
+        <div class="thumb"><img src="assets/62550.jpg" alt="Classic Asymmetric Biker — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Classic Asymmetric Biker</div>
         <p class="desc">Notch lapel, diagonal front zip, YKK hardware standard.</p>
         <div class="specs"><span>Leather: <b>Full-Grain Cowhide</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>20 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
       <div class="item-card">
+        <div class="thumb"><img src="assets/62560.jpg" alt="Quilted Panel Biker — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Quilted Panel Biker</div>
         <p class="desc">Diamond-quilted shoulder panels, removable belt.</p>
         <div class="specs"><span>Leather: <b>Lambskin</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>22 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
       <div class="item-card">
+        <div class="thumb"><img src="assets/62552.jpg" alt="Women's Slim Biker — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Women's Slim Biker</div>
         <p class="desc">Fitted waist, contrast stitching, short-body length.</p>
         <div class="specs"><span>Leather: <b>Sheepskin</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>20 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
@@ -607,25 +620,34 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
     </div>
     <div class="item-grid">
       <div class="item-card">
+        <div class="thumb"><img src="assets/62555.jpg" alt="MA-1 Flight Bomber — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">MA-1 Flight Bomber</div>
         <p class="desc">Orange-lined utility pocket, ribbed knit trims.</p>
         <div class="specs"><span>Leather: <b>Full-Grain Cowhide</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>20 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
       <div class="item-card">
+        <div class="thumb"><img src="assets/62553.jpg" alt="Hooded Leather Bomber — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Hooded Leather Bomber</div>
         <p class="desc">Detachable hood, storm placket, YKK zip.</p>
         <div class="specs"><span>Leather: <b>Lambskin</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>22 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
       <div class="item-card">
+        <div class="thumb"><img src="assets/62561.jpg" alt="Suede Bomber — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Suede Bomber</div>
         <p class="desc">Brushed suede shell, knit baseball collar.</p>
         <div class="specs"><span>Leather: <b>Suede Split</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>20 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
@@ -640,25 +662,34 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
     </div>
     <div class="item-grid">
       <div class="item-card">
+        <div class="thumb"><img src="assets/62554.jpg" alt="Classic Wool-Leather Varsity — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Classic Wool-Leather Varsity</div>
         <p class="desc">Snap-button front, ribbed collar &amp; cuffs.</p>
         <div class="specs"><span>Body: <b>Melton Wool</b></span><span>MOQ: <b>100 units</b></span><span>Lead Time: <b>25 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
       <div class="item-card">
+        <div class="thumb"><img src="assets/62562.jpg" alt="Full-Leather Varsity — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Full-Leather Varsity</div>
         <p class="desc">All-leather body &amp; sleeves, two-tone panel option.</p>
         <div class="specs"><span>Leather: <b>Full-Grain Cowhide</b></span><span>MOQ: <b>100 units</b></span><span>Lead Time: <b>25 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
       <div class="item-card">
+        <div class="thumb"><img src="assets/62551.jpg" alt="Women's Cropped Varsity — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Women's Cropped Varsity</div>
         <p class="desc">Shortened body length, fitted sleeve taper.</p>
         <div class="specs"><span>Body: <b>Melton Wool</b></span><span>MOQ: <b>100 units</b></span><span>Lead Time: <b>25 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
@@ -673,18 +704,24 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
     </div>
     <div class="item-grid">
       <div class="item-card">
+        <div class="thumb"><img src="assets/62556.jpg" alt="Classic Biker Vest — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Classic Biker Vest</div>
         <p class="desc">Side-lace waist, snap-front closure.</p>
         <div class="specs"><span>Leather: <b>Full-Grain Cowhide</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>18 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
       <div class="item-card">
+        <div class="thumb"><img src="assets/62558.jpg" alt="Utility Multi-Pocket Vest — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Utility Multi-Pocket Vest</div>
         <p class="desc">Six-pocket layout, adjustable side straps.</p>
         <div class="specs"><span>Leather: <b>Suede Split</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>18 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
@@ -699,18 +736,24 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
     </div>
     <div class="item-grid">
       <div class="item-card">
+        <div class="thumb"><img src="assets/62557.jpg" alt="Belted Leather Trench — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Belted Leather Trench</div>
         <p class="desc">Full-length, storm flap, self-tie belt.</p>
         <div class="specs"><span>Leather: <b>Full-Grain Cowhide</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>25 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
       <div class="item-card">
+        <div class="thumb"><img src="assets/62559.jpg" alt="Double-Breasted Overcoat — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Double-Breasted Overcoat</div>
         <p class="desc">Wide lapel, six-button front, back vent.</p>
         <div class="specs"><span>Leather: <b>Lambskin</b></span><span>MOQ: <b>50 units</b></span><span>Lead Time: <b>25 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
@@ -725,18 +768,24 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
     </div>
     <div class="item-grid">
       <div class="item-card">
+        <div class="thumb"><img src="assets/62563.jpg" alt="Aviator Shearling Jacket — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">Aviator Shearling Jacket</div>
         <p class="desc">Oversized collar, shearling cuffs &amp; hem.</p>
         <div class="specs"><span>Leather: <b>Full-Grain Cowhide</b></span><span>MOQ: <b>30 units</b></span><span>Lead Time: <b>28 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
       <div class="item-card">
+        <div class="thumb"><img src="assets/62564.jpg" alt="B-3 Bomber, Shearling-Lined — genuine leather, wholesale manufacturer" loading="lazy"></div>
+        <div class="body">
         <svg class="icon"><use href="#icon-jacket"/></svg>
         <div class="name">B-3 Bomber, Shearling-Lined</div>
         <p class="desc">Full shearling body lining, wrap collar.</p>
         <div class="specs"><span>Leather: <b>Full-Grain Cowhide</b></span><span>MOQ: <b>30 units</b></span><span>Lead Time: <b>28 Days</b></span></div>
         <a href="contact.html" class="cta">Request Sample <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
