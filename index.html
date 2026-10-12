@@ -4,721 +4,1349 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RAWx Leather Jacket Div. — Manufacturer &amp; B2B Supplier, Bangladesh</title>
-<meta name="description" content="RAWx Leather Jacket Div. is a B2B leather jacket manufacturer based in Bangladesh. Wholesale, private label &amp; OEM leather jackets — full-grain hides, in-house cut &amp; stitch, MOQ from 50 units.">
+<meta name="description" content="RAWx Leather Jacket Div. is an authoritative B2B leather jacket manufacturer based in Dhaka, Bangladesh. Wholesale, private label &amp; OEM leather outerwear, direct tannery integration, MOQ from 50 units.">
+<meta property="og:title" content="RAWx Leather Jacket Div. — Manufacturer &amp; B2B Supplier, Bangladesh">
+<meta property="og:description" content="Authoritative B2B leather jacket manufacturer based in Dhaka, Bangladesh. Wholesale, private label &amp; OEM leather jackets — full-grain hides, in-house cut &amp; stitch, MOQ from 50 units.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 /* ==========================================================================
-   RAWx Leather Jacket Div. — Design System
-   Display: Big Shoulders Display (condensed industrial / stamped signage)
-   Body:    Archivo
-   Utility: IBM Plex Mono (spec tags, data, work-order feel)
+   RAWx Leather Jacket Div. — Dark Brutalist Luxury Design System
+   Synchronized with handsandhead.com, 21dev.handsandhead.com & b2b.handsandhead.com
    ========================================================================== */
 
-:root{
-  --black:      #0D0C0B;
-  --charcoal:   #171512;
-  --charcoal-2: #1F1C18;
-  --hide-tan:   #B4814F;
-  --hide-tan-dim: #8C6640;
-  --oxblood:    #8A2F20;
-  --oxblood-br: #B4432E;
-  --bone:       #EDE6D8;
-  --bone-dim:   #B9B0A0;
-  --brass:      #9C8752;
-  --line:       rgba(237,230,216,0.14);
-  --line-strong:rgba(237,230,216,0.28);
+:root {
+  --bg-base:        #0B0B0B;
+  --bg-surface:     #121212;
+  --bg-card:        #171614;
+  --bg-card-hover:  #1F1E1A;
+  --bg-inset:       #0F0E0D;
+
+  --amber:          #E5A93C;
+  --amber-dim:      #B37F24;
+  --amber-glow:     rgba(229, 169, 60, 0.22);
+  --hide-tan:       #C89551;
+  --hide-tan-dim:   #946933;
+  --oxblood:        #8A2F20;
+  --oxblood-br:     #B4432E;
+
+  --bone:           #EDE6D8;
+  --bone-dim:       #A69F91;
+  --bone-muted:     #6E685F;
+  --brass:          #A8925A;
+
+  --line:           rgba(237, 230, 216, 0.11);
+  --line-strong:    rgba(237, 230, 216, 0.22);
+  --line-amber:     rgba(229, 169, 60, 0.32);
 
   --display: "Big Shoulders Display", sans-serif;
   --body:    "Archivo", sans-serif;
   --mono:    "IBM Plex Mono", monospace;
 
-  --container: 1240px;
+  --container: 1280px;
 }
 
-*,*::before,*::after{ box-sizing: border-box; }
-html{ scroll-behavior: smooth; }
-body{
-  margin:0;
-  background: var(--black);
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg-base);
   color: var(--bone);
   font-family: var(--body);
   font-size: 16px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* subtle grain overlay for tactile "hide" texture */
-body::before{
-  content:"";
-  position: fixed; inset:0;
-  pointer-events:none;
+/* Tactile raw leather grain overlay */
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  pointer-events: none;
   z-index: 999;
-  opacity: 0.035;
+  opacity: 0.04;
   mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-h1,h2,h3,h4{
+h1, h2, h3, h4 {
   font-family: var(--display);
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
   margin: 0 0 0.4em;
   color: var(--bone);
 }
-h1{ font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.92; }
-h2{ font-size: clamp(2rem, 4.4vw, 3.4rem); line-height: 0.98; }
-h3{ font-size: clamp(1.3rem, 2vw, 1.7rem); line-height: 1.05; }
+h1 { font-size: clamp(2.8rem, 7vw, 5.8rem); line-height: 0.94; }
+h2 { font-size: clamp(2.1rem, 4.4vw, 3.6rem); line-height: 0.98; }
+h3 { font-size: clamp(1.35rem, 2vw, 1.8rem); line-height: 1.05; }
+h4 { font-size: 1.15rem; line-height: 1.15; }
 
-p{ margin: 0 0 1em; color: var(--bone-dim); }
-a{ color: inherit; text-decoration: none; }
+p { margin: 0 0 1em; color: var(--bone-dim); font-size: 0.98rem; }
+a { color: inherit; text-decoration: none; }
 
-.container{
+.container {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 32px;
 }
 
-.eyebrow{
+.amber { color: var(--amber); }
+.tan { color: var(--hide-tan); }
+.mono { font-family: var(--mono); }
+
+/* Eyebrows / Spec tags */
+.eyebrow {
   font-family: var(--mono);
   font-size: 0.72rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--hide-tan);
+  color: var(--amber);
   display: inline-flex;
   align-items: center;
   gap: 10px;
 }
-.eyebrow::before{
-  content:"";
+.eyebrow::before {
+  content: "";
   width: 18px; height: 1px;
-  background: var(--hide-tan);
+  background: var(--amber);
 }
 
-/* ---------- buttons ---------- */
-.btn{
+/* ==========================================================================
+   BUTTONS & CTAS
+   ========================================================================== */
+.btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-family: var(--mono);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  padding: 15px 26px;
+  padding: 13px 22px;
   border: 1px solid var(--line-strong);
   background: transparent;
   color: var(--bone);
   cursor: pointer;
-  transition: all .2s ease;
+  transition: all .2s cubic-bezier(.2,.8,.2,1);
   white-space: nowrap;
 }
-.btn:hover{ border-color: var(--hide-tan); color: var(--hide-tan); }
-.btn-solid{
+.btn:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+  transform: translateY(-1px);
+}
+
+/* Primary Magnetic B2B Portal Button */
+.btn-portal {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: #070707;
+  font-weight: 600;
+  box-shadow: 0 0 20px var(--amber-glow);
+}
+.btn-portal:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #000000;
+  box-shadow: 0 0 28px rgba(255, 255, 255, 0.4);
+}
+
+.btn-solid {
   background: var(--oxblood);
   border-color: var(--oxblood);
   color: var(--bone);
 }
-.btn-solid:hover{ background: var(--oxblood-br); border-color: var(--oxblood-br); color: var(--bone); }
-.btn-tan{
-  background: var(--hide-tan);
-  border-color: var(--hide-tan);
-  color: var(--black);
+.btn-solid:hover {
+  background: var(--oxblood-br);
+  border-color: var(--oxblood-br);
+  color: var(--bone);
 }
-.btn-tan:hover{ background: var(--bone); border-color: var(--bone); color: var(--black); }
 
-/* ---------- header ---------- */
-header.site{
-  position: sticky; top:0; z-index: 500;
-  background: rgba(13,12,11,0.92);
-  backdrop-filter: blur(8px);
+.btn-secondary-spec {
+  background: rgba(237, 230, 216, 0.05);
+  border-color: var(--line-strong);
+  color: var(--bone);
+}
+.btn-secondary-spec:hover {
+  background: rgba(229, 169, 60, 0.12);
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+/* ==========================================================================
+   HEADER & GLOBAL NAVIGATION
+   ========================================================================== */
+header.site {
+  position: sticky; top: 0; z-index: 600;
+  background: rgba(11, 11, 11, 0.94);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
-.marquee-bar{
-  background: var(--charcoal);
+
+.marquee-bar {
+  background: #060606;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
   white-space: nowrap;
 }
-.marquee-track{
+.marquee-track {
   display: inline-flex;
   align-items: center;
   width: max-content;
-  padding: 9px 0;
-  animation: marquee-scroll 26s linear infinite;
+  padding: 8px 0;
+  animation: marquee-scroll 24s linear infinite;
 }
-.marquee-bar:hover .marquee-track{ animation-play-state: paused; }
-.marquee-item{
+.marquee-bar:hover .marquee-track { animation-play-state: paused; }
+.marquee-item {
   font-family: var(--mono);
   font-size: 0.68rem;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--bone-dim);
-  padding: 0 20px;
+  padding: 0 24px;
 }
-.marquee-item b{ color: var(--hide-tan); font-weight:500; }
-.marquee-sep{ color: var(--hide-tan); opacity:0.6; }
-@keyframes marquee-scroll{
-  0%{ transform: translateX(0); }
-  100%{ transform: translateX(-50%); }
-}
-@media (prefers-reduced-motion: reduce){
-  .marquee-track{ animation: none; }
+.marquee-item b { color: var(--amber); font-weight: 500; }
+.marquee-sep { color: var(--amber); opacity: 0.6; }
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-.navbar{
-  display:flex; align-items:center; justify-content: space-between;
-  padding: 18px 0;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
   flex-wrap: wrap;
   row-gap: 14px;
 }
-.logo{
+.logo {
   font-family: var(--display);
   font-weight: 800;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  display:flex; align-items:baseline; gap: 2px;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
 }
-.logo .x{ color: var(--oxblood-br); }
-.logo small{
+.logo .x { color: var(--oxblood-br); }
+.logo small {
   font-family: var(--mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.2em;
-  color: var(--bone-dim);
-  display:block;
+  font-size: 0.54rem;
+  letter-spacing: 0.22em;
+  color: var(--amber);
+  display: block;
   text-transform: uppercase;
   margin-top: 2px;
 }
-.navlinks{
-  display:flex; align-items:center; gap: 34px;
+
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 26px;
   font-family: var(--mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.06em;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.navlinks a{ position:relative; padding: 4px 0; color: var(--bone-dim); }
-.navlinks a:hover, .navlinks a.active{ color: var(--bone); }
-.navlinks a.active::after{
-  content:""; position:absolute; left:0; right:0; bottom:-4px; height:2px; background: var(--hide-tan);
-}
-.nav-actions{ display:flex; align-items:center; gap:18px; }
-.burger{ display:none; }
-
-@media (max-width: 900px){
-  .navlinks{ display:none; }
-  .burger{ display:block; background:none; border:1px solid var(--line-strong); color:var(--bone); padding:8px 12px; font-family: var(--mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; cursor:pointer;}
-  .navlinks.open{
-    display:flex; flex-direction:column; gap: 18px;
-    position:absolute; top:100%; left:0; right:0;
-    background: var(--black); border-bottom:1px solid var(--line);
-    padding: 26px 32px;
-  }
-}
-@media (max-width: 560px){
-  .navbar{ align-items: flex-start; }
-  .logo{ font-size: 1.4rem; }
-  .nav-actions{
-    width: 100%;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  .nav-actions .btn{ padding: 12px 16px; font-size: 0.72rem; flex: 1; text-align:center; justify-content:center; }
-  .burger{ flex: 0 0 auto; padding: 12px 14px; }
-}
-
-/* ---------- spec tag (signature element) ---------- */
-.spec-tag{
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+.navlinks a {
+  position: relative;
+  padding: 6px 0;
   color: var(--bone-dim);
-  border: 1px solid var(--line-strong);
-  background: var(--charcoal);
-  padding: 14px 18px;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 6px;
-  position: relative;
+  transition: color .2s ease;
 }
-.spec-tag::before{
+.navlinks a:hover, .navlinks a.active { color: var(--bone); }
+.navlinks a.active::after {
   content: "";
-  position:absolute; left:-1px; top:10px; bottom:10px; width:3px;
-  background: var(--hide-tan);
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 2px;
+  background: var(--amber);
 }
-.spec-tag .row{ display:flex; justify-content: space-between; gap: 24px; }
-.spec-tag .row b{ color: var(--bone); font-weight: 500; }
-.spec-tag .row span:first-child{ color: var(--hide-tan); text-transform: uppercase; }
 
-/* ---------- stamp seal (signature element) ---------- */
-.seal{
-  width: 150px; height:150px;
-  border-radius: 50%;
-  border: 1px dashed var(--line-strong);
-  display:flex; align-items:center; justify-content:center;
-  position: relative;
-  flex-shrink:0;
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-.seal .seal-core{
-  width: 108px; height:108px;
-  border-radius:50%;
-  border: 1px solid var(--hide-tan);
-  display:flex; align-items:center; justify-content:center;
-  text-align:center;
-  font-family: var(--display);
-  font-size: 0.95rem;
-  letter-spacing:0.03em;
-  text-transform:uppercase;
-  color: var(--hide-tan);
-  line-height:1.05;
-}
-.seal svg{ position:absolute; inset:0; width:100%; height:100%; animation: spin 22s linear infinite; }
-@media (prefers-reduced-motion: reduce){ .seal svg{ animation:none; } }
-@keyframes spin{ to{ transform: rotate(360deg);} }
 
-/* ---------- section scaffolding ---------- */
-section{ padding: 72px 0; border-bottom: 1px solid var(--line); }
-section.tight{ padding: 44px 0; }
-section:last-of-type{ border-bottom:none; }
-.section-head{
-  display:flex; justify-content: space-between; align-items:flex-end;
-  gap: 40px; margin-bottom: 44px; flex-wrap: wrap;
+.lang-switch {
+  display: flex;
+  gap: 2px;
+  font-family: var(--mono);
+  font-size: 0.66rem;
 }
-.section-head p{ max-width: 420px; margin:0; }
+.lang-switch button {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--bone-dim);
+  padding: 6px 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all .2s ease;
+}
+.lang-switch button:hover { border-color: var(--amber); color: var(--amber); }
+.lang-switch button.active { background: var(--amber); border-color: var(--amber); color: #000; font-weight:600; }
 
-/* ---------- hero slider ---------- */
-.hero-slider{
+.burger { display: none; }
+
+@media (max-width: 1040px) {
+  .navlinks { display: none; }
+  .burger {
+    display: block;
+    background: none;
+    border: 1px solid var(--line-strong);
+    color: var(--bone);
+    padding: 9px 14px;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+  .navlinks.open {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #0B0B0B;
+    border-bottom: 1px solid var(--line);
+    padding: 24px 32px;
+  }
+}
+@media (max-width: 640px) {
+  .lang-switch { display: none; }
+  .nav-actions .btn-secondary-spec { display: none; }
+  .nav-actions { width: 100%; justify-content: space-between; }
+  .btn-portal { flex: 1; text-align: center; }
+}
+
+/* ==========================================================================
+   HERO SLIDER SYSTEM (Full-State Slider with Text & Photos)
+   ========================================================================== */
+.hero-slider {
   position: relative;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
   padding: 0;
   margin: 0;
 }
-.hero-slider-track{
+.hero-slider-track {
   display: flex;
-  transition: transform .6s cubic-bezier(.65,0,.35,1);
+  transition: transform .65s cubic-bezier(.65,0,.35,1);
 }
-.hero-slide{
+.hero-slide {
   flex: 0 0 100%;
   min-width: 100%;
 }
-.hero-slider-arrow{
-  position: absolute; top:50%; transform: translateY(-50%);
-  z-index: 20; width:46px; height:46px;
-  display:flex; align-items:center; justify-content:center;
-  background: rgba(13,12,11,0.55); border:1px solid var(--line-strong); color: var(--bone);
-  cursor:pointer; font-family: var(--display); font-size:1.4rem;
+.hero-slider-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 40; width: 50px; height: 50px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(11, 11, 11, 0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--line-strong); color: var(--bone);
+  cursor: pointer; font-family: var(--display); font-size: 1.8rem;
   transition: all .2s ease;
 }
-.hero-slider-arrow:hover{ background: var(--oxblood); border-color: var(--oxblood); }
-.hero-slider-arrow.prev{ left: 20px; }
-.hero-slider-arrow.next{ right: 20px; }
-.hero-slider-dots{
-  position:absolute; left:50%; bottom:20px; transform: translateX(-50%);
-  z-index:20; display:flex; gap:10px;
+.hero-slider-arrow:hover { background: var(--amber); border-color: var(--amber); color: #000; }
+.hero-slider-arrow.prev { left: 24px; }
+.hero-slider-arrow.next { right: 24px; }
+.hero-slider-dots {
+  position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%);
+  z-index: 40; display: flex; gap: 10px;
 }
-.hero-slider-dots button{
-  width:8px; height:8px; border-radius:50%; padding:0; border:1px solid var(--line-strong);
-  background: transparent; cursor:pointer; transition: all .2s ease;
+.hero-slider-dots button {
+  width: 8px; height: 8px; border-radius: 50%; padding: 0; border: 1px solid var(--line-strong);
+  background: transparent; cursor: pointer; transition: all .25s ease;
 }
-.hero-slider-dots button.active{ background: var(--hide-tan); border-color: var(--hide-tan); width:22px; border-radius:5px; }
-.hero-slider[data-count="1"] .hero-slider-arrow,
-.hero-slider[data-count="1"] .hero-slider-dots{ display:none; }
+.hero-slider-dots button.active { background: var(--amber); border-color: var(--amber); width: 28px; border-radius: 6px; }
 
-.hero-slide-photo{
+/* Slide 1: Primary Typography Hero */
+.hero-slide-primary {
+  padding: 60px 0 72px;
+  background: radial-gradient(circle at 85% 20%, rgba(229, 169, 60, 0.05) 0%, transparent 65%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+.hero-main h1 { margin: 18px 0 20px; }
+.hero-copy {
+  font-size: 1.05rem;
+  max-width: 580px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.hero-cta-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.hero-telemetry {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.telemetry-item .val {
+  font-family: var(--display);
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--amber);
+}
+.telemetry-item .lbl {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bone-dim);
+  margin-top: 8px;
+}
+
+/* Technical Work-Order Spec Card */
+.spec-ticket {
+  background: var(--bg-card);
+  border: 1px solid var(--line-strong);
+  padding: 32px;
   position: relative;
-  min-height: 480px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+.spec-ticket::before {
+  content: "";
+  position: absolute;
+  top: -1px; left: 24px; right: 24px; height: 3px;
+  background: linear-gradient(90deg, var(--amber), var(--hide-tan));
+}
+.spec-ticket-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed var(--line-strong);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+.ticket-code {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  color: var(--amber);
+}
+.ticket-stamp {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  padding: 4px 8px;
+  border: 1px solid var(--oxblood-br);
+  color: var(--oxblood-br);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.spec-ticket-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+}
+.spec-ticket-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(237, 230, 216, 0.06);
+  padding-bottom: 8px;
+}
+.spec-ticket-row span { color: var(--bone-dim); }
+.spec-ticket-row strong { color: var(--bone); font-weight: 500; }
+.spec-ticket-footer {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Photo Slide Styling */
+.hero-slide-photo {
+  position: relative;
+  min-height: 580px;
   display: flex;
   align-items: flex-end;
   background-size: cover;
   background-position: center;
 }
-.hero-slide-photo::before{
-  content:"";
-  position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(13,12,11,0.10) 0%, rgba(13,12,11,0.38) 45%, rgba(13,12,11,0.94) 100%);
+.hero-slide-photo::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(11, 11, 11, 0.25) 0%, rgba(11, 11, 11, 0.65) 50%, rgba(11, 11, 11, 0.96) 100%);
 }
-.hero-slide-photo .container{ position:relative; z-index:2; }
-.hero-slide-content{ max-width: 560px; padding-bottom: 44px; }
-.hero-slide-content h2{ margin-top: 14px; font-size: clamp(2.1rem, 5vw, 3.6rem); }
-.hero-slide-content p{ margin-top: 14px; font-size: 1rem; max-width: 460px; }
-.hero-slide-content .hero-ctas{ margin-top: 22px; }
-.hero{ min-height: 480px; }
-@media (min-width: 901px){
-  .hero,
-  .hero-slide-photo{ min-height: 620px; }
+.hero-slide-photo .container { position: relative; z-index: 2; }
+.hero-slide-content { max-width: 620px; padding-bottom: 56px; }
+.hero-slide-content h2 { margin-top: 14px; font-size: clamp(2.2rem, 5vw, 3.8rem); line-height: 0.98; }
+.hero-slide-content p { margin-top: 14px; font-size: 1.05rem; max-width: 520px; }
+.hero-slide-content .hero-ctas { margin-top: 24px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-telemetry { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .hero-slide-photo { min-height: 480px; }
 }
 
-/* ---------- hero ---------- */
-.hero{
-  padding: 52px 0 60px;
+/* ==========================================================================
+   SECTIONS & LAYOUT
+   ========================================================================== */
+section {
+  padding: 88px 0;
+  border-bottom: 1px solid var(--line);
   position: relative;
-  overflow:hidden;
 }
-.hero-grid{
-  display:grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items:end;
+section.tight { padding: 48px 0; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
 }
-.hero-tagline{ max-width: 460px; }
-.hero-tagline p{ font-size: 1.05rem; margin-top: 18px; }
-.hero-ctas{ display:flex; gap: 16px; margin-top: 26px; flex-wrap: wrap; }
-.hero-stats{
-  display:grid; grid-template-columns: repeat(3,1fr); gap: 24px;
-  margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--line);
-}
-.hero-stats .num{ font-family: var(--display); font-size: 2.6rem; color: var(--hide-tan); line-height:1; }
-.hero-stats .lbl{ font-family: var(--mono); font-size: 0.68rem; letter-spacing:0.1em; text-transform:uppercase; color: var(--bone-dim); margin-top:8px; }
+.section-head p { max-width: 480px; margin: 0; }
 
-@media (max-width: 900px){
-  .hero-grid{ grid-template-columns: 1fr; gap: 44px; }
-  .hero-stats{ grid-template-columns: 1fr 1fr; }
-  .hero-spec-tag{
-    justify-self: stretch !important;
-    width: 100%;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
+/* ==========================================================================
+   19-IMAGE FACTORY ARCHIVE & BENCHWORK VAULT
+   ========================================================================== */
+.vault-section {
+  background: #080808;
 }
-@media (max-width: 520px){
-  .hero-stats{ grid-template-columns: 1fr; gap: 28px; }
+.vault-filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.vault-filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--line-strong);
+  color: var(--bone-dim);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 10px 18px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.vault-filter-btn:hover, .vault-filter-btn.active {
+  background: rgba(229, 169, 60, 0.12);
+  border-color: var(--amber);
+  color: var(--amber);
 }
 
-/* ---------- grids / cards ---------- */
-.grid-3{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); }
-.grid-2{ display:grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--line); }
-.grid-4{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--line); }
-@media (max-width: 900px){ .grid-3, .grid-4{ grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 560px){ .grid-3, .grid-4, .grid-2{ grid-template-columns: 1fr; } }
+.vault-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: var(--line);
+}
+@media (max-width: 1200px) {
+  .vault-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 860px) {
+  .vault-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .vault-grid { grid-template-columns: 1fr; }
+}
 
-.card{
-  background: var(--charcoal);
-  padding: 40px 32px;
+.vault-card {
+  background: var(--bg-card);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: all .25s cubic-bezier(.2,.8,.2,1);
+  position: relative;
+  overflow: hidden;
+}
+.vault-card:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+  z-index: 5;
+}
+
+.vault-thumb-wrap {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background: #050505;
+  position: relative;
+}
+.vault-thumb {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: contrast(1.04) saturate(0.96);
+  transition: transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.vault-card:hover .vault-thumb {
+  transform: scale(1.08);
+}
+
+.vault-category-pill {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: rgba(11, 11, 11, 0.88);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--line-strong);
+  padding: 4px 10px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  z-index: 10;
+}
+
+.vault-zoom-trigger {
+  position: absolute;
+  bottom: 12px; right: 12px;
+  width: 32px; height: 32px;
+  background: rgba(11, 11, 11, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--line-strong);
+  color: var(--bone);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all .2s ease;
+  z-index: 10;
+}
+.vault-card:hover .vault-zoom-trigger {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: #000;
+}
+
+.vault-body {
+  padding: 20px 22px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+}
+.vault-spec-id {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  color: var(--hide-tan);
+  text-transform: uppercase;
+}
+.vault-title {
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.1;
+}
+.vault-desc {
+  font-size: 0.86rem;
+  margin: 0;
+  color: var(--bone-dim);
+  line-height: 1.45;
+}
+.vault-specs-strip {
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+}
+.vault-specs-strip div {
+  display: flex;
+  justify-content: space-between;
+}
+.vault-specs-strip span { color: var(--bone-muted); text-transform: uppercase; }
+.vault-specs-strip strong { color: var(--bone); font-weight: 500; }
+
+.vault-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+}
+.vault-actions .btn {
+  flex: 1;
+  padding: 9px 10px;
+  font-size: 0.68rem;
+}
+
+/* ==========================================================================
+   PRODUCTION GUIDE: FROM HIDE TO HANGER
+   ========================================================================== */
+.workflow-section {
+  background: #090909;
+}
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  background: var(--line);
+}
+@media (max-width: 1100px) {
+  .workflow-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+  .workflow-grid { grid-template-columns: 1fr; }
+}
+
+.workflow-card {
+  background: var(--bg-surface);
+  padding: 34px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
   transition: background .2s ease;
 }
-.card:hover{ background: var(--charcoal-2); }
+.workflow-card:hover { background: var(--bg-card); }
+.workflow-step-num {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
+  color: var(--amber);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.workflow-step-num::after {
+  content: "";
+  height: 1px; flex: 1; margin-left: 14px;
+  background: var(--line);
+}
+.workflow-card h3 { font-size: 1.35rem; margin: 0; }
+.workflow-card p { font-size: 0.88rem; margin: 0; line-height: 1.5; }
+.workflow-taglist {
+  margin-top: auto;
+  padding-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.workflow-tag {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(237, 230, 216, 0.05);
+  border: 1px solid var(--line);
+  padding: 4px 8px;
+  color: var(--bone-dim);
+}
 
-.cat-card{
-  background: var(--charcoal);
-  padding: 0 0 28px;
-  display:flex; flex-direction:column; gap:18px;
-  transition: background .25s ease;
-  position:relative;
+/* ==========================================================================
+   INTERACTIVE ESTIMATOR & DIRECT B2B FUNNEL
+   ========================================================================== */
+.estimator-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--line-amber);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
-.cat-card:hover{ background: var(--charcoal-2); }
-.cat-card .thumb{ width:100%; aspect-ratio: 4/5; overflow:hidden; background:var(--charcoal-2); }
-.cat-card .thumb img{ width:100%; height:100%; object-fit:cover; object-position:top center; display:block; filter:saturate(0.92) contrast(1.03); transition:transform .4s ease; }
-.cat-card:hover .thumb img{ transform:scale(1.04); }
-.cat-card .body{ padding:0 28px; display:flex; flex-direction:column; gap:18px; flex:1; }
-.cat-card .icon{ display:none; }
-.cat-card h3{ margin:0; }
-.cat-card .meta{
-  font-family: var(--mono); font-size:0.68rem; letter-spacing:0.08em;
-  text-transform:uppercase; color: var(--bone-dim);
-  display:flex; justify-content:space-between;
-  border-top:1px solid var(--line); padding-top:14px; margin-top:auto;
+@media (max-width: 900px) {
+  .estimator-box { grid-template-columns: 1fr; padding: 28px 20px; }
 }
-.cat-card .go{
-  position:absolute; top:16px; right:16px;
-  width:34px; height:34px; display:flex; align-items:center; justify-content:center;
-  background: rgba(10,10,10,0.55); backdrop-filter: blur(2px);
-  font-family: var(--mono); color: var(--bone); font-size:1.1rem;
-  transition: transform .2s ease, color .2s ease;
-}
-.cat-card:hover .go{ transform: translate(3px,-3px); color: var(--hide-tan); }
 
-/* ---------- process steps ---------- */
-.process{ display:grid; grid-template-columns: repeat(5,1fr); gap:2px; background: var(--line); }
-@media (max-width: 900px){ .process{ grid-template-columns: repeat(2,1fr); } }
-.step{ background: var(--black); padding: 30px 22px; }
-.step .idx{ font-family: var(--mono); color: var(--oxblood-br); font-size:0.8rem; margin-bottom: 18px; display:block; }
-.step h4{ font-family: var(--body); text-transform:none; font-weight:700; font-size:1.05rem; margin-bottom:8px; letter-spacing:0; }
-.step p{ font-size:0.9rem; margin:0; }
+.estimator-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.calc-field label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+.calc-field label .label-val {
+  font-size: 1.05rem;
+  color: var(--bone);
+  font-weight: 600;
+}
 
-/* ---------- marquee ---------- */
-.marquee{
-  overflow:hidden; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-  padding: 22px 0; background: var(--charcoal);
+.range-slider {
+  width: 100%;
+  height: 6px;
+  background: var(--bg-card);
+  outline: none;
+  -webkit-appearance: none;
+  border: 1px solid var(--line-strong);
+  cursor: pointer;
 }
-.marquee-track{
-  display:flex; gap:60px; white-space:nowrap;
-  animation: scroll 32s linear infinite;
-  font-family: var(--mono); text-transform:uppercase; letter-spacing:0.12em;
-  font-size:0.78rem; color: var(--bone-dim);
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px; height: 22px;
+  background: var(--amber);
+  cursor: pointer;
+  border: 2px solid #000;
+  box-shadow: 0 0 10px var(--amber-glow);
 }
-@keyframes scroll{ from{ transform: translateX(0);} to{ transform: translateX(-50%);} }
-.marquee-track span{ color: var(--hide-tan); margin: 0 10px; }
-@media (prefers-reduced-motion: reduce){ .marquee-track{ animation:none; } }
+.range-slider::-moz-range-thumb {
+  width: 22px; height: 22px;
+  background: var(--amber);
+  cursor: pointer;
+  border: 2px solid #000;
+}
 
-/* ---------- testimonial ---------- */
-.quote-card{
-  background: var(--charcoal); padding: 36px 32px; display:flex; flex-direction:column; gap:20px;
+.slider-presets {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
-.quote-card .stars{ color: var(--hide-tan); font-family: var(--mono); letter-spacing:2px; }
-.quote-card footer{ font-family: var(--mono); font-size:0.75rem; color: var(--bone-dim); text-transform:uppercase; letter-spacing:0.05em; }
+.preset-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--bone-dim);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.preset-btn:hover, .preset-btn.active {
+  border-color: var(--amber);
+  color: var(--amber);
+  background: rgba(229, 169, 60, 0.08);
+}
 
-/* ---------- forms ---------- */
-.form-wrap{ background: var(--charcoal); padding: 48px; border: 1px solid var(--line); }
-@media (max-width:600px){ .form-wrap{ padding: 28px 20px; } }
-.form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 22px; }
-@media (max-width:640px){ .form-row{ grid-template-columns: 1fr; } }
-.field{ display:flex; flex-direction:column; gap:8px; }
-.field.full{ grid-column: 1/-1; }
-.field label{
-  font-family: var(--mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color: var(--hide-tan);
+.selector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
-.field input, .field select, .field textarea{
-  background: var(--black); border:1px solid var(--line-strong); color: var(--bone);
-  padding: 13px 14px; font-family: var(--body); font-size:0.95rem;
+@media (max-width: 520px) {
+  .selector-grid { grid-template-columns: 1fr; }
 }
-.field input:focus, .field select:focus, .field textarea:focus{
-  outline: none; border-color: var(--hide-tan);
-}
-.field textarea{ resize: vertical; min-height: 110px; }
-.chip-group{ display:flex; flex-wrap:wrap; gap:10px; }
-.chip{
-  font-family: var(--mono); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.06em;
-  border:1px solid var(--line-strong); padding:9px 16px; cursor:pointer; color: var(--bone-dim);
-}
-.chip input{ display:none; }
-.chip:has(input:checked){ border-color: var(--hide-tan); color: var(--hide-tan); background: rgba(180,129,79,0.08); }
-.form-note{ font-family: var(--mono); font-size:0.72rem; color: var(--bone-dim); margin-top: 18px; }
-.form-success{
-  display:none; text-align:center; padding: 40px 20px;
-}
-.form-success.show{ display:block; }
-.form-success .icon{ font-size:2.4rem; color: var(--hide-tan); margin-bottom: 14px; }
 
-/* ---------- footer ---------- */
-footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padding-top: 80px; }
-.footer-top{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr 1.2fr; gap: 40px; padding-bottom: 60px; }
-@media (max-width: 900px){ .footer-top{ grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px){ .footer-top{ grid-template-columns: 1fr; } }
-.footer-top h4{ font-family: var(--mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color: var(--hide-tan); margin-bottom:18px; }
-.footer-top ul{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:11px; }
-.footer-top ul a{ color: var(--bone-dim); font-size:0.92rem; }
-.footer-top ul a:hover{ color: var(--bone); }
-.footer-bottom{
-  border-top:1px solid var(--line); padding: 24px 0;
-  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
-  font-family: var(--mono); font-size:0.7rem; color: var(--bone-dim); text-transform:uppercase; letter-spacing:0.05em;
+.select-chip {
+  background: var(--bg-card);
+  border: 1px solid var(--line-strong);
+  padding: 12px 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all .2s ease;
 }
-.footer-bottom .socials{ display:flex; gap:18px; }
+.select-chip input { display: none; }
+.select-chip strong {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  color: var(--bone);
+  letter-spacing: 0.04em;
+}
+.select-chip small {
+  font-size: 0.68rem;
+  color: var(--bone-dim);
+}
+.select-chip:has(input:checked) {
+  border-color: var(--amber);
+  background: rgba(229, 169, 60, 0.08);
+}
+.select-chip:has(input:checked) strong { color: var(--amber); }
 
-/* ---------- page hero (interior pages) ---------- */
-.page-hero{
-  padding: 60px 0 60px;
+/* Estimator Output Card */
+.estimator-output {
+  background: var(--bg-inset);
+  border: 1px solid var(--line-strong);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.out-head {
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+.out-stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.out-stat .lbl {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  color: var(--bone-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+.out-stat .big {
+  font-family: var(--display);
+  font-size: 2.2rem;
+  color: var(--amber);
+  line-height: 1;
+}
+.out-stat .sub {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--bone-dim);
+  margin-top: 4px;
+}
+.out-total-block {
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.out-total-block .lbl { font-family: var(--mono); font-size: 0.72rem; color: var(--bone-dim); text-transform: uppercase; }
+.out-total-block .amt { font-family: var(--display); font-size: 1.8rem; color: var(--bone); }
+
+/* ==========================================================================
+   ECOSYSTEM PERSISTENT BAR & FOOTER
+   ========================================================================== */
+.ecosystem-bar {
+  background: #060606;
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+  padding: 18px 0;
 }
-.breadcrumb{
-  font-family: var(--mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase;
-  color: var(--bone-dim); margin-bottom: 20px;
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
-.breadcrumb a{ color: var(--bone-dim); } .breadcrumb a:hover{ color: var(--hide-tan); }
-.breadcrumb .sep{ margin: 0 8px; color: var(--line-strong); }
-
-/* ---------- utility ---------- */
-.tan{ color: var(--hide-tan); }
-.center{ text-align:center; }
-.mt-0{ margin-top:0; }
-.divider{ height:1px; background: var(--line); border:none; margin: 60px 0; }
-.badge-row{ display:flex; flex-wrap:wrap; gap:14px; }
-.badge{
-  font-family: var(--mono); font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase;
-  border:1px solid var(--line-strong); padding:8px 14px; color: var(--bone-dim);
-  display:inline-flex; align-items:center; gap:8px;
+@media (max-width: 860px) {
+  .ecosystem-grid { grid-template-columns: 1fr; }
 }
-.badge::before{ content:""; width:6px; height:6px; background: var(--hide-tan); border-radius:50%; }
 
-.tiers{ display:grid; grid-template-columns: repeat(4,1fr); gap:2px; background: var(--line); }
-@media (max-width:900px){ .tiers{ grid-template-columns: repeat(2,1fr);} }
-.tier{ background: var(--black); padding: 30px 22px; text-align:center; }
-.tier.active{ background: var(--oxblood); }
-.tier .qty{ font-family: var(--display); font-size:1.9rem; color: var(--hide-tan); }
-.tier.active .qty{ color: var(--bone); }
-.tier .note{ font-family: var(--mono); font-size:0.68rem; text-transform:uppercase; color: var(--bone-dim); margin-top:6px; }
-.tier.active .note{ color: rgba(237,230,216,0.75); }
-
-
-/* ---------- language switcher ---------- */
-.lang-switch{ display:flex; gap:2px; font-family: var(--mono); font-size:0.68rem; letter-spacing:0.05em; }
-.lang-switch button{
-  background:transparent; border:1px solid var(--line); color: var(--bone-dim);
-  padding: 6px 8px; cursor:pointer; text-transform:uppercase; transition: all .2s ease;
+.ecosystem-node {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 14px;
+  border-left: 2px solid var(--line);
+  transition: all .2s ease;
 }
-.lang-switch button:hover{ border-color: var(--hide-tan); color: var(--hide-tan); }
-.lang-switch button.active{ background: var(--hide-tan); border-color: var(--hide-tan); color: var(--black); }
-@media (max-width: 720px){ .lang-switch{ display:none; } }
-</style>
+.ecosystem-node:hover {
+  border-left-color: var(--amber);
+  background: rgba(229, 169, 60, 0.03);
+}
+.ecosystem-node .node-url {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ecosystem-node .node-role {
+  font-size: 0.76rem;
+  color: var(--bone-dim);
+}
 
-<style>
-  /* ---------- AI Buyer Match ---------- */
-  .ai-matcher{ border:1px solid var(--line-strong); padding:40px; background: var(--charcoal); }
-  .ai-matcher-form{ display:grid; grid-template-columns: 1fr 1fr 1fr auto; gap:16px; margin-top:24px; align-items:end; }
-  @media (max-width:800px){ .ai-matcher-form{ grid-template-columns: 1fr 1fr; } }
-  @media (max-width:480px){ .ai-matcher-form{ grid-template-columns: 1fr; } }
-  .ai-matcher-form .field label{ font-family:var(--mono); font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; color: var(--bone-dim); display:block; margin-bottom:8px; }
-  .ai-matcher-form input{ width:100%; background: var(--charcoal-2); border:1px solid var(--line-strong); color: var(--bone); padding:12px 14px; font-family: var(--body); }
-  .ai-matcher-result{ margin-top:24px; }
-  .ai-matcher-card{ border-left:2px solid var(--hide-tan); padding: 6px 0 6px 18px; }
-  .ai-matcher-card strong{ font-family: var(--display); text-transform:uppercase; font-size:1.2rem; color: var(--hide-tan); }
+footer.site {
+  background: #090909;
+  padding: 64px 0 36px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 48px;
+}
+@media (max-width: 960px) {
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px) {
+  .footer-top { grid-template-columns: 1fr; }
+}
+.footer-top h4 {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 18px;
+}
+.footer-top ul {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.footer-top ul a {
+  color: var(--bone-dim);
+  font-size: 0.88rem;
+  transition: color .2s ease;
+}
+.footer-top ul a:hover { color: var(--bone); }
 
-  /* ---------- AI Chat Widget ---------- */
-  .ai-chat-launcher{
-    position:fixed; bottom:24px; right:24px; z-index:800; width:56px; height:56px; border-radius:50%;
-    background: var(--oxblood); border:1px solid var(--oxblood-br); color: var(--bone); cursor:pointer;
-    display:flex; align-items:center; justify-content:center; box-shadow: 0 6px 20px rgba(0,0,0,.4);
-  }
-  .ai-chat-launcher:hover{ background: var(--oxblood-br); }
-  .ai-chat-panel{
-    position:fixed; bottom:92px; right:24px; z-index:800; width:340px; max-width: calc(100vw - 32px);
-    max-height: 480px; background: var(--charcoal); border:1px solid var(--line-strong);
-    display:none; flex-direction:column; box-shadow: 0 12px 40px rgba(0,0,0,.5);
-  }
-  .ai-chat-panel.open{ display:flex; }
-  .ai-chat-head{
-    display:flex; justify-content:space-between; align-items:center; padding:14px 16px;
-    border-bottom:1px solid var(--line); font-family: var(--mono); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.08em;
-  }
-  .ai-chat-close{ background:none; border:none; color: var(--bone-dim); cursor:pointer; font-size:1rem; }
-  .ai-chat-messages{ flex:1; overflow-y:auto; padding:14px 16px; display:flex; flex-direction:column; gap:10px; min-height:180px; }
-  .ai-chat-msg{ font-size:0.86rem; line-height:1.4; padding:8px 12px; max-width:85%; }
-  .ai-chat-msg.user{ align-self:flex-end; background: var(--hide-tan); color: var(--black); }
-  .ai-chat-msg.assistant{ align-self:flex-start; background: var(--charcoal-2); color: var(--bone); }
-  .ai-chat-msg.thinking{ opacity:0.5; }
-  .ai-chat-form{ display:flex; border-top:1px solid var(--line); }
-  .ai-chat-form input{ flex:1; background:transparent; border:none; color: var(--bone); padding:12px 14px; font-family: var(--body); }
-  .ai-chat-form button{ background: var(--oxblood); border:none; color: var(--bone); padding:0 18px; cursor:pointer; font-family: var(--mono); font-size:0.72rem; text-transform:uppercase; }
-  .ai-chat-disclaimer{ font-size:0.68rem; color: var(--bone-dim); text-align:center; padding:6px 10px 10px; margin:0; }
+.footer-bottom {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--bone-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ==========================================================================
+   MODAL LIGHTBOX & RFQ DIALOGS
+   ========================================================================== */
+.rfq-modal-backdrop, .lightbox-backdrop {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(5, 5, 5, 0.88);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.rfq-modal-backdrop.open, .lightbox-backdrop.open { display: flex; }
+
+.rfq-modal-dialog {
+  background: var(--bg-surface);
+  border: 1px solid var(--line-amber);
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px;
+  position: relative;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 600px) {
+  .rfq-modal-dialog { padding: 24px 18px; }
+}
+
+.rfq-close, .lightbox-close {
+  position: absolute; top: 18px; right: 20px;
+  background: transparent; border: none;
+  color: var(--bone-dim);
+  font-size: 1.5rem; cursor: pointer;
+  padding: 6px;
+  line-height: 1;
+}
+.rfq-close:hover, .lightbox-close:hover { color: var(--amber); }
+
+.lightbox-dialog {
+  background: var(--bg-surface);
+  border: 1px solid var(--line-strong);
+  max-width: 920px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  box-shadow: 0 24px 70px rgba(0,0,0,.9);
+}
+@media (max-width: 768px) {
+  .lightbox-dialog { grid-template-columns: 1fr; }
+}
+.lightbox-media {
+  background: #000;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.lightbox-media img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  display: block;
+}
+.lightbox-info {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rfq-form {
+  display: flex; flex-direction: column; gap: 18px;
+  margin-top: 24px;
+}
+.rfq-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+@media (max-width: 580px) { .rfq-row { grid-template-columns: 1fr; } }
+
+.rfq-field label {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  display: block;
+  margin-bottom: 6px;
+}
+.rfq-field input, .rfq-field select, .rfq-field textarea {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--line-strong);
+  color: var(--bone);
+  padding: 12px 14px;
+  font-family: var(--body);
+  font-size: 0.92rem;
+}
+.rfq-field input:focus, .rfq-field select:focus, .rfq-field textarea:focus {
+  outline: none; border-color: var(--amber);
+}
+.rfq-success-card {
+  display: none;
+  text-align: center;
+  padding: 24px 0;
+}
+.rfq-success-card.show { display: block; }
 </style>
 </head>
 <body>
 
-<!-- ============ SVG SPRITE ============ -->
-<svg width="0" height="0" style="position:absolute">
-  <defs>
-    <symbol id="icon-jacket" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
-      <path d="M14,16 L32,25 L50,16 L50,21 L62,27 L62,45 L48,39 L48,58 L16,58 L16,39 L2,45 L2,27 L14,21 Z"/>
-      <path d="M32,25 L32,58" stroke-dasharray="1.5 3"/>
-    </symbol>
-    <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-      <path d="M5 19 L19 5 M9 5 H19 V15"/>
-    </symbol>
-  </defs>
-</svg>
-
-<!-- ============ HEADER ============ -->
+<!-- ============ HEADER & TOP TICKER ============ -->
 <header class="site">
   <div class="marquee-bar">
     <div class="marquee-track">
-      <span class="marquee-item" data-i18n="topbar.brand_line"></span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.moq_line"></span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.brand_line"></span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.moq_line"></span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.brand_line"></span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.moq_line"></span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.brand_line"></span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.moq_line"></span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.brand_line">MADE IN BANGLADESH • MOQ FROM 50 UNITS</span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.moq_line">SAMPLE TO BULK TURNAROUND 14-21 DAYS • DIRECT TANNERY INTEGRATION</span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.brand_line">MADE IN BANGLADESH • MOQ FROM 50 UNITS</span><span class="marquee-sep">◆</span>
+      <span class="marquee-item" data-i18n="topbar.moq_line">SAMPLE TO BULK TURNAROUND 14-21 DAYS • DIRECT TANNERY INTEGRATION</span><span class="marquee-sep">◆</span>
     </div>
   </div>
+
   <div class="container navbar">
-    <a href="index.html" class="logo">RAW<span class="x">x</span><small>Leather Jacket Div.</small></a>
+    <a href="index.html" class="logo">
+      RAW<span class="x">x</span><small>Leather Jacket Div. · Sourcing Node</small>
+    </a>
+
     <nav class="navlinks">
-      <a href="index.html" class="active" data-i18n="nav.home"></a>
-      <a href="catalog.html" data-i18n="nav.catalog"></a>
-      <a href="custom-orders.html" data-i18n="nav.custom"></a>
-      <a href="about.html" data-i18n="nav.about"></a>
-      <a href="contact.html" data-i18n="nav.contact"></a>
-      <a href="blog.html" data-i18n="nav.journal"></a>
+      <a href="index.html" class="active" data-i18n="nav.home">HOME</a>
+      <a href="catalog.html" data-i18n="nav.catalog">CATALOG</a>
+      <a href="custom-orders.html" data-i18n="nav.custom">CUSTOM / OEM SPEC</a>
+      <a href="#how-we-work" data-i18n="nav.how_we_work">HOW WE WORK</a>
+      <a href="#detail-vault" data-i18n="nav.lookbook">DETAIL VAULT</a>
+      <a href="blog.html" data-i18n="nav.journal">JOURNAL</a>
     </nav>
+
     <div class="nav-actions">
       <div class="lang-switch" data-lang-mount></div>
-      <a href="contact.html" class="btn btn-tan">RFQ</a>
-      <button class="burger">MENU</button>
+      <button type="button" class="btn btn-secondary-spec" id="headerRfqBtn" data-open-rfq data-i18n="nav.cta_quote">
+        REQUEST TECH PACK / SAMPLE
+      </button>
+      <a href="https://b2b.handsandhead.com/?source=jacket_showroom" target="_blank" rel="noopener noreferrer" class="btn btn-portal" data-i18n="nav.portal">
+        ENTER B2B PORTAL ↗
+      </a>
+      <button class="burger" aria-label="Toggle Navigation">MENU</button>
     </div>
   </div>
 </header>
 
-<!-- ============ HERO SLIDER ============ -->
-<!-- To add more slides: duplicate a .hero-slide block inside .hero-slider-track. -->
-<section class="hero-slider" id="heroSlider" data-count="4">
+<!-- ============ HERO SLIDER (Previous Multi-Slide State with Text & Photos Restored) ============ -->
+<section class="hero-slider" id="heroSlider" data-count="7">
   <div class="hero-slider-track">
 
-    <!-- SLIDE 1 -->
-    <div class="hero-slide hero" style="border-bottom:none;">
+    <!-- SLIDE 1: PRIMARY TYPOGRAPHY & LIVE TELEMETRY -->
+    <div class="hero-slide hero-slide-primary">
       <div class="container hero-grid">
-        <div>
-          <span class="eyebrow" data-i18n="hero.eyebrow">B2B Leather Manufacturer</span>
-          <h1 style="margin-top:18px;"><span data-i18n="hero.title_line1">Full-Grain Leather.</span><br><span data-i18n="hero.title_line2">Jackets, Built To</span><br><span class="tan" data-i18n="hero.title_line3">Your Spec.</span></h1>
-          <div class="hero-tagline">
-            <p data-i18n="hero.tagline">Wholesale, private label &amp; OEM leather jackets — full-grain hides, in-house cut &amp; stitch, MOQ from 50 units.</p>
+        <div class="hero-main">
+          <span class="eyebrow" data-i18n="hero.eyebrow">B2B Leather Outerwear · Dhaka Facility</span>
+          <h1>
+            DIRECT TANNERY SOURCING.<br>
+            IN-HOUSE CUT &amp; SEW.<br>
+            <span class="amber">ZERO MIDDLEMEN.</span>
+          </h1>
+          <p class="hero-copy" data-i18n="hero.tagline">
+            RAWx Leather Jacket Division operates as our dedicated high-precision outerwear manufacturing node in Dhaka, Bangladesh. Wholesale, private label &amp; OEM leather jackets — full-grain hides, in-house cut &amp; stitch, MOQ from 50 units.
+          </p>
+          <div class="hero-cta-cluster">
+            <a href="https://b2b.handsandhead.com/?source=jacket_showroom_hero" target="_blank" rel="noopener noreferrer" class="btn btn-portal" style="padding:15px 28px; font-size:0.84rem;">
+              ENTER B2B PORTAL ↗
+            </a>
+            <a href="#estimator" class="btn">
+              LAUNCH ESTIMATOR ↓
+            </a>
+            <button type="button" class="btn btn-secondary-spec" data-open-rfq>
+              REQUEST TECH PACK / SAMPLE
+            </button>
           </div>
-          <div class="hero-ctas">
-            <a href="contact.html" class="btn btn-solid">RFQ</a>
-            <a href="catalog.html" class="btn" data-i18n="hero.cta_catalog">View Catalog</a>
-          </div>
-          <div class="hero-stats">
-            <div><div class="num" data-i18n="hero.stat1_num">120+</div><div class="lbl" data-i18n="hero.stat1_lbl">Wholesale Clients, 22 Countries</div></div>
-            <div><div class="num" data-i18n="hero.stat2_num">50</div><div class="lbl" data-i18n="hero.stat2_lbl">Unit Minimum Order</div></div>
-            <div><div class="num" data-i18n="hero.stat3_num">18–25</div><div class="lbl" data-i18n="hero.stat3_lbl">Days, Sample To Bulk</div></div>
+          <div class="hero-telemetry">
+            <div class="telemetry-item">
+              <div class="val" data-i18n="hero.stat2_num">50</div>
+              <div class="lbl">Unit Minimum Order</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="val">7–10</div>
+              <div class="lbl">Days Sample Turnaround</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="val" data-i18n="hero.stat3_num">14–21</div>
+              <div class="lbl">Days Bulk FOB Delivery</div>
+            </div>
+            <div class="telemetry-item">
+              <div class="val">1.1–1.3</div>
+              <div class="lbl">MM Full-Grain Grade A</div>
+            </div>
           </div>
         </div>
-        <div class="spec-tag hero-spec-tag">
-          <div class="row"><span>Ticket No.</span><b>RXL-2026-0114</b></div>
-          <div class="row"><span>Material</span><b>Full-Grain Cowhide</b></div>
-          <div class="row"><span>Weight</span><b>1.0–1.2mm</b></div>
-          <div class="row"><span>Origin</span><b>Dhaka, BD</b></div>
-          <div class="row"><span>Order Type</span><b>Private Label / OEM</b></div>
+
+        <!-- Spec Ticket -->
+        <div class="spec-ticket">
+          <div class="spec-ticket-head">
+            <span class="ticket-code">WORK-ORDER // RXL-2026-DHAKA</span>
+            <span class="ticket-stamp">PROD-READY</span>
+          </div>
+          <div class="spec-ticket-rows">
+            <div class="spec-ticket-row">
+              <span>FACILITY</span>
+              <strong>Savar &amp; Tejgaon Nodes, Dhaka</strong>
+            </div>
+            <div class="spec-ticket-row">
+              <span>HIDE PROVENANCE</span>
+              <strong>Vegetable / Chrome-Free Bull &amp; Cowhide</strong>
+            </div>
+            <div class="spec-ticket-row">
+              <span>HARDWARE BENCH</span>
+              <strong>YKK Excella #10 / 316L Stainless Steel</strong>
+            </div>
+            <div class="spec-ticket-row">
+              <span>QUALITY GATE</span>
+              <strong>Triple-Point Tolerance ±1.5mm</strong>
+            </div>
+            <div class="spec-ticket-row">
+              <span>PRIMARY FUNNEL</span>
+              <strong>b2b.handsandhead.com (Direct EDI)</strong>
+            </div>
+          </div>
+          <div class="spec-ticket-footer">
+            <span style="font-family:var(--mono); font-size:0.68rem; color:var(--amber);">● LINE STATUS: ONLINE</span>
+            <a href="https://b2b.handsandhead.com/rfq?source=jacket_showroom_ticket" target="_blank" rel="noopener noreferrer" class="btn btn-secondary-spec" style="padding:7px 12px; font-size:0.68rem;">
+              VIEW B2B PIPELINE ↗
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <!-- /SLIDE 1 -->
 
-    <!-- SLIDE 2 — SHEARLING & AVIATOR -->
-    <div class="hero-slide hero-slide-photo" style="background-image:url('assets/62654.jpg');">
+    <!-- SLIDE 2: THE ANCHOR JACKET — DOUBLE RIDER & CAFE RACER -->
+    <div class="hero-slide hero-slide-photo" style="background-image:url('assets/62550.jpg');">
       <div class="container">
         <div class="hero-slide-content">
-          <span class="eyebrow">Style RXL-06</span>
-          <h2>Shearling &amp; Aviator<br><span class="tan">Built For Winter</span></h2>
-          <p>Genuine shearling linings, oversized collars, B-3 bomber silhouettes — private-label ready from 30 units.</p>
+          <span class="eyebrow">Style RXL-01 // The Anchor Biker</span>
+          <h2>Double Rider &amp; Moto<br><span class="tan">Full-Grain Cowhide</span></h2>
+          <p>Heavyweight 1.3mm pebbled hides, asymmetric YKK Excella #10 diagonal zipper, snap coin pockets, action-back pleats, and full roller-buckle belt. Sample to bulk in 14–21 days.</p>
           <div class="hero-ctas">
-            <a href="catalog.html#shearling" class="btn btn-solid">View Shearling Range</a>
-            <a href="contact.html" class="btn">RFQ</a>
+            <a href="https://b2b.handsandhead.com/rfq?source=jacket_anchor_slide" target="_blank" rel="noopener noreferrer" class="btn btn-portal">Launch Order on B2B Portal ↗</a>
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Classic Asymmetric Double Rider">Request Tech Pack / Sample</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- /SLIDE 2 -->
 
-    <!-- SLIDE 3 — TRENCH & COATS -->
+    <!-- SLIDE 3: TRENCH & DUSTER COATS -->
     <div class="hero-slide hero-slide-photo" style="background-image:url('assets/62655.jpg');">
       <div class="container">
         <div class="hero-slide-content">
-          <span class="eyebrow">Style RXL-05</span>
-          <h2>Trench &amp; Coats<br><span class="tan">Cut To Order</span></h2>
-          <p>Belted trenches, dusters &amp; overcoats in full-grain cowhide — private-label ready from 50 units.</p>
+          <span class="eyebrow">Style RXL-05 // Architectural Tailoring</span>
+          <h2>Trench &amp; Duster Coats<br><span class="tan">Cut To Exact Tolerance</span></h2>
+          <p>Belted leather trenches, drop-shoulder dusters &amp; car coats in 1.2mm vegetable-tanned cowhide with storm flaps, covered buckles, and forged zinc-alloy hardware.</p>
           <div class="hero-ctas">
-            <a href="catalog.html#trench" class="btn btn-solid">View Trench &amp; Coats</a>
-            <a href="contact.html" class="btn">RFQ</a>
+            <a href="https://b2b.handsandhead.com/rfq?source=jacket_trench_slide" target="_blank" rel="noopener noreferrer" class="btn btn-portal">Launch Order on B2B Portal ↗</a>
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Belted Leather Trench Coat">Request Tech Pack / Sample</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- /SLIDE 3 -->
 
-    <!-- SLIDE 4 — FACTORY / CRAFT -->
+    <!-- SLIDE 4: SHEARLING & FLIGHT AVIATORS -->
+    <div class="hero-slide hero-slide-photo" style="background-image:url('assets/62654.jpg');">
+      <div class="container">
+        <div class="hero-slide-content">
+          <span class="eyebrow">Style RXL-06 // Heavy Thermal Outerwear</span>
+          <h2>Shearling &amp; Aviator<br><span class="tan">Built For Sub-Zero</span></h2>
+          <p>Genuine &amp; dense shearling linings, heavy brass collar buckles, double-faced sheepskin, and B-3 bomber silhouettes — private-label ready from 30 units.</p>
+          <div class="hero-ctas">
+            <a href="https://b2b.handsandhead.com/rfq?source=jacket_shearling_slide" target="_blank" rel="noopener noreferrer" class="btn btn-portal">Launch Order on B2B Portal ↗</a>
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Aviator Shearling Jacket">Request Tech Pack / Sample</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: LEATHER VESTS & UTILITY OVERSHIRTS -->
+    <div class="hero-slide hero-slide-photo" style="background-image:url('assets/62558.jpg');">
+      <div class="container">
+        <div class="hero-slide-content">
+          <span class="eyebrow">Style RXL-04 // Modular Outerwear</span>
+          <h2>Vests &amp; Utility Overshirts<br><span class="tan">Engineered Layering</span></h2>
+          <p>Tactical bellows pockets, raw hand-burnished edges, reinforced snap plackets, and oil-tanned pull-up hides tailored for contemporary streetwear and workwear brands.</p>
+          <div class="hero-ctas">
+            <a href="https://b2b.handsandhead.com/rfq?source=jacket_vest_slide" target="_blank" rel="noopener noreferrer" class="btn btn-portal">Launch Order on B2B Portal ↗</a>
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Utility Multi-Pocket Tactical Vest">Request Tech Pack / Sample</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6: BY-PRODUCT LINE: HIDE & STEEL ACCESSORIES -->
+    <div class="hero-slide hero-slide-photo" style="background-image:url('assets/62556.jpg');">
+      <div class="container">
+        <div class="hero-slide-content">
+          <span class="eyebrow">Zero-Waste By-Product Line</span>
+          <h2>Hide &amp; Steel Hardware<br><span class="tan">316L Stainless Clasps</span></h2>
+          <p>Braided leather cuffs and utility accessories manufactured from premium jacket production off-cuts, paired with custom CNC 316L stainless steel magnetic clasps.</p>
+          <div class="hero-ctas">
+            <a href="https://b2b.handsandhead.com/rfq?source=jacket_accessory_slide" target="_blank" rel="noopener noreferrer" class="btn btn-portal">Launch Order on B2B Portal ↗</a>
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Classic Asymmetric Biker Vest">Request Tech Pack / Sample</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7: FACTORY FLOOR & CRAFT PHOTO SLIDE -->
     <div class="hero-slide hero-slide-photo" style="background-image:url('assets/62656.jpg');">
       <div class="container">
         <div class="hero-slide-content">
-          <span class="eyebrow">Made In Dhaka</span>
-          <h2>Cut &amp; Stitched<br><span class="tan">In-House</span></h2>
-          <p>From tech pack to finished jacket — pattern cutting, leather sourcing and stitching under one roof.</p>
+          <span class="eyebrow">Direct Dhaka Facility</span>
+          <h2>Cut &amp; Stitched<br><span class="tan">100% In-House</span></h2>
+          <p>From CAD tech pack grading to finished garment — raw hide selection, precision skiving, and bonded nylon stitching under one roof with zero subcontracting.</p>
           <div class="hero-ctas">
-            <a href="about.html" class="btn btn-solid">Our Factory</a>
-            <a href="custom-orders.html" class="btn">Custom / OEM</a>
+            <a href="#how-we-work" class="btn btn-solid">Our Production Workflow</a>
+            <a href="https://b2b.handsandhead.com/?source=jacket_floor_slide" target="_blank" rel="noopener noreferrer" class="btn btn-portal">Enter B2B Portal ↗</a>
           </div>
         </div>
       </div>
     </div>
-    <!-- /SLIDE 4 -->
 
   </div>
 
@@ -727,275 +1355,968 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
   <div class="hero-slider-dots"></div>
 </section>
 
-<div class="marquee">
-  <div class="marquee-track">
-    <span>BIKER</span> JACKETS <span>BOMBER</span> JACKETS <span>VARSITY</span> JACKETS <span>VESTS</span> &amp; GILETS <span>TRENCH</span> &amp; COATS <span>SHEARLING</span> &amp; FUR <span>PRIVATE LABEL</span> READY
-    <span>BIKER</span> JACKETS <span>BOMBER</span> JACKETS <span>VARSITY</span> JACKETS <span>VESTS</span> &amp; GILETS <span>TRENCH</span> &amp; COATS <span>SHEARLING</span> &amp; FUR <span>PRIVATE LABEL</span> READY
+<!-- ============ 22-PHOTO ARCHIVAL SPECIFICATION & BENCHWORK VAULT ============ -->
+<section id="detail-vault" class="vault-section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Inspection Archive · All 22 Factory Photos</span>
+        <h2 style="margin-top:12px;">Archival Spec &amp; Benchwork Vault.</h2>
+      </div>
+      <p>
+        Every silhouette, close-up grain detail, and benchwork stage from our Dhaka facility. Click any photo to inspect high-resolution textures, hardware finishes, and stitch tolerances.
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="vault-filter-bar">
+      <button type="button" class="vault-filter-btn active" data-filter="all">All Details (22)</button>
+      <button type="button" class="vault-filter-btn" data-filter="biker">Bikers &amp; Racers (4)</button>
+      <button type="button" class="vault-filter-btn" data-filter="bomber">Bombers &amp; Varsities (5)</button>
+      <button type="button" class="vault-filter-btn" data-filter="vest">Vests &amp; Utility (3)</button>
+      <button type="button" class="vault-filter-btn" data-filter="trench">Trenches &amp; Overcoats (3)</button>
+      <button type="button" class="vault-filter-btn" data-filter="shearling">Shearling &amp; Aviators (3)</button>
+      <button type="button" class="vault-filter-btn" data-filter="benchwork">Factory &amp; Benchwork (4)</button>
+    </div>
+
+    <!-- Vault Grid (All 22 Authentic Project Photos) -->
+    <div class="vault-grid" id="vaultGrid">
+
+      <!-- ITEM 1: assets/62550.jpg -->
+      <div class="vault-card" data-cat="biker" data-title="Classic Asymmetric Double Rider Biker" data-img="assets/62550.jpg" data-fallback="assets/62550.jpg" data-desc="Heavy 1.3mm full-grain cowhide with pebbled grain, diagonal YKK Excella #10 zipper, wide snap-down lapels, zippered slash chest pocket, snap coin pocket, and full waist belt with heavy roller buckle." data-spec="1.3mm Full-Grain Cowhide | YKK Excella #10 | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">BIKERS &amp; RACERS</span>
+          <img src="assets/62550.jpg" alt="Classic Asymmetric Double Rider Biker" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-01 // ANCHOR BIKER</span>
+          <h3 class="vault-title">Classic Double Rider Biker</h3>
+          <p class="vault-desc">Heavy 1.3mm full-grain cowhide with pebbled grain, diagonal YKK Excella #10 zipper, wide snap lapels, and full roller-buckle waist belt.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.3mm Full-Grain Cowhide</strong></div>
+            <div><span>HARDWARE</span><strong>YKK Excella #10 Nickel</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Classic Asymmetric Double Rider">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62550" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 2: assets/62551.jpg -->
+      <div class="vault-card" data-cat="biker" data-title="Women's Cropped Moto & Varsity Hybrid" data-img="assets/62551.jpg" data-fallback="assets/62551.jpg" data-desc="1.1mm supple semi-aniline lambskin cut in a tailored cropped high-waist silhouette with contoured princess paneling, antique silver hardware, and tonal satin interior lining." data-spec="1.1mm Aniline Lambskin | Princess Seaming | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">BIKERS &amp; RACERS</span>
+          <img src="assets/62551.jpg" alt="Women's Cropped Moto & Varsity Hybrid" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-02 // CROPPED MOTO</span>
+          <h3 class="vault-title">Women's Cropped Moto</h3>
+          <p class="vault-desc">1.1mm supple lambskin in a tailored cropped high-waist cut with princess seams, antique silver hardware, and tonal satin lining.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.1mm Semi-Aniline Lambskin</strong></div>
+            <div><span>TAILORING</span><strong>Contoured Princess Seams</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Women's Cropped Moto">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62551" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 3: assets/62552.jpg -->
+      <div class="vault-card" data-cat="biker" data-title="Minimalist Stand-Collar Cafe Racer" data-img="assets/62552.jpg" data-fallback="assets/62552.jpg" data-desc="Streamlined 1.1mm calfskin with mandarin snap-tab collar, clean vertical chest welt pocket, articulated rider sleeve seams, and concealed zippered wrist expanders." data-spec="1.1mm Calfskin | Mandarin Snap Tab | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">BIKERS &amp; RACERS</span>
+          <img src="assets/62552.jpg" alt="Minimalist Stand-Collar Cafe Racer" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-03 // CAFE RACER</span>
+          <h3 class="vault-title">Stand-Collar Cafe Racer</h3>
+          <p class="vault-desc">Clean lines in 1.1mm calfskin with mandarin snap-tab collar, single chest welt pocket, and articulated sleeve seams.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.1mm Drum-Dyed Calfskin</strong></div>
+            <div><span>COLLAR</span><strong>Mandarin Collar Snap-Tab</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Minimalist Stand-Collar Cafe Racer">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62552" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 4: assets/62553.jpg -->
+      <div class="vault-card" data-cat="bomber" data-title="Hooded Leather Bomber Hybrid" data-img="assets/62553.jpg" data-fallback="assets/62553.jpg" data-desc="Detachable 380gsm charcoal cotton fleece hood with drawstrings, storm flap placket, dual horizontal chest zip pockets, and heavy double-knit ribbed cuffs and waistband." data-spec="1.1mm Nappa Lambskin | 380gsm Fleece Insert | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">BOMBERS &amp; VARSITIES</span>
+          <img src="assets/62553.jpg" alt="Hooded Leather Bomber Hybrid" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-04 // HOODED BOMBER</span>
+          <h3 class="vault-title">Hooded Leather Bomber</h3>
+          <p class="vault-desc">Detachable 380gsm fleece hood, storm flap placket, dual chest zip pockets, and heavy rib knit cuffs in 1.1mm nappa leather.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.1mm Nappa Lambskin</strong></div>
+            <div><span>HOOD INSERT</span><strong>Detachable 380gsm Fleece</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Hooded Leather Bomber">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62553" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 5: assets/62554.jpg -->
+      <div class="vault-card" data-cat="bomber" data-title="Classic Melton Wool & Leather Varsity" data-img="assets/62554.jpg" data-fallback="assets/62554.jpg" data-desc="24oz Melton wool body framed with 1.2mm drum-dyed cowhide leather sleeves, striped heavy rib trims, matte enamel snaps, and chainstitch embroidery-ready back panel." data-spec="24oz Wool & 1.2mm Cowhide | Enamel Snaps | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">BOMBERS &amp; VARSITIES</span>
+          <img src="assets/62554.jpg" alt="Classic Melton Wool & Leather Varsity" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-05 // VARSITY HYBRID</span>
+          <h3 class="vault-title">Wool &amp; Leather Varsity</h3>
+          <p class="vault-desc">24oz Melton wool body paired with 1.2mm cowhide leather sleeves, striped rib knit trims, and custom chainstitch embroidery options.</p>
+          <div class="vault-specs-strip">
+            <div><span>MATERIALS</span><strong>24oz Wool + 1.2mm Cowhide</strong></div>
+            <div><span>CLOSURE</span><strong>Heavy Matte Enamel Snaps</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Classic Melton Wool & Leather Varsity">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62554" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 6: assets/62555.jpg -->
+      <div class="vault-card" data-cat="bomber" data-title="MA-1 Industrial Flight Bomber" data-img="assets/62555.jpg" data-fallback="assets/62555.jpg" data-desc="Drop-shoulder oversized flight silhouette in 1.2mm oil-tanned calfskin, utility sleeve pen & zip pocket, storm flap center zipper, and high-tenacity knit collar and cuffs." data-spec="1.2mm Oil-Tanned Calfskin | Sleeve Utility Zip | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">BOMBERS &amp; VARSITIES</span>
+          <img src="assets/62555.jpg" alt="MA-1 Industrial Flight Bomber" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-06 // MA-1 BOMBER</span>
+          <h3 class="vault-title">MA-1 Flight Bomber</h3>
+          <p class="vault-desc">Drop-shoulder volume in 1.2mm oil-tanned calfskin with left sleeve utility pen pocket, heavy #10 center zip, and double-knit trims.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.2mm Oil-Tanned Calfskin</strong></div>
+            <div><span>POCKETING</span><strong>MA-1 Sleeve Utility Pocket</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="MA-1 Flight Bomber">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62555" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 7: assets/62556.jpg -->
+      <div class="vault-card" data-cat="vest" data-title="Classic Asymmetric Biker Vest" data-img="assets/62556.jpg" data-fallback="assets/62556.jpg" data-desc="Heavy 1.3mm milled cowhide cut into a classic sleeveless rider profile with asymmetric front zip, snap lapels, and adjustable side leather thong lacing for layering." data-spec="1.3mm Milled Cowhide | Side Laced Gussets | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">VESTS &amp; UTILITY</span>
+          <img src="assets/62556.jpg" alt="Classic Asymmetric Biker Vest" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-07 // BIKER VEST</span>
+          <h3 class="vault-title">Laced Biker Vest</h3>
+          <p class="vault-desc">1.3mm milled cowhide sleeveless rider silhouette with cross-zip, snap collar, and raw leather side-laced expansion gussets.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.3mm Milled Cowhide</strong></div>
+            <div><span>EXPANSION</span><strong>Side Leather Lacing Gusset</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Classic Asymmetric Biker Vest">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62556" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 8: assets/62557.jpg -->
+      <div class="vault-card" data-cat="trench" data-title="Belted Leather Trench Coat" data-img="assets/62557.jpg" data-fallback="assets/62557.jpg" data-desc="Full-length 1.2mm vegetable-tanned cowhide with storm shoulder gun-flap, double-breasted 8-button closure, removable leather waist belt with covered buckle, and deep walking vent." data-spec="1.2mm Veg-Tan Cowhide | Double Breasted | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">TRENCHES &amp; OVERCOATS</span>
+          <img src="assets/62557.jpg" alt="Belted Leather Trench Coat" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-08 // TRENCH COAT</span>
+          <h3 class="vault-title">Belted Leather Trench</h3>
+          <p class="vault-desc">Full-length 1.2mm veg-tan cowhide with storm flap, double-breasted button front, removable leather waist belt, and deep vent.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.2mm Vegetable-Tanned Cowhide</strong></div>
+            <div><span>CLOSURE</span><strong>Double-Breasted 8-Button</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Belted Leather Trench Coat">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62557" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 9: assets/62558.jpg -->
+      <div class="vault-card" data-cat="vest" data-title="Utility Multi-Pocket Tactical Vest" data-img="assets/62558.jpg" data-fallback="assets/62558.jpg" data-desc="Engineered 1.2mm pull-up leather vest featuring 4 exterior 3D cargo bellows pockets, concealed internal pistol welt pockets, reinforced shoulder yokes, and #8 heavy brass zip." data-spec="1.2mm Pull-Up Hide | 4 Bellows Pockets | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">VESTS &amp; UTILITY</span>
+          <img src="assets/62558.jpg" alt="Utility Multi-Pocket Tactical Vest" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-09 // TACTICAL VEST</span>
+          <h3 class="vault-title">Multi-Pocket Tactical Vest</h3>
+          <p class="vault-desc">1.2mm pull-up cowhide with 4 exterior cargo bellows pockets, internal welt pockets, reinforced yokes, and #8 heavy brass zip.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.2mm Oil-Tanned Pull-Up</strong></div>
+            <div><span>POCKETS</span><strong>4 Exterior Cargo Bellows</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Utility Multi-Pocket Tactical Vest">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62558" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 10: assets/62559.jpg -->
+      <div class="vault-card" data-cat="trench" data-title="Double-Breasted Duster Overcoat" data-img="assets/62559.jpg" data-fallback="assets/62559.jpg" data-desc="1.3mm milled cowhide engineered for cold-weather outerwear, broad peak lapels, tailored exterior ticket welt, horn buttons, deep back pleat, and insulated viscose lining." data-spec="1.3mm Milled Leather | Tailored Peak Lapels | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">TRENCHES &amp; OVERCOATS</span>
+          <img src="assets/62559.jpg" alt="Double-Breasted Duster Overcoat" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-10 // OVERCOAT</span>
+          <h3 class="vault-title">Double-Breasted Overcoat</h3>
+          <p class="vault-desc">1.3mm milled cowhide cold-weather overcoat with broad peak lapels, exterior ticket pocket, horn buttons, and deep back vent.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.3mm Milled Cowhide</strong></div>
+            <div><span>LAPEL</span><strong>Broad Tailored Peak Lapel</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Double-Breasted Overcoat">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62559" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 11: assets/62560.jpg -->
+      <div class="vault-card" data-cat="biker" data-title="Diamond Quilted Shoulder Moto Rider" data-img="assets/62560.jpg" data-fallback="assets/62560.jpg" data-desc="High-density diamond foam quilted padding across shoulders and elbows, articulated sleeves, snap mandarin collar, and twin horizontal zip vents on 1.2mm full-grain cowhide." data-spec="1.2mm Full-Grain Cowhide | Diamond Quilt | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">BIKERS &amp; RACERS</span>
+          <img src="assets/62560.jpg" alt="Diamond Quilted Shoulder Moto Rider" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-11 // QUILTED MOTO</span>
+          <h3 class="vault-title">Diamond Quilted Moto</h3>
+          <p class="vault-desc">1.2mm full-grain cowhide with high-density diamond padded quilting on shoulders and elbows, articulated racer sleeves, and zip vents.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.2mm Full-Grain Cowhide</strong></div>
+            <div><span>PADDING</span><strong>Diamond Topstitch High-Density</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Diamond Quilted Shoulder Moto Rider">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62560" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 12: assets/62561.jpg -->
+      <div class="vault-card" data-cat="bomber" data-title="Midnight Split Suede Trucker Jacket" data-img="assets/62561.jpg" data-fallback="assets/62561.jpg" data-desc="0.9mm velvety goatskin split suede in deep midnight navy, Type III point collar, dual buttoned chest flap pockets, antique brass shank buttons, and waist cinch tabs." data-spec="0.9mm Goatskin Suede | Metal Shank Buttons | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">BOMBERS &amp; VARSITIES</span>
+          <img src="assets/62561.jpg" alt="Midnight Split Suede Trucker Jacket" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-12 // SUEDE TRUCKER</span>
+          <h3 class="vault-title">Midnight Suede Trucker</h3>
+          <p class="vault-desc">0.9mm velvety goatskin split suede in deep navy with Type III point collar, dual flap chest pockets, and brass shank buttons.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>0.9mm Goatskin Split Suede</strong></div>
+            <div><span>HARDWARE</span><strong>Antique Brass Metal Shanks</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Midnight Split Suede Trucker Jacket">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62561" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 13: assets/62562.jpg -->
+      <div class="vault-card" data-cat="bomber" data-title="Full-Leather Minimalist Varsity Overshirt" data-img="assets/62562.jpg" data-fallback="assets/62562.jpg" data-desc="1.0mm supple nappa cowhide in a contemporary relaxed overshirt silhouette, matte tonal snap front, clean slash side pockets, and unlined interior for natural leather drape." data-spec="1.0mm Nappa Cowhide | Matte Snap Front | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">BOMBERS &amp; VARSITIES</span>
+          <img src="assets/62562.jpg" alt="Full-Leather Minimalist Varsity Overshirt" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-13 // VARSITY OVERSHIRT</span>
+          <h3 class="vault-title">Leather Varsity Overshirt</h3>
+          <p class="vault-desc">1.0mm supple nappa leather in a contemporary boxy drop-shoulder cut with tonal snap front, welt pockets, and unlined natural drape.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.0mm Nappa Cowhide</strong></div>
+            <div><span>CUT</span><strong>Relaxed Drop-Shoulder Overshirt</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Full-Leather Minimalist Varsity Overshirt">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62562" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 14: assets/62563.jpg -->
+      <div class="vault-card" data-cat="shearling" data-title="Aviator Shearling Jacket with Roller Buckles" data-img="assets/62563.jpg" data-fallback="assets/62563.jpg" data-desc="1.3mm distressed antique brown cowhide shell bonded with plush 15mm natural shearling collar, dual throat-latch roller buckle straps, storm front zip, and waist cinches." data-spec="1.3mm Cowhide & Shearling | Dual Collar Straps | 30 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">SHEARLING &amp; AVIATORS</span>
+          <img src="assets/62563.jpg" alt="Aviator Shearling Jacket with Roller Buckles" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-14 // SHEARLING AVIATOR</span>
+          <h3 class="vault-title">Aviator Shearling Jacket</h3>
+          <p class="vault-desc">1.3mm antique brown cowhide with dense 15mm genuine shearling collar, dual throat roller buckle straps, and heavy storm front zip.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE &amp; LINING</span><strong>1.3mm Hide + 15mm Shearling</strong></div>
+            <div><span>COLLAR</span><strong>Dual Roller Buckle Straps</strong></div>
+            <div><span>MOQ</span><strong>30 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Aviator Shearling Jacket">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62563" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 15: assets/62564.jpg -->
+      <div class="vault-card" data-cat="shearling" data-title="B-3 Arctic Double-Faced Flight Bomber" data-img="assets/62564.jpg" data-fallback="assets/62564.jpg" data-desc="Heavyweight genuine double-faced shearling sheepskin with natural exposed wool cuffs, collar and hem, dual heavy brass collar buckles, and taped leather structural seams." data-spec="Double-Faced Sheepskin | -20°C Thermal Rating | 30 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">SHEARLING &amp; AVIATORS</span>
+          <img src="assets/62564.jpg" alt="B-3 Arctic Double-Faced Flight Bomber" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-15 // B-3 FLIGHT BOMBER</span>
+          <h3 class="vault-title">B-3 Arctic Flight Bomber</h3>
+          <p class="vault-desc">Genuine double-faced shearling sheepskin with exposed wool trims, taped leather seams, and dual brass collar straps rated for sub-zero.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>Double-Faced Shearling Sheepskin</strong></div>
+            <div><span>THERMAL TIER</span><strong>Sub-Zero Arctic Rated (-20°C)</strong></div>
+            <div><span>MOQ</span><strong>30 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="B-3 Arctic Double-Faced Flight Bomber">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62564" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 16: assets/62640.jpg -->
+      <div class="vault-card" data-cat="vest" data-title="Buckled Trail Vest & Tactical Harness" data-img="assets/62640.jpg" data-fallback="assets/62640.jpg" data-desc="1.4mm heavy buffalo pull-up leather engineered with dual quick-release metal chest buckle straps, modular D-ring attachment points, and raw hand-beveled edge finish." data-spec="1.4mm Buffalo Pull-Up | Quick-Release Buckles | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">VESTS &amp; UTILITY</span>
+          <img src="assets/62640.jpg" alt="Buckled Trail Vest & Tactical Harness" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-16 // TRAIL VEST</span>
+          <h3 class="vault-title">Buckled Trail Vest</h3>
+          <p class="vault-desc">1.4mm heavy buffalo pull-up leather with dual metal chest buckle closures, modular D-rings, and hand-beveled raw edge finishing.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.4mm Buffalo Pull-Up Leather</strong></div>
+            <div><span>CLOSURE</span><strong>Quick-Release Metal Buckles</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Buckled Trail Vest">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62640" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 17: assets/62641.jpg -->
+      <div class="vault-card" data-cat="shearling" data-title="Buckle-Strap Shearling Flight Aviator" data-img="assets/62641.jpg" data-fallback="assets/62641.jpg" data-desc="1.3mm distressed oiled hide with contrasting deep cream shearling collar, double throat latches, heavy #10 antique brass zipper, and double needle load-bearing seams." data-spec="1.3mm Oiled Hide | Contrast Cream Shearling | 30 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">SHEARLING &amp; AVIATORS</span>
+          <img src="assets/62641.jpg" alt="Buckle-Strap Shearling Flight Aviator" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-17 // STRAP AVIATOR</span>
+          <h3 class="vault-title">Buckle-Strap Shearling Aviator</h3>
+          <p class="vault-desc">1.3mm distressed oiled hide featuring contrast cream shearling collar, dual throat latches, and heavy antique brass zipper.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.3mm Distressed Oiled Cowhide</strong></div>
+            <div><span>COLLAR</span><strong>Contrast Deep Cream Shearling</strong></div>
+            <div><span>MOQ</span><strong>30 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Buckle-Strap Shearling Flight Aviator">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62641" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 18: assets/62642.jpg -->
+      <div class="vault-card" data-cat="trench" data-title="Notch Lapel Car Coat & City Duster" data-img="assets/62642.jpg" data-fallback="assets/62642.jpg" data-desc="1.2mm semi-aniline black cowhide with tailored 3-button front stance, notched lapels, angled handwarmer welt pockets, internal breast pockets, and mid-thigh drape." data-spec="1.2mm Semi-Aniline Cowhide | 3-Button Stance | 50 Units MOQ">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">TRENCHES &amp; OVERCOATS</span>
+          <img src="assets/62642.jpg" alt="Notch Lapel Car Coat & City Duster" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-18 // CITY CAR COAT</span>
+          <h3 class="vault-title">Notch Lapel Car Coat</h3>
+          <p class="vault-desc">1.2mm semi-aniline black cowhide with tailored 3-button front stance, notched lapels, angled welt pockets, and mid-thigh silhouette.</p>
+          <div class="vault-specs-strip">
+            <div><span>HIDE GRADE</span><strong>1.2mm Semi-Aniline Cowhide</strong></div>
+            <div><span>CLOSURE</span><strong>Tailored 3-Button Front Stance</strong></div>
+            <div><span>MOQ</span><strong>50 Units / Style</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Notch Lapel Car Coat">SPEC THIS</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62642" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 19: assets/62653.jpg -->
+      <div class="vault-card" data-cat="benchwork" data-title="Master Tannery Hide Curation & Cutting Bench" data-img="assets/62653.jpg" data-fallback="assets/62653.jpg" data-desc="Direct bench inspection in our Dhaka cutting facility: manual grading of Grade A bull and cowhide hides, verifying fiber density, grain uniformity, and zero surface defect yield." data-spec="Grade A Tannery Selection | Zero-Defect Cutting | Dhaka Bench">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">FACTORY &amp; BENCHWORK</span>
+          <img src="assets/62653.jpg" alt="Master Tannery Hide Curation & Cutting Bench" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-19 // HIDE SELECTION</span>
+          <h3 class="vault-title">Tannery Hide Selection Bench</h3>
+          <p class="vault-desc">Direct inspection at our Dhaka cutting floor: manual grading of Grade A hides, verifying fiber density and grain uniformity before cutting.</p>
+          <div class="vault-specs-strip">
+            <div><span>PROCESS</span><strong>Grade A Tannery Sorting</strong></div>
+            <div><span>INSPECTION</span><strong>Fiber Density &amp; Zero Flake</strong></div>
+            <div><span>CAPACITY</span><strong>5,000+ Hides / Month</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Tannery Hide Selection Bench">SPEC BENCHWORK</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62653" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 20: assets/62654.jpg -->
+      <div class="vault-card" data-cat="benchwork" data-title="Sub-Zero Thermal Outerwear & Shearling Assembly" data-img="assets/62654.jpg" data-fallback="assets/62654.jpg" data-desc="Specialized outerwear bench: assembling heavy shearling collar units, multi-layer thermal interfacings, and high-tensile skived seam joins for sub-zero performance." data-spec="Shearling Craft Bench | Thermal Interfacings | Hand Skived">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">FACTORY &amp; BENCHWORK</span>
+          <img src="assets/62654.jpg" alt="Sub-Zero Thermal Outerwear & Shearling Assembly" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-20 // THERMAL BENCHWORK</span>
+          <h3 class="vault-title">Shearling Assembly Bench</h3>
+          <p class="vault-desc">Specialized thermal bench: skiving dense shearling collars, installing reinforced roller buckles, and multi-layer thermal interfacings.</p>
+          <div class="vault-specs-strip">
+            <div><span>PROCESS</span><strong>Shearling Edge Skiving &amp; Seaming</strong></div>
+            <div><span>HARDWARE</span><strong>Roller Buckles &amp; Throat Straps</strong></div>
+            <div><span>TOLERANCE</span><strong>±1.0mm Collar Alignment</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Shearling Assembly Bench">SPEC BENCHWORK</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62654" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 21: assets/62655.jpg -->
+      <div class="vault-card" data-cat="benchwork" data-title="Architectural Tailoring & Pattern Master Room" data-img="assets/62655.jpg" data-fallback="assets/62655.jpg" data-desc="Precision pattern development: digitizing buyer tech packs into 2D/3D CAD grading, creating physical card templates, and cutting first prototypes within 7 working days." data-spec="2D/3D CAD Grading | 7-Day Sample Turn | ±1.0mm Tolerance">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">FACTORY &amp; BENCHWORK</span>
+          <img src="assets/62655.jpg" alt="Architectural Tailoring & Pattern Master Room" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-21 // CAD PATTERN GRADING</span>
+          <h3 class="vault-title">CAD Pattern Master Room</h3>
+          <p class="vault-desc">Digitizing buyer tech packs into 2D/3D CAD grading, cutting master card templates, and preparing prototype panels for sampling.</p>
+          <div class="vault-specs-strip">
+            <div><span>SOFTWARE</span><strong>Digital CAD Grading Suite</strong></div>
+            <div><span>SAMPLING</span><strong>7–10 Business Days Prototype</strong></div>
+            <div><span>ACCURACY</span><strong>Laser &amp; Manual Bench Cutting</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="CAD Pattern Master Room">SPEC CAD PATTERN</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62655" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ITEM 22: assets/62656.jpg -->
+      <div class="vault-card" data-cat="benchwork" data-title="In-House Cut & Stitch Dhaka Assembly Floor" data-img="assets/62656.jpg" data-fallback="assets/62656.jpg" data-desc="Main production floor in Savar: heavy walking-foot industrial sewing machines, bonded #40 nylon thread, reinforced stress bar-tacks, and triple-point quality control gate." data-spec="100% In-House Production | Walking-Foot Machines | AQL 2.5 QC">
+        <div class="vault-thumb-wrap">
+          <span class="vault-category-pill">FACTORY &amp; BENCHWORK</span>
+          <img src="assets/62656.jpg" alt="In-House Cut & Stitch Dhaka Assembly Floor" class="vault-thumb" loading="lazy">
+          <button type="button" class="vault-zoom-trigger" aria-label="Zoom Photo">🔍</button>
+        </div>
+        <div class="vault-body">
+          <span class="vault-spec-id">VAULT-22 // ASSEMBLY LINE</span>
+          <h3 class="vault-title">Dhaka Stitching Floor</h3>
+          <p class="vault-desc">Main facility in Savar: industrial walking-foot machines, bonded nylon thread, bar-tacked stress points, and triple-point QC gate.</p>
+          <div class="vault-specs-strip">
+            <div><span>EQUIPMENT</span><strong>Heavy Walking-Foot Sewing Lines</strong></div>
+            <div><span>STITCHING</span><strong>8 SPI Bonded #40 Nylon Thread</strong></div>
+            <div><span>AUDIT</span><strong>AQL 2.5 Triple-Gate QC</strong></div>
+          </div>
+          <div class="vault-actions">
+            <button type="button" class="btn btn-secondary-spec" data-spec-trigger="Dhaka Stitching Floor">SPEC ASSEMBLY</button>
+            <a href="https://b2b.handsandhead.com/rfq?source=vault_62656" target="_blank" rel="noopener noreferrer" class="btn btn-portal">B2B ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEEP PRODUCTION GUIDE: FROM HIDE TO HANGER ============ -->
+<section id="how-we-work" class="workflow-section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Engineering Rigor &amp; Provenance</span>
+        <h2 style="margin-top:12px;">From Hide to Hanger.<br>Architectural Factory Workflow.</h2>
+      </div>
+      <p>
+        Mirroring the edge architecture standards of 21dev.handsandhead.com, our Dhaka facility runs an unbroken 5-stage manufacturing sequence with zero subcontracting.
+      </p>
+    </div>
+
+    <div class="workflow-grid">
+      <!-- STAGE 01 -->
+      <div class="workflow-card">
+        <div class="workflow-step-num">STAGE 01</div>
+        <h3>Raw Sourcing &amp; Tannery Selection</h3>
+        <p>
+          Hides selected directly at certified regional tanneries in Savar. Strict density inspection, chrome-free &amp; vegetable tanning protocols, and tight fiber grading to prevent surface flaking.
+        </p>
+        <div class="workflow-taglist">
+          <span class="workflow-tag">Full Grain</span>
+          <span class="workflow-tag">Veg-Tan</span>
+          <span class="workflow-tag">Reach Compliant</span>
+        </div>
+      </div>
+
+      <!-- STAGE 02 -->
+      <div class="workflow-card">
+        <div class="workflow-step-num">STAGE 02</div>
+        <h3>Pattern Master &amp; Prototyping</h3>
+        <p>
+          Digital 2D/3D CAD grading from your tech pack or reference garment. First physical sample cut and sewn within 7–10 business days for complete buyer sign-off before line setup.
+        </p>
+        <div class="workflow-taglist">
+          <span class="workflow-tag">CAD Grading</span>
+          <span class="workflow-tag">3D Simulation</span>
+          <span class="workflow-tag">7-Day Turn</span>
+        </div>
+      </div>
+
+      <!-- STAGE 03 -->
+      <div class="workflow-card">
+        <div class="workflow-step-num">STAGE 03</div>
+        <h3>Precision Benchwork</h3>
+        <p>
+          Panel-by-panel edge skiving, hand-burnished seam edges, and bonded #40/#60 nylon thread stitching. Structural horsehair canvas interfacings ensure lapels maintain crisp shape over decades.
+        </p>
+        <div class="workflow-taglist">
+          <span class="workflow-tag">Edge Skiving</span>
+          <span class="workflow-tag">Bonded Nylon</span>
+          <span class="workflow-tag">Horsehair Canvas</span>
+        </div>
+      </div>
+
+      <!-- STAGE 04 -->
+      <div class="workflow-card">
+        <div class="workflow-step-num">STAGE 04</div>
+        <h3>Industrial Hardware Curation</h3>
+        <p>
+          Direct integration of genuine YKK Excella zippers, solid zinc-alloy snap buttons, and 316L stainless steel clasps tested for 15,000+ pull cycles without tarnish or binding.
+        </p>
+        <div class="workflow-taglist">
+          <span class="workflow-tag">YKK Excella</span>
+          <span class="workflow-tag">316L Steel</span>
+          <span class="workflow-tag">Anti-Tarnish</span>
+        </div>
+      </div>
+
+      <!-- STAGE 05 -->
+      <div class="workflow-card">
+        <div class="workflow-step-num">STAGE 05</div>
+        <h3>Triple-Point Quality &amp; Freight</h3>
+        <p>
+          Every jacket undergoes measurement tolerance checks (±1.5mm), stitch density verification (8 SPI), and metal-detection. Packed in breathable garment bags and routed DDP/FOB worldwide.
+        </p>
+        <div class="workflow-taglist">
+          <span class="workflow-tag">AQL 2.5</span>
+          <span class="workflow-tag">Air &amp; Sea DDP</span>
+          <span class="workflow-tag">EDI Tracking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE SAMPLE-TO-BULK CALCULATOR ============ -->
+<section id="estimator">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Real-Time Procurement Estimator</span>
+        <h2 style="margin-top:12px;">Interactive Sample-To-Bulk<br>Production Estimator.</h2>
+      </div>
+      <p>
+        Simulate lot volumes, hide tiers, and hardware curation in real time. Lock your configuration and transfer directly into our enterprise B2B portal.
+      </p>
+    </div>
+
+    <div class="estimator-box">
+      <!-- Controls -->
+      <div class="estimator-controls">
+        <!-- Volume -->
+        <div class="calc-field">
+          <label>
+            <span>Production Volume (MOQ 50 to 5,000 Pcs)</span>
+            <span class="label-val"><span id="volDisplay">200</span> Units</span>
+          </label>
+          <input type="range" min="50" max="5000" step="25" value="200" class="range-slider" id="volSlider">
+          <div class="slider-presets">
+            <button type="button" class="preset-btn" data-val="50">50 (MOQ)</button>
+            <button type="button" class="preset-btn" data-val="100">100</button>
+            <button type="button" class="preset-btn active" data-val="200">200</button>
+            <button type="button" class="preset-btn" data-val="500">500</button>
+            <button type="button" class="preset-btn" data-val="1000">1,000</button>
+            <button type="button" class="preset-btn" data-val="2500">2,500</button>
+          </div>
+        </div>
+
+        <!-- Leather Grade -->
+        <div class="calc-field">
+          <label><span>Leather Grade &amp; Hide Specification</span></label>
+          <div class="selector-grid">
+            <label class="select-chip">
+              <input type="radio" name="leatherGrade" value="cowhide" checked>
+              <strong>Full-Grain Cowhide (1.2mm)</strong>
+              <small>Pull-up finish, high tensile strength, durable patina.</small>
+            </label>
+            <label class="select-chip">
+              <input type="radio" name="leatherGrade" value="lambskin">
+              <strong>Nappa Sheepskin (0.9mm)</strong>
+              <small>Ultra-soft drape, lightweight luxury boutique grade.</small>
+            </label>
+            <label class="select-chip">
+              <input type="radio" name="leatherGrade" value="buffalo">
+              <strong>Buffalo Pull-Up (1.4mm)</strong>
+              <small>Heavyweight rugged grain, motorcycle &amp; workwear block.</small>
+            </label>
+            <label class="select-chip">
+              <input type="radio" name="leatherGrade" value="suede">
+              <strong>Split Suede &amp; Goatskin</strong>
+              <small>Brushed tactile nap, breathable outerwear grade.</small>
+            </label>
+          </div>
+        </div>
+
+        <!-- Hardware Tier -->
+        <div class="calc-field">
+          <label><span>Hardware &amp; Zipper Specification</span></label>
+          <div class="selector-grid">
+            <label class="select-chip">
+              <input type="radio" name="hardwareTier" value="standard" checked>
+              <strong>Standard Industrial YKK Brass</strong>
+              <small>Heavy-duty YKK #8 antique brass / gunmetal pulls.</small>
+            </label>
+            <label class="select-chip">
+              <input type="radio" name="hardwareTier" value="custom_cnc">
+              <strong>Custom CNC &amp; Excella #10 (+316L)</strong>
+              <small>Laser-engraved pulls, custom molds &amp; stainless clasps.</small>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real-time Output -->
+      <div class="estimator-output">
+        <div>
+          <div class="out-head">
+            <span style="font-family:var(--mono); font-size:0.7rem; color:var(--amber); letter-spacing:0.12em; text-transform:uppercase;">
+              LIVE ESTIMATED PRODUCTION TELEMETRY
+            </span>
+          </div>
+
+          <div class="out-stat-grid">
+            <div class="out-stat">
+              <div class="lbl">Unit FOB (Est. Range)</div>
+              <div class="big" id="unitFobDisplay">$62–$74</div>
+              <div class="sub">Per unit, Chittagong Port</div>
+            </div>
+            <div class="out-stat">
+              <div class="lbl">Physical Sample Time</div>
+              <div class="big" id="sampleTimeDisplay">7–10d</div>
+              <div class="sub">Working days to courier</div>
+            </div>
+            <div class="out-stat">
+              <div class="lbl">Bulk FOB Turnaround</div>
+              <div class="big" id="bulkTimeDisplay">18–21d</div>
+              <div class="sub">From final lab dip / sample sign-off</div>
+            </div>
+            <div class="out-stat">
+              <div class="lbl">Scale Discount</div>
+              <div class="big" id="discountDisplay">-12%</div>
+              <div class="sub" id="tierLabel">Volume tier applied</div>
+            </div>
+          </div>
+
+          <div class="out-total-block">
+            <span class="lbl">Estimated Total Lot Value</span>
+            <span class="amt" id="totalLotDisplay">$12,400 – $14,800</span>
+          </div>
+        </div>
+
+        <div>
+          <a href="https://b2b.handsandhead.com/rfq?source=jacket_showroom" target="_blank" rel="noopener noreferrer" id="lockB2bBtn" class="btn btn-portal" style="width:100%; padding:16px; font-size:0.84rem;">
+            Lock Quote &amp; Launch Tech Pack on B2B Portal ↗
+          </a>
+          <button type="button" class="btn btn-secondary-spec" id="saveToRfqBtn" style="width:100%; margin-top:10px; font-size:0.74rem;">
+            Save Estimate to Quick Sample Ticket ↓
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ B2B DIRECT BUYER ASSISTANT WIDGETS ============ -->
+<section style="background:#070707;">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">On-Demand Sourcing Intelligence</span>
+        <h2 style="margin-top:12px;">Instant AI Sourcing Matcher.</h2>
+      </div>
+      <p>
+        Provide your order parameters or query our procurement agent on material specs, lead times, and compliance standards.
+      </p>
+    </div>
+
+    <div data-ai-buyer-match></div>
+  </div>
+</section>
+
+<!-- ============ ECOSYSTEM PILLARS PERSISTENT BAR ============ -->
+<div class="ecosystem-bar">
+  <div class="container">
+    <div class="ecosystem-grid">
+      <a href="https://handsandhead.com" target="_blank" rel="noopener noreferrer" class="ecosystem-node">
+        <span class="node-url">handsandhead.com ↗</span>
+        <span class="node-role">Brand Philosophy, Creative Direction &amp; Industrial Design</span>
+      </a>
+      <a href="https://21dev.handsandhead.com" target="_blank" rel="noopener noreferrer" class="ecosystem-node">
+        <span class="node-url">21dev.handsandhead.com ↗</span>
+        <span class="node-role">Digital Engineering, Edge Prototyping &amp; High-Velocity Build</span>
+      </a>
+      <a href="https://b2b.handsandhead.com" target="_blank" rel="noopener noreferrer" class="ecosystem-node">
+        <span class="node-url">b2b.handsandhead.com ↗</span>
+        <span class="node-role">Direct Factory Sourcing, Enterprise Invoicing &amp; Global Logistics</span>
+      </a>
+    </div>
   </div>
 </div>
-
-<!-- ============ CATEGORIES ============ -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">Product Range</span>
-        <h2 style="margin-top:14px;">Built by category,<br>tailored by order.</h2>
-      </div>
-      <p>Every style below ships as a stock wholesale line or as a private-label base for your own designs. Mix leathers, hardware, and linings per PO.</p>
-    </div>
-
-    <div class="grid-3">
-      <a href="catalog.html#biker" class="cat-card">
-        <div class="thumb"><img src="assets/62550.jpg" alt="Biker Jackets — genuine leather, wholesale manufacturer" loading="lazy"></div>
-        <div class="body">
-        <svg class="icon"><use href="#icon-jacket"/></svg>
-        <div>
-          <h3>Biker Jackets</h3>
-          <p style="margin:0;font-size:0.92rem;">Asymmetric zip, belted hem, classic &amp; slim silhouettes.</p>
-        </div>
-        <div class="meta"><span>Style RXL-01</span><span>MOQ 50</span></div>
-        </div>
-        <span class="go"><svg width="16" height="16"><use href="#icon-arrow"/></svg></span>
-      </a>
-      <a href="catalog.html#bomber" class="cat-card">
-        <div class="thumb"><img src="assets/62555.jpg" alt="Bomber Jackets — genuine leather, wholesale manufacturer" loading="lazy"></div>
-        <div class="body">
-        <svg class="icon"><use href="#icon-jacket"/></svg>
-        <div>
-          <h3>Bomber Jackets</h3>
-          <p style="margin:0;font-size:0.92rem;">Ribbed collar &amp; cuffs, MA-1 and varsity-inspired cuts.</p>
-        </div>
-        <div class="meta"><span>Style RXL-02</span><span>MOQ 50</span></div>
-        </div>
-        <span class="go"><svg width="16" height="16"><use href="#icon-arrow"/></svg></span>
-      </a>
-      <a href="catalog.html#varsity" class="cat-card">
-        <div class="thumb"><img src="assets/62554.jpg" alt="Varsity Jackets — genuine leather, wholesale manufacturer" loading="lazy"></div>
-        <div class="body">
-        <svg class="icon"><use href="#icon-jacket"/></svg>
-        <div>
-          <h3>Varsity Jackets</h3>
-          <p style="margin:0;font-size:0.92rem;">Wool-leather hybrid bodies, chenille patch ready.</p>
-        </div>
-        <div class="meta"><span>Style RXL-03</span><span>MOQ 100</span></div>
-        </div>
-        <span class="go"><svg width="16" height="16"><use href="#icon-arrow"/></svg></span>
-      </a>
-      <a href="catalog.html#vest" class="cat-card">
-        <div class="thumb"><img src="assets/62556.jpg" alt="Leather Vests — genuine leather, wholesale manufacturer" loading="lazy"></div>
-        <div class="body">
-        <svg class="icon"><use href="#icon-jacket"/></svg>
-        <div>
-          <h3>Leather Vests</h3>
-          <p style="margin:0;font-size:0.92rem;">Sleeveless bikers &amp; utility gilets, lined or unlined.</p>
-        </div>
-        <div class="meta"><span>Style RXL-04</span><span>MOQ 50</span></div>
-        </div>
-        <span class="go"><svg width="16" height="16"><use href="#icon-arrow"/></svg></span>
-      </a>
-      <a href="catalog.html#trench" class="cat-card">
-        <div class="thumb"><img src="assets/62557.jpg" alt="Trench &amp; Coats — genuine leather, wholesale manufacturer" loading="lazy"></div>
-        <div class="body">
-        <svg class="icon"><use href="#icon-jacket"/></svg>
-        <div>
-          <h3>Trench &amp; Coats</h3>
-          <p style="margin:0;font-size:0.92rem;">Belted leather trenches, dusters &amp; overcoats.</p>
-        </div>
-        <div class="meta"><span>Style RXL-05</span><span>MOQ 50</span></div>
-        </div>
-        <span class="go"><svg width="16" height="16"><use href="#icon-arrow"/></svg></span>
-      </a>
-      <a href="catalog.html#shearling" class="cat-card">
-        <div class="thumb"><img src="assets/62563.jpg" alt="Shearling &amp; Fur — genuine leather, wholesale manufacturer" loading="lazy"></div>
-        <div class="body">
-        <svg class="icon"><use href="#icon-jacket"/></svg>
-        <div>
-          <h3>Shearling &amp; Fur</h3>
-          <p style="margin:0;font-size:0.92rem;">Faux &amp; genuine shearling linings, aviator collars.</p>
-        </div>
-        <div class="meta"><span>Style RXL-06</span><span>MOQ 30</span></div>
-        </div>
-        <span class="go"><svg width="16" height="16"><use href="#icon-arrow"/></svg></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHY BANGLADESH / PROCESS ============ -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">How We Work</span>
-        <h2 style="margin-top:14px;">From hide to<br>hanger, in-house.</h2>
-      </div>
-      <p>One factory floor, five checkpoints. You approve the sample; we run the line. No subcontracted stitching, no surprise substitutions.</p>
-    </div>
-
-    <div class="process">
-      <div class="step">
-        <span class="idx">01</span>
-        <h4>Sourcing</h4>
-        <p>Full-grain &amp; suede hides sourced from regional tanneries, graded before cutting.</p>
-      </div>
-      <div class="step">
-        <span class="idx">02</span>
-        <h4>Pattern &amp; Cut</h4>
-        <p>In-house pattern room grades your spec sheet across a full size run.</p>
-      </div>
-      <div class="step">
-        <span class="idx">03</span>
-        <h4>Stitch &amp; Build</h4>
-        <p>Dedicated leather-line stitchers assemble, reinforce, and finish seams.</p>
-      </div>
-      <div class="step">
-        <span class="idx">04</span>
-        <h4>QC &amp; Branding</h4>
-        <p>Piece-by-piece inspection, then your labels, hangtags &amp; packaging.</p>
-      </div>
-      <div class="step">
-        <span class="idx">05</span>
-        <h4>Ship</h4>
-        <p>Consolidated air or sea freight, DDP or FOB, to your warehouse door.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CUSTOM / OEM BAND ============ -->
-<section style="background:var(--charcoal);">
-  <div class="container hero-grid" style="align-items:center;">
-    <div>
-      <span class="eyebrow">Private Label &amp; OEM</span>
-      <h2 style="margin-top:18px;">Your label.<br>Our factory floor.</h2>
-      <p style="max-width:480px;">Send a tech pack, a reference photo, or just a rough sketch — our design team will build a costed sample within days. Neck labels, hangtags, poly-bags and cartons all branded to spec.</p>
-      <div class="hero-ctas">
-        <a href="custom-orders.html" class="btn btn-solid">Start a Custom Order →</a>
-      </div>
-    </div>
-    <div class="seal" style="justify-self:center;">
-      <svg viewBox="0 0 150 150">
-        <defs><path id="sealpath" d="M 75,75 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"/></defs>
-        <text font-family="IBM Plex Mono" font-size="7.4" letter-spacing="2.5" fill="var(--brass)">
-          <textPath href="#sealpath" startOffset="0%">GENUINE LEATHER · MADE IN BANGLADESH · RAWx LEATHER JACKET DIV. · EST. DHAKA ·</textPath>
-        </text>
-      </svg>
-      <div class="seal-core">100%<br>Full<br>Grain</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TIERS ============ -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">Order Volume</span>
-        <h2 style="margin-top:14px;">Pricing scales<br>with quantity.</h2>
-      </div>
-      <p>Indicative wholesale FOB pricing per unit — final quote depends on leather grade, lining and hardware. Sample units always available.</p>
-    </div>
-    <div class="tiers">
-      <div class="tier"><div class="qty">1</div><div class="note">Sample Unit</div></div>
-      <div class="tier"><div class="qty">50–99</div><div class="note">Starter Wholesale</div></div>
-      <div class="tier active"><div class="qty">100–499</div><div class="note">Standard MOQ Tier</div></div>
-      <div class="tier"><div class="qty">500+</div><div class="note">Bulk / Private Label</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">Buyer Feedback</span>
-        <h2 style="margin-top:14px;">What our<br>partners say.</h2>
-      </div>
-    </div>
-    <div class="grid-3">
-      <div class="card quote-card">
-        <div class="stars">★★★★★</div>
-        <p>“Sample came in nine days, exactly to the tech pack we sent. Reordered twice since.”</p>
-        <footer>— Boutique Buyer, Germany</footer>
-      </div>
-      <div class="card quote-card">
-        <div class="stars">★★★★★</div>
-        <p>“First factory that didn't push us toward split leather. Consistent hide grading across a 300-unit run.”</p>
-        <footer>— Streetwear Label, USA</footer>
-      </div>
-      <div class="card quote-card">
-        <div class="stars">★★★★★</div>
-        <p>“Private label setup was simple — our neck tags and hangtags were on the first sample round.”</p>
-        <footer>— Multi-Brand Retailer, UAE</footer>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA STRIP ============ -->
-<section class="tight" style="background:var(--oxblood); border:none;">
-  <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px;">
-    <h3 style="margin:0; text-transform:uppercase; max-width:520px;">Ready to spec your first run? Send us your quantity, leather choice &amp; timeline.</h3>
-    <a href="contact.html" class="btn btn-tan">Request a Quote →</a>
-  </div>
-</section>
 
 <!-- ============ FOOTER ============ -->
 <footer class="site">
   <div class="container footer-top">
     <div>
       <a href="index.html" class="logo">RAW<span class="x">x</span></a>
-      <p style="margin-top:16px; max-width:260px; font-size:0.9rem;" data-i18n="footer.tagline"></p>
+      <p style="margin-top:16px; max-width:280px; font-size:0.88rem;" data-i18n="footer.tagline">
+        B2B leather jacket manufacturer based in Dhaka, Bangladesh. Wholesale, private label &amp; OEM production with direct tannery integration.
+      </p>
+      <div style="margin-top:20px;">
+        <a href="https://b2b.handsandhead.com/?source=jacket_showroom_footer" target="_blank" rel="noopener noreferrer" class="btn btn-portal" style="font-size:0.72rem; padding:10px 16px;">
+          ENTER B2B PORTAL ↗
+        </a>
+      </div>
     </div>
     <div>
-      <h4 data-i18n="footer.h_catalog"></h4>
+      <h4 data-i18n="footer.h_catalog">CATALOG</h4>
       <ul>
-        <li><a href="catalog.html#biker" data-i18n="footer.cat_biker"></a></li>
-        <li><a href="catalog.html#bomber" data-i18n="footer.cat_bomber"></a></li>
-        <li><a href="catalog.html#varsity" data-i18n="footer.cat_varsity"></a></li>
-        <li><a href="catalog.html#vest" data-i18n="footer.cat_vest"></a></li>
-        <li><a href="catalog.html#trench" data-i18n="footer.cat_trench"></a></li>
-        <li><a href="catalog.html#shearling" data-i18n="footer.cat_shearling"></a></li>
+        <li><a href="catalog.html#biker" data-i18n="footer.cat_biker">Biker Jackets</a></li>
+        <li><a href="catalog.html#bomber" data-i18n="footer.cat_bomber">Bomber Jackets</a></li>
+        <li><a href="catalog.html#varsity" data-i18n="footer.cat_varsity">Varsity Jackets</a></li>
+        <li><a href="catalog.html#vest" data-i18n="footer.cat_vest">Leather Vests</a></li>
+        <li><a href="catalog.html#trench" data-i18n="footer.cat_trench">Trench &amp; Coats</a></li>
+        <li><a href="catalog.html#shearling" data-i18n="footer.cat_shearling">Shearling &amp; Fur</a></li>
       </ul>
     </div>
     <div>
-      <h4 data-i18n="footer.h_company"></h4>
+      <h4 data-i18n="footer.h_company">COMPANY</h4>
       <ul>
-        <li><a href="about.html" data-i18n="footer.co_about"></a></li>
-        <li><a href="custom-orders.html" data-i18n="footer.co_custom"></a></li>
-        <li><a href="contact.html" data-i18n="footer.co_contact"></a></li>
+        <li><a href="about.html" data-i18n="footer.co_about">About RAWx LJ</a></li>
+        <li><a href="custom-orders.html" data-i18n="footer.co_custom">Custom / OEM</a></li>
+        <li><a href="blog.html" data-i18n="nav.journal">Factory Journal</a></li>
+        <li><a href="contact.html" data-i18n="footer.co_contact">Contact &amp; RFQ</a></li>
       </ul>
     </div>
     <div>
-      <h4 data-i18n="footer.h_trade"></h4>
+      <h4 data-i18n="footer.h_trade">TRADE &amp; SOURCING</h4>
       <ul>
-        <li><a href="contact.html" data-i18n="footer.tr_quote"></a></li>
-        <li><a href="custom-orders.html" data-i18n="footer.tr_moq"></a></li>
-        <li><a href="about.html#compliance" data-i18n="footer.tr_compliance"></a></li>
+        <li><a href="https://b2b.handsandhead.com/rfq" target="_blank" rel="noopener noreferrer">B2B Portal RFQ ↗</a></li>
+        <li><a href="custom-orders.html">MOQ &amp; Lead Times</a></li>
+        <li><a href="about.html#compliance">Compliance &amp; Certs</a></li>
+        <li><a href="https://21dev.handsandhead.com" target="_blank" rel="noopener noreferrer">Digital Spec Engine ↗</a></li>
       </ul>
     </div>
     <div>
-      <h4 data-i18n="footer.h_contact"></h4>
+      <h4 data-i18n="footer.h_contact">FACTORY HQ</h4>
       <ul>
-        <li data-i18n-html="footer.addr"></li>
-        <li data-i18n="footer.email"></li>
-        <li data-i18n="footer.phone"></li>
+        <li data-i18n-html="footer.addr">Savar Industrial Area,<br>Dhaka, Bangladesh</li>
+        <li><a href="mailto:sales@handsandhead.com" data-i18n="footer.email">sales@handsandhead.com</a></li>
+        <li><span data-i18n="footer.phone">+880 1974518600 (WhatsApp)</span></li>
       </ul>
     </div>
   </div>
+
   <div class="container footer-bottom">
-    <span>© <span class="cur-year"></span> <span data-i18n="footer.rights"></span></span>
-    <div class="socials">
-      <a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">WhatsApp</a>
+    <span>© <span class="cur-year"></span> RAWx Leather Jacket Division • Part of Hands and Head Ecosystem</span>
+    <div style="display:flex; gap:20px;">
+      <a href="https://b2b.handsandhead.com" target="_blank" rel="noopener noreferrer" style="color:var(--amber);">b2b.handsandhead.com ↗</a>
+      <a href="https://21dev.handsandhead.com" target="_blank" rel="noopener noreferrer">21dev ↗</a>
+      <a href="https://handsandhead.com" target="_blank" rel="noopener noreferrer">handsandhead.com ↗</a>
     </div>
   </div>
 </footer>
 
+<!-- ============ FULL-SCREEN MACRO LIGHTBOX ============ -->
+<div class="lightbox-backdrop" id="macroLightbox" role="dialog" aria-modal="true">
+  <div class="lightbox-dialog">
+    <button type="button" class="lightbox-close" id="lightboxCloseBtn" aria-label="Close Lightbox">✕</button>
+    <div class="lightbox-media">
+      <img id="lightboxImg" src="" alt="Macro Detail Inspection">
+    </div>
+    <div class="lightbox-info">
+      <div>
+        <span class="eyebrow" id="lightboxTag">BENCHWORK DETAIL</span>
+        <h2 id="lightboxTitle" style="margin-top:10px; font-size:2rem;">Detail Title</h2>
+        <p id="lightboxDesc" style="margin-top:14px; font-size:0.95rem; line-height:1.6;">Description text</p>
+        <div style="background:var(--bg-card); border:1px solid var(--line); padding:16px; margin-top:20px; font-family:var(--mono); font-size:0.75rem;">
+          <div style="color:var(--amber); margin-bottom:6px; letter-spacing:0.1em; text-transform:uppercase;">ENGINEERING SPECIFICATION</div>
+          <div id="lightboxSpec" style="color:var(--bone);">Spec text</div>
+        </div>
+      </div>
+      <div style="display:flex; gap:12px; margin-top:30px; flex-wrap:wrap;">
+        <button type="button" class="btn btn-secondary-spec" id="lightboxSpecBtn" style="flex:1;">SPEC THIS DETAIL</button>
+        <a id="lightboxB2bLink" href="https://b2b.handsandhead.com/rfq?source=jacket_macro_lightbox" target="_blank" rel="noopener noreferrer" class="btn btn-portal" style="flex:1;">ORDER ON B2B ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ INTERACTIVE RFQ / TECH PACK MODAL ============ -->
+<div class="rfq-modal-backdrop" id="rfqModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="rfq-modal-dialog">
+    <button type="button" class="rfq-close" id="rfqCloseBtn" aria-label="Close Modal">✕</button>
+
+    <div id="rfqFormWrap">
+      <span class="eyebrow">Enterprise Procurement Ticket</span>
+      <h2 id="modalTitle" style="margin-top:10px; font-size:2rem;">Request Tech Pack / Sample</h2>
+      <p style="margin-bottom:20px; font-size:0.9rem;">
+        Submit your specifications below. We route physical mockups within 7–10 days and sync your order ticket straight into b2b.handsandhead.com.
+      </p>
+
+      <form class="rfq-form" id="sampleRfqForm" data-rfq>
+        <div class="rfq-row">
+          <div class="rfq-field">
+            <label for="rfqCompany">Company / Brand Name</label>
+            <input type="text" id="rfqCompany" name="company" required placeholder="e.g. Atelier V Studio">
+          </div>
+          <div class="rfq-field">
+            <label for="rfqEmail">Work Email</label>
+            <input type="email" id="rfqEmail" name="email" required placeholder="buyer@brand.com">
+          </div>
+        </div>
+
+        <div class="rfq-row">
+          <div class="rfq-field">
+            <label for="rfqStyle">Silhouette / Category</label>
+            <select id="rfqStyle" name="style_category">
+              <option value="Oversized Minimalist Leather Bomber">Oversized Minimalist Leather Bomber</option>
+              <option value="Dark Espresso Cafe Racer">Dark Espresso Cafe Racer</option>
+              <option value="Diamond Quilted Moto Rider">Diamond Quilted Moto Rider</option>
+              <option value="Navy Suede Trucker Jacket">Navy Suede Trucker Jacket</option>
+              <option value="Belted Double Rider Biker">Belted Double Rider Biker</option>
+              <option value="Hooded Leather Bomber">Hooded Leather Bomber</option>
+              <option value="Minimalist Stand-Collar Racer">Minimalist Stand-Collar Racer</option>
+              <option value="Cognac 4-Pocket Field Jacket">Cognac 4-Pocket Field Jacket</option>
+              <option value="Custom Proprietary Tech Pack">Custom Proprietary Tech Pack</option>
+            </select>
+          </div>
+          <div class="rfq-field">
+            <label for="rfqQuantity">Target Volume (Units)</label>
+            <input type="number" id="rfqQuantity" name="volume" min="1" value="100" required>
+          </div>
+        </div>
+
+        <div class="rfq-field">
+          <label for="rfqLeather">Target Leather &amp; Hardware Requirements</label>
+          <input type="text" id="rfqLeather" name="materials" placeholder="e.g. 1.2mm Full-Grain Pull-up Cowhide, YKK Excella #10 Antique Brass">
+        </div>
+
+        <div class="rfq-field">
+          <label for="rfqNotes">Tech Pack Cloud Link / Spec Details</label>
+          <textarea id="rfqNotes" name="spec_notes" rows="3" placeholder="Paste link to Google Drive / Dropbox tech pack, or describe lining, sizing run, and branding requirements..."></textarea>
+        </div>
+
+        <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:8px;">
+          <button type="submit" class="btn btn-portal" style="flex:1; padding:14px;">
+            GENERATE WORK TICKET &amp; SUBMIT ↗
+          </button>
+          <a href="https://b2b.handsandhead.com/rfq?source=jacket_showroom_modal" target="_blank" rel="noopener noreferrer" class="btn" style="padding:14px;">
+            OPEN B2B PORTAL DIRECTLY
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <!-- Success state -->
+    <div class="rfq-success-card" id="rfqSuccessCard">
+      <div style="font-size:3rem; color:var(--amber); margin-bottom:12px;">✓</div>
+      <h3 style="margin-bottom:8px;">Procurement Ticket Dispatched</h3>
+      <p style="max-width:440px; margin:0 auto 24px; font-size:0.92rem;">
+        Your spec sheet has been queued at our Dhaka factory pattern room. An engineering tech pack manager will respond within 24–48 hours.
+      </p>
+      <a href="https://b2b.handsandhead.com/rfq?source=jacket_showroom_complete" target="_blank" rel="noopener noreferrer" class="btn btn-portal" style="display:inline-flex;">
+        Continue Order in B2B Portal ↗
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CLIENT INTERACTIVITY SCRIPTS ============ -->
 <script>
-// Mobile nav toggle
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile nav toggle
   const burger = document.querySelector('.burger');
   const navlinks = document.querySelector('.navlinks');
   if (burger && navlinks) {
@@ -1005,30 +2326,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // RFQ / contact form handling (front-end only demo)
-  document.querySelectorAll('form[data-rfq]').forEach((form) => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      form.style.display = 'none';
-      const success = form.parentElement.querySelector('.form-success');
-      if (success) success.classList.add('show');
-    });
+  // Footer current year
+  document.querySelectorAll('.cur-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
   });
 
-  // Quantity tier chip -> highlight card
-  document.querySelectorAll('.tiers .tier').forEach((tier) => {
-    tier.addEventListener('click', () => {
-      document.querySelectorAll('.tiers .tier').forEach(t => t.classList.remove('active'));
-      tier.classList.add('active');
-      const input = document.getElementById('qtyTierInput');
-      if (input) input.value = tier.dataset.value || '';
-    });
-  });
-
-  // current year in footer
-  document.querySelectorAll('.cur-year').forEach(el => { el.textContent = new Date().getFullYear(); });
-
-  // Hero slider — auto-detects however many .hero-slide blocks exist
+  // ==========================================================================
+  // HERO SLIDER SYSTEM (Auto-play, Prev/Next Arrows, Indicator Dots)
+  // ==========================================================================
   const slider = document.getElementById('heroSlider');
   if (slider) {
     const track = slider.querySelector('.hero-slider-track');
@@ -1036,50 +2341,385 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsWrap = slider.querySelector('.hero-slider-dots');
     const prevBtn = slider.querySelector('.hero-slider-arrow.prev');
     const nextBtn = slider.querySelector('.hero-slider-arrow.next');
-    let index = 0;
+    let currentIndex = 0;
     let autoplayTimer = null;
 
     slider.dataset.count = slides.length;
 
+    // Generate indicator dots
+    dotsWrap.innerHTML = '';
     slides.forEach((_, i) => {
       const dot = document.createElement('button');
       dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
       if (i === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => goTo(i));
+      dot.addEventListener('click', () => goToSlide(i));
       dotsWrap.appendChild(dot);
     });
     const dots = Array.from(dotsWrap.children);
 
-    function goTo(i) {
-      index = (i + slides.length) % slides.length;
-      track.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach((d, di) => d.classList.toggle('active', di === index));
+    function goToSlide(i) {
+      currentIndex = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((d, di) => d.classList.toggle('active', di === currentIndex));
     }
-    function next() { goTo(index + 1); }
-    function prev() { goTo(index - 1); }
+
+    function nextSlide() { goToSlide(currentIndex + 1); }
+    function prevSlide() { goToSlide(currentIndex - 1); }
+
     function startAutoplay() {
       if (slides.length < 2) return;
-      autoplayTimer = setInterval(next, 6000);
+      stopAutoplay();
+      autoplayTimer = setInterval(nextSlide, 7000);
     }
-    function stopAutoplay() { clearInterval(autoplayTimer); }
+    function stopAutoplay() {
+      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+    }
 
-    nextBtn.addEventListener('click', () => { next(); stopAutoplay(); startAutoplay(); });
-    prevBtn.addEventListener('click', () => { prev(); stopAutoplay(); startAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAutoplay(); });
+    if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAutoplay(); });
     slider.addEventListener('mouseenter', stopAutoplay);
     slider.addEventListener('mouseleave', startAutoplay);
 
-    goTo(0);
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoplay();
+    }, { passive: true });
+    slider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 45) {
+        nextSlide();
+      } else if (touchEndX - touchStartX > 45) {
+        prevSlide();
+      }
+      startAutoplay();
+    }, { passive: true });
+
+    // Keyboard navigation when slider or window is active
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+      if (e.key === 'ArrowRight') { nextSlide(); startAutoplay(); }
+      if (e.key === 'ArrowLeft') { prevSlide(); startAutoplay(); }
+    });
+
+    goToSlide(0);
     startAutoplay();
   }
-});
 
+  // ==========================================================================
+  // 22-PHOTO DETAIL VAULT FILTER & LIGHTBOX
+  // ==========================================================================
+  const filterBtns = document.querySelectorAll('.vault-filter-btn');
+  const vaultCards = document.querySelectorAll('.vault-card');
+  const macroLightbox = document.getElementById('macroLightbox');
+  const lightboxCloseBtn = document.getElementById('lightboxCloseBtn');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxTitle = document.getElementById('lightboxTitle');
+  const lightboxDesc = document.getElementById('lightboxDesc');
+  const lightboxSpec = document.getElementById('lightboxSpec');
+  const lightboxTag = document.getElementById('lightboxTag');
+  const lightboxSpecBtn = document.getElementById('lightboxSpecBtn');
+  const lightboxB2bLink = document.getElementById('lightboxB2bLink');
+
+  // Filter tabs
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+
+      vaultCards.forEach(card => {
+        if (filter === 'all' || card.dataset.cat === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Lightbox opening
+  function openLightbox(card) {
+    const title = card.dataset.title || '';
+    const desc = card.dataset.desc || '';
+    const spec = card.dataset.spec || '';
+    const img = card.dataset.img || '';
+    const fallback = card.dataset.fallback || '';
+    const cat = card.dataset.cat ? card.dataset.cat.toUpperCase() : 'BENCHWORK DETAIL';
+
+    lightboxTitle.textContent = title;
+    lightboxDesc.textContent = desc;
+    lightboxSpec.textContent = spec;
+    lightboxTag.textContent = cat;
+
+    lightboxImg.src = img;
+    lightboxImg.onerror = () => { lightboxImg.src = fallback; };
+
+    lightboxSpecBtn.onclick = () => {
+      closeLightbox();
+      openRfqModal(title);
+    };
+
+    const b2bUrl = new URL('https://b2b.handsandhead.com/rfq');
+    b2bUrl.searchParams.set('source', 'jacket_macro_vault');
+    b2bUrl.searchParams.set('item', title);
+    lightboxB2bLink.href = b2bUrl.toString();
+
+    macroLightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    macroLightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  vaultCards.forEach(card => {
+    const thumbWrap = card.querySelector('.vault-thumb-wrap');
+    if (thumbWrap) {
+      thumbWrap.addEventListener('click', () => openLightbox(card));
+    }
+  });
+
+  if (lightboxCloseBtn) lightboxCloseBtn.addEventListener('click', closeLightbox);
+  if (macroLightbox) {
+    macroLightbox.addEventListener('click', (e) => {
+      if (e.target === macroLightbox) closeLightbox();
+    });
+  }
+
+  // ==========================================================================
+  // RFQ MODAL HANDLING
+  // ==========================================================================
+  const rfqModal = document.getElementById('rfqModal');
+  const rfqCloseBtn = document.getElementById('rfqCloseBtn');
+  const rfqStyleSelect = document.getElementById('rfqStyle');
+  const sampleRfqForm = document.getElementById('sampleRfqForm');
+  const rfqFormWrap = document.getElementById('rfqFormWrap');
+  const rfqSuccessCard = document.getElementById('rfqSuccessCard');
+
+  function openRfqModal(preloadedStyle) {
+    if (preloadedStyle && rfqStyleSelect) {
+      let found = false;
+      for (let option of rfqStyleSelect.options) {
+        if (option.value.toLowerCase().includes(preloadedStyle.toLowerCase())) {
+          rfqStyleSelect.value = option.value;
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        // Add dynamic option if not in base list
+        const opt = document.createElement('option');
+        opt.value = preloadedStyle;
+        opt.textContent = preloadedStyle;
+        opt.selected = true;
+        rfqStyleSelect.appendChild(opt);
+      }
+    }
+    rfqModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeRfqModal() {
+    rfqModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-open-rfq]').forEach(btn => {
+    btn.addEventListener('click', () => openRfqModal());
+  });
+
+  document.querySelectorAll('[data-spec-trigger]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const style = btn.getAttribute('data-spec-trigger');
+      openRfqModal(style);
+    });
+  });
+
+  if (rfqCloseBtn) rfqCloseBtn.addEventListener('click', closeRfqModal);
+
+  if (rfqModal) {
+    rfqModal.addEventListener('click', (e) => {
+      if (e.target === rfqModal) closeRfqModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (rfqModal && rfqModal.classList.contains('open')) closeRfqModal();
+      if (macroLightbox && macroLightbox.classList.contains('open')) closeLightbox();
+    }
+  });
+
+  // Sample RFQ Form Submission to /api/rfq-triage
+  if (sampleRfqForm) {
+    sampleRfqForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(sampleRfqForm);
+      const data = {
+        source: 'jacket_showroom_interactive_modal',
+        submittedAt: new Date().toISOString(),
+        fields: {
+          company: fd.get('company'),
+          email: fd.get('email'),
+          style_category: fd.get('style_category'),
+          volume: fd.get('volume'),
+          materials: fd.get('materials'),
+          spec_notes: fd.get('spec_notes')
+        }
+      };
+
+      try {
+        await fetch('/api/rfq-triage', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+      } catch (err) {
+        console.warn('[rfq-triage client]', err);
+      }
+
+      rfqFormWrap.style.display = 'none';
+      rfqSuccessCard.classList.add('show');
+    });
+  }
+
+  // ==========================================================================
+  // REAL-TIME SAMPLE-TO-BULK CALCULATOR
+  // ==========================================================================
+  const volSlider = document.getElementById('volSlider');
+  const volDisplay = document.getElementById('volDisplay');
+  const unitFobDisplay = document.getElementById('unitFobDisplay');
+  const sampleTimeDisplay = document.getElementById('sampleTimeDisplay');
+  const bulkTimeDisplay = document.getElementById('bulkTimeDisplay');
+  const discountDisplay = document.getElementById('discountDisplay');
+  const tierLabel = document.getElementById('tierLabel');
+  const totalLotDisplay = document.getElementById('totalLotDisplay');
+  const lockB2bBtn = document.getElementById('lockB2bBtn');
+  const saveToRfqBtn = document.getElementById('saveToRfqBtn');
+
+  const gradeMultipliers = {
+    cowhide: { min: 62, max: 74, name: 'Full-Grain Cowhide' },
+    lambskin: { min: 68, max: 82, name: 'Nappa Sheepskin' },
+    buffalo: { min: 65, max: 78, name: 'Buffalo Pull-Up' },
+    suede: { min: 54, max: 64, name: 'Split Suede' }
+  };
+
+  const hardwareAddons = {
+    standard: 0,
+    custom_cnc: 8
+  };
+
+  function calculateEstimates() {
+    if (!volSlider) return;
+    const vol = parseInt(volSlider.value, 10);
+    volDisplay.textContent = vol.toLocaleString();
+
+    const selectedGrade = document.querySelector('input[name="leatherGrade"]:checked')?.value || 'cowhide';
+    const selectedHw = document.querySelector('input[name="hardwareTier"]:checked')?.value || 'standard';
+
+    const base = gradeMultipliers[selectedGrade] || gradeMultipliers.cowhide;
+    const hwAdd = hardwareAddons[selectedHw] || 0;
+
+    let discount = 0;
+    let tierText = 'Starter Tier';
+    let bulkLead = '14–18d';
+
+    if (vol >= 2500) {
+      discount = 0.22;
+      tierText = 'Enterprise Tier (-22%)';
+      bulkLead = '25–30d';
+    } else if (vol >= 1000) {
+      discount = 0.18;
+      tierText = 'Major Volume (-18%)';
+      bulkLead = '21–25d';
+    } else if (vol >= 500) {
+      discount = 0.14;
+      tierText = 'Bulk Tier (-14%)';
+      bulkLead = '18–22d';
+    } else if (vol >= 200) {
+      discount = 0.10;
+      tierText = 'Standard Wholesale (-10%)';
+      bulkLead = '16–20d';
+    } else if (vol >= 100) {
+      discount = 0.05;
+      tierText = 'Scaling Tier (-5%)';
+      bulkLead = '14–18d';
+    } else {
+      discount = 0;
+      tierText = 'MOQ Starter Tier';
+      bulkLead = '14–16d';
+    }
+
+    const minFob = Math.round((base.min + hwAdd) * (1 - discount));
+    const maxFob = Math.round((base.max + hwAdd) * (1 - discount));
+
+    const totalMin = (minFob * vol).toLocaleString();
+    const totalMax = (maxFob * vol).toLocaleString();
+
+    unitFobDisplay.textContent = `$${minFob}–$${maxFob}`;
+    discountDisplay.textContent = discount === 0 ? '0%' : `-${Math.round(discount * 100)}%`;
+    tierLabel.textContent = tierText;
+    bulkTimeDisplay.textContent = bulkLead;
+    sampleTimeDisplay.textContent = vol >= 1000 ? '7–8d' : '7–10d';
+    totalLotDisplay.textContent = `$${totalMin} – $${totalMax}`;
+
+    if (lockB2bBtn) {
+      const b2bUrl = new URL('https://b2b.handsandhead.com/rfq');
+      b2bUrl.searchParams.set('source', 'jacket_showroom_estimator');
+      b2bUrl.searchParams.set('volume', vol);
+      b2bUrl.searchParams.set('leather', selectedGrade);
+      b2bUrl.searchParams.set('hardware', selectedHw);
+      b2bUrl.searchParams.set('est_fob', `${minFob}-${maxFob}`);
+      lockB2bBtn.href = b2bUrl.toString();
+    }
+  }
+
+  if (volSlider) {
+    volSlider.addEventListener('input', calculateEstimates);
+  }
+
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      if (volSlider) {
+        volSlider.value = btn.dataset.val;
+        calculateEstimates();
+      }
+    });
+  });
+
+  document.querySelectorAll('input[name="leatherGrade"], input[name="hardwareTier"]').forEach(input => {
+    input.addEventListener('change', calculateEstimates);
+  });
+
+  if (saveToRfqBtn) {
+    saveToRfqBtn.addEventListener('click', () => {
+      const vol = volSlider ? volSlider.value : '200';
+      const grade = document.querySelector('input[name="leatherGrade"]:checked')?.value || 'cowhide';
+      const gradeName = gradeMultipliers[grade]?.name || 'Full-Grain Cowhide';
+      const hw = document.querySelector('input[name="hardwareTier"]:checked')?.value || 'standard';
+      const hwName = hw === 'custom_cnc' ? 'Custom CNC & 316L Stainless' : 'Standard YKK Industrial Brass';
+
+      const qtyInput = document.getElementById('rfqQuantity');
+      const matInput = document.getElementById('rfqLeather');
+
+      if (qtyInput) qtyInput.value = vol;
+      if (matInput) matInput.value = `${gradeName}, ${hwName}`;
+
+      openRfqModal();
+    });
+  }
+
+  calculateEstimates();
+});
 </script>
+
 <script src="assets/i18n.js"></script>
 <script src="assets/ai-widgets.js"></script>
-<script>
-  window.MULTI_AI_ENDPOINT = "https://the-o.himon.workers.dev";
-  window.MULTI_AI_STREAM = true;
-</script>
-<script src="https://bot.handsandhead.com/chat-widget.js"></script>
 </body>
 </html>

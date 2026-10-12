@@ -2,15 +2,18 @@
   "nav": {
     "home": "Home",
     "catalog": "Catalog",
-    "custom": "Custom / OEM",
+    "custom": "Custom / OEM Spec",
+    "how_we_work": "How We Work",
+    "lookbook": "Lookbook",
     "about": "About",
     "contact": "Contact",
     "journal": "Journal",
-    "cta_quote": "Request a Quote"
+    "portal": "Enter B2B Portal ↗",
+    "cta_quote": "Request Tech Pack / Sample"
   },
   "topbar": {
-    "brand_line": "RAWx LJ · Genuine Leather Manufacturer, Dhaka, Bangladesh",
-    "moq_line": "MOQ From 50 Units · Sample-to-Bulk Turnaround 18–25 Days"
+    "brand_line": "MADE IN BANGLADESH • MOQ FROM 50 UNITS",
+    "moq_line": "SAMPLE TO BULK TURNAROUND 14-21 DAYS • DIRECT TANNERY INTEGRATION"
   },
   "hero": {
     "eyebrow": "B2B Leather Jacket Manufacturer",

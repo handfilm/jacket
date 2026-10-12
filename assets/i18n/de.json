@@ -2,15 +2,18 @@
   "nav": {
     "home": "Startseite",
     "catalog": "Katalog",
-    "custom": "Custom / OEM",
+    "custom": "Custom / OEM Spec",
+    "how_we_work": "Produktion",
+    "lookbook": "Lookbook",
     "about": "Über Uns",
     "contact": "Kontakt",
     "journal": "Journal",
-    "cta_quote": "Angebot Anfordern"
+    "portal": "B2B-Portal ↗",
+    "cta_quote": "Tech Pack / Muster Anfordern"
   },
   "topbar": {
-    "brand_line": "RAWx LJ · Hersteller Für Echtleder, Dhaka, Bangladesch",
-    "moq_line": "MOQ Ab 50 Stück · Durchlaufzeit Muster Bis Bulk 18–25 Tage"
+    "brand_line": "MADE IN BANGLADESCH • MOQ AB 50 STÜCK",
+    "moq_line": "MUSTER-BIS-BULK 14–21 TAGE • DIREKTE GERBEREI-ANBINDUNG"
   },
   "hero": {
     "eyebrow": "B2B-Hersteller Für Lederjacken",

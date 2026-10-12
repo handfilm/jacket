@@ -12,10 +12,10 @@
    ========================================================================== */
 
 window.RAWX_AI_ENDPOINTS = window.RAWX_AI_ENDPOINTS || {
-  matcher: "https://rawx-ai-proxy.<your-subdomain>.workers.dev/match",
-  chat: "https://rawx-ai-proxy.<your-subdomain>.workers.dev/chat",
-  // RFQ triage posts straight to a Make.com webhook (fire-and-forget, async is fine here)
-  rfqTriage: "https://hook.us1.make.com/<your-webhook-id>"
+  matcher: "/api/match",
+  chat: "/api/chat",
+  // RFQ triage posts to server-side triage handler
+  rfqTriage: "/api/rfq-triage"
 };
 
 (function () {
@@ -89,9 +89,12 @@ window.RAWX_AI_ENDPOINTS = window.RAWX_AI_ENDPOINTS || {
           </div>`;
       } catch (err) {
         console.warn("[ai-matcher]", err);
-        resultBox.textContent = "";
-        resultBox.style.display = "none";
-        alert("Couldn't reach the matching service — please use Request a Quote instead.");
+        resultBox.innerHTML = `
+          <div class="ai-matcher-card" style="border-color:var(--oxblood);">
+            <p style="color:var(--bone-dim);margin-bottom:10px;">Couldn't reach the matching service — please use our quote form.</p>
+            <a class="btn btn-solid" href="contact.html">Request a Quote →</a>
+          </div>`;
+        resultBox.style.display = "block";
       }
     });
   }

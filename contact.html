@@ -126,6 +126,19 @@ a{ color: inherit; text-decoration: none; }
   color: var(--black);
 }
 .btn-tan:hover{ background: var(--bone); border-color: var(--bone); color: var(--black); }
+.btn-portal{
+  background: var(--hide-tan);
+  border-color: var(--hide-tan);
+  color: var(--black);
+  font-weight: 600;
+  box-shadow: 0 0 16px rgba(180,129,79,0.25);
+}
+.btn-portal:hover{
+  background: var(--bone);
+  border-color: var(--bone);
+  color: var(--black);
+  box-shadow: 0 0 24px rgba(237,230,216,0.4);
+}
 
 /* ---------- header ---------- */
 header.site{
@@ -524,13 +537,13 @@ footer.site{ background: var(--charcoal); border-top:1px solid var(--line); padd
       <a href="index.html" data-i18n="nav.home"></a>
       <a href="catalog.html" data-i18n="nav.catalog"></a>
       <a href="custom-orders.html" data-i18n="nav.custom"></a>
-      <a href="about.html" data-i18n="nav.about"></a>
-      <a href="contact.html" class="active" data-i18n="nav.contact"></a>
+      <a href="index.html#how-we-work" data-i18n="nav.how_we_work"></a>
+      <a href="index.html#lookbook" data-i18n="nav.lookbook"></a>
       <a href="blog.html" data-i18n="nav.journal"></a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" data-lang-mount></div>
-      <a href="contact.html" class="btn btn-tan" data-i18n="nav.cta_quote"></a>
+      <a href="https://b2b.handsandhead.com/?source=jacket_showroom_contact" target="_blank" rel="noopener noreferrer" class="btn btn-portal" data-i18n="nav.portal">ENTER B2B PORTAL ↗</a>
       <button class="burger">MENU</button>
     </div>
   </div>

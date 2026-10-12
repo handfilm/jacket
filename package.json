@@ -1,0 +1,16 @@
+{
+  "name": "rawx-leather-jacket",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo 'Static multi-page web application ready'",
+    "lint": "node --check server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google/genai": "latest",
+    "express": "^4.21.2"
+  }
+}

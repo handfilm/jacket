@@ -2,15 +2,18 @@
   "nav": {
     "home": "Home",
     "catalog": "Catalogus",
-    "custom": "Custom / OEM",
+    "custom": "Custom / OEM Spec",
+    "how_we_work": "Werkwijze",
+    "lookbook": "Lookbook",
     "about": "Over Ons",
     "contact": "Contact",
     "journal": "Journaal",
-    "cta_quote": "Offerte Aanvragen"
+    "portal": "B2B Portaal ↗",
+    "cta_quote": "Tech Pack / Sample Aanvragen"
   },
   "topbar": {
-    "brand_line": "RAWx LJ · Fabrikant van Echt Leer, Dhaka, Bangladesh",
-    "moq_line": "MOQ Vanaf 50 Stuks · Doorlooptijd Sample Naar Bulk 18–25 Dagen"
+    "brand_line": "MADE IN BANGLADESH • MOQ VANAF 50 STUKS",
+    "moq_line": "DOORLOOPTIJD 14–21 DAGEN • DIRECTE LOOIERIJ INTEGRATIE"
   },
   "hero": {
     "eyebrow": "B2B Fabrikant van Leren Jassen",

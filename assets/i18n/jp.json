@@ -2,15 +2,18 @@
   "nav": {
     "home": "ホーム",
     "catalog": "カタログ",
-    "custom": "カスタム / OEM",
+    "custom": "カスタム / OEM 仕様",
+    "how_we_work": "製造工程",
+    "lookbook": "ルックブック",
     "about": "会社概要",
     "contact": "お問い合わせ",
     "journal": "ジャーナル",
-    "cta_quote": "見積依頼"
+    "portal": "B2Bポータル ↗",
+    "cta_quote": "仕様書 / サンプル依頼"
   },
   "topbar": {
-    "brand_line": "RAWx LJ · 本革レザージャケット製造、ダッカ、バングラデシュ",
-    "moq_line": "MOQ 50ユニットから · サンプルから量産まで18〜25日"
+    "brand_line": "バングラデシュ製 • 最小注文数 50着から",
+    "moq_line": "量産納期 14〜21日 • 製革工場直接連携"
   },
   "hero": {
     "eyebrow": "B2Bレザージャケット製造",
