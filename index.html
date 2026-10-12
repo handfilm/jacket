@@ -17,34 +17,43 @@
    ========================================================================== */
 
 :root {
-  --bg-base:        #0B0B0B;
-  --bg-surface:     #121212;
-  --bg-card:        #171614;
-  --bg-card-hover:  #1F1E1A;
-  --bg-inset:       #0F0E0D;
+  --bg-base:        #050505;
+  --bg-surface:     #0D0D0D;
+  --bg-card:        #121212;
+  --bg-card-hover:  #1A1212;
+  --bg-inset:       #080808;
 
-  --amber:          #E5A93C;
-  --amber-dim:      #B37F24;
-  --amber-glow:     rgba(229, 169, 60, 0.22);
-  --hide-tan:       #C89551;
-  --hide-tan-dim:   #946933;
-  --oxblood:        #8A2F20;
-  --oxblood-br:     #B4432E;
+  /* Red & Black Brutalist Palette */
+  --red:            #E50914;
+  --red-dim:        #B20710;
+  --red-glow:       rgba(229, 9, 20, 0.45);
+  --red-accent:     #FF1E27;
+  --oxblood:        #8B0000;
+  --oxblood-br:     #E50914;
 
-  --bone:           #EDE6D8;
-  --bone-dim:       #A69F91;
-  --bone-muted:     #6E685F;
-  --brass:          #A8925A;
+  /* Amber & Leather Accent aliases mapped to Crimson / Red Brutalist */
+  --amber:          #E50914;
+  --amber-dim:      #B20710;
+  --amber-glow:     rgba(229, 9, 20, 0.45);
+  --hide-tan:       #E50914;
+  --hide-tan-dim:   #990B11;
+  --brass:          #D0141E;
 
-  --line:           rgba(237, 230, 216, 0.11);
-  --line-strong:    rgba(237, 230, 216, 0.22);
-  --line-amber:     rgba(229, 169, 60, 0.32);
+  --bone:           #FFFFFF;
+  --bone-dim:       #B8B8B8;
+  --bone-muted:     #707070;
+
+  --line:           rgba(255, 255, 255, 0.12);
+  --line-strong:    rgba(229, 9, 20, 0.45);
+  --line-amber:     rgba(229, 9, 20, 0.65);
+  --line-red:       rgba(229, 9, 20, 0.65);
 
   --display: "Big Shoulders Display", sans-serif;
   --body:    "Archivo", sans-serif;
   --mono:    "IBM Plex Mono", monospace;
 
-  --container: 1280px;
+  /* Full screen scale width */
+  --container: 100%;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -88,9 +97,13 @@ p { margin: 0 0 1em; color: var(--bone-dim); font-size: 0.98rem; }
 a { color: inherit; text-decoration: none; }
 
 .container {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 32px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 40px;
+}
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
 }
 
 .amber { color: var(--amber); }
@@ -142,39 +155,39 @@ a { color: inherit; text-decoration: none; }
 
 /* Primary Magnetic B2B Portal Button */
 .btn-portal {
-  background: var(--amber);
-  border-color: var(--amber);
-  color: #070707;
-  font-weight: 600;
-  box-shadow: 0 0 20px var(--amber-glow);
+  background: var(--red);
+  border: 1px solid var(--red-accent);
+  color: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 0 24px rgba(229, 9, 20, 0.45);
 }
 .btn-portal:hover {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  color: #000000;
-  box-shadow: 0 0 28px rgba(255, 255, 255, 0.4);
+  background: #FF1E27;
+  border-color: #FF1E27;
+  color: #FFFFFF;
+  box-shadow: 0 0 32px rgba(229, 9, 20, 0.75);
 }
 
 .btn-solid {
-  background: var(--oxblood);
-  border-color: var(--oxblood);
-  color: var(--bone);
+  background: var(--red);
+  border-color: var(--red-accent);
+  color: #FFFFFF;
 }
 .btn-solid:hover {
-  background: var(--oxblood-br);
-  border-color: var(--oxblood-br);
-  color: var(--bone);
+  background: #FF1E27;
+  border-color: #FF1E27;
+  color: #FFFFFF;
 }
 
 .btn-secondary-spec {
-  background: rgba(237, 230, 216, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border-color: var(--line-strong);
-  color: var(--bone);
+  color: #FFFFFF;
 }
 .btn-secondary-spec:hover {
-  background: rgba(229, 169, 60, 0.12);
-  border-color: var(--amber);
-  color: var(--amber);
+  background: rgba(229, 9, 20, 0.18);
+  border-color: var(--red);
+  color: var(--red);
 }
 
 /* ==========================================================================
@@ -356,7 +369,7 @@ header.site {
   cursor: pointer; font-family: var(--display); font-size: 1.8rem;
   transition: all .2s ease;
 }
-.hero-slider-arrow:hover { background: var(--amber); border-color: var(--amber); color: #000; }
+.hero-slider-arrow:hover { background: var(--red); border-color: var(--red); color: #FFF; }
 .hero-slider-arrow.prev { left: 24px; }
 .hero-slider-arrow.next { right: 24px; }
 .hero-slider-dots {
@@ -367,23 +380,24 @@ header.site {
   width: 8px; height: 8px; border-radius: 50%; padding: 0; border: 1px solid var(--line-strong);
   background: transparent; cursor: pointer; transition: all .25s ease;
 }
-.hero-slider-dots button.active { background: var(--amber); border-color: var(--amber); width: 28px; border-radius: 6px; }
+.hero-slider-dots button.active { background: var(--red); border-color: var(--red); width: 28px; border-radius: 6px; box-shadow: 0 0 10px var(--red-glow); }
 
 /* Slide 1: Primary Typography Hero */
 .hero-slide-primary {
   padding: 60px 0 72px;
-  background: radial-gradient(circle at 85% 20%, rgba(229, 169, 60, 0.05) 0%, transparent 65%);
+  background: radial-gradient(circle at 85% 20%, rgba(229, 9, 20, 0.08) 0%, transparent 65%);
 }
 .hero-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 56px;
   align-items: center;
+  width: 100%;
 }
 .hero-main h1 { margin: 18px 0 20px; }
 .hero-copy {
   font-size: 1.05rem;
-  max-width: 580px;
+  max-width: 680px;
   line-height: 1.6;
   margin-bottom: 30px;
 }
@@ -405,7 +419,7 @@ header.site {
   font-family: var(--display);
   font-size: 2.2rem;
   line-height: 1;
-  color: var(--amber);
+  color: var(--red);
 }
 .telemetry-item .lbl {
   font-family: var(--mono);
@@ -422,13 +436,13 @@ header.site {
   border: 1px solid var(--line-strong);
   padding: 32px;
   position: relative;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
 }
 .spec-ticket::before {
   content: "";
   position: absolute;
   top: -1px; left: 24px; right: 24px; height: 3px;
-  background: linear-gradient(90deg, var(--amber), var(--hide-tan));
+  background: linear-gradient(90deg, var(--red), var(--red-dim));
 }
 .spec-ticket-head {
   display: flex;
@@ -504,6 +518,322 @@ header.site {
 }
 
 /* ==========================================================================
+   21st.dev 3D CYLINDRICAL CURVED CAROUSEL HERO SECTION
+   ========================================================================== */
+.tilted-hero-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #050505;
+  color: #EDEDED;
+  user-select: none;
+  min-height: 720px;
+  border-bottom: 2px solid var(--red-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1600px;
+  perspective-origin: 50% 50%;
+}
+@media (max-width: 768px) {
+  .tilted-hero-viewport { min-height: 640px; }
+}
+
+.tilted-cylinder-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  perspective-origin: 50% 50%;
+}
+
+.tilted-cylinder-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  animation: tiltedCylinderOrbit 28s linear infinite;
+}
+
+@keyframes tiltedCylinderOrbit {
+  0%   { transform: rotateX(8deg) rotateY(0deg) translateZ(-160px); }
+  100% { transform: rotateX(8deg) rotateY(360deg) translateZ(-160px); }
+}
+
+.tilted-cylinder-tile {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  background: #0A0A0A;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  width: 140px;
+  height: 270px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+@media (min-width: 768px) {
+  .tilted-cylinder-tile {
+    width: 200px;
+    height: 380px;
+  }
+}
+@media (min-width: 1200px) {
+  .tilted-cylinder-tile {
+    width: 250px;
+    height: 460px;
+  }
+}
+
+.tilted-cylinder-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(85%) contrast(1.15) brightness(0.85);
+  transform: scale(1.04);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+.tilted-cylinder-tile:hover img {
+  filter: grayscale(0%) contrast(1.05) brightness(1);
+  transform: scale(1.08);
+}
+
+.tilted-tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5,5,5,0.1) 0%, rgba(5,5,5,0.4) 60%, rgba(5,5,5,0.95) 100%);
+  pointer-events: none;
+}
+
+.tilted-tile-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  text-align: left;
+  pointer-events: none;
+}
+.tilted-tile-category {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--red);
+  display: block;
+  margin-bottom: 3px;
+}
+.tilted-tile-title {
+  font-family: var(--body);
+  font-size: 12px;
+  font-weight: 600;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+.tilted-fader-edges {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  background:
+    linear-gradient(to right, #050505 0%, rgba(5,5,5,0.6) 8%, transparent 22%, transparent 78%, rgba(5,5,5,0.6) 92%, #050505 100%),
+    linear-gradient(to bottom, #050505 0%, rgba(5,5,5,0.7) 12%, transparent 30%, transparent 70%, rgba(5,5,5,0.95) 90%, #050505 100%);
+}
+
+.tilted-hero-content {
+  position: relative;
+  z-index: 20;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.tilted-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  background: rgba(18, 10, 10, 0.9);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 25px -5px rgba(229, 9, 20, 0.3);
+  margin-bottom: 24px;
+}
+.tilted-hero-badge .ping-wrapper {
+  position: relative;
+  display: flex;
+  width: 8px;
+  height: 8px;
+}
+.tilted-hero-badge .ping-dot {
+  position: absolute;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background-color: #E50914;
+  opacity: 0.85;
+  animation: pingDot 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.tilted-hero-badge .ping-solid {
+  position: relative;
+  display: inline-flex;
+  border-radius: 9999px;
+  width: 8px;
+  height: 8px;
+  background-color: #E50914;
+}
+@keyframes pingDot {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+.tilted-hero-badge span.badge-txt {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #E5E5E5;
+  font-weight: 500;
+}
+
+.tilted-hero-headline {
+  font-family: var(--display);
+  font-size: clamp(2.6rem, 6.2vw, 5.2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.96;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+  margin: 0 0 20px;
+  text-shadow: 0 4px 30px rgba(0,0,0,0.8);
+}
+.tilted-hero-headline span.italic-sub {
+  font-family: var(--display);
+  font-weight: 700;
+  color: var(--bone);
+  letter-spacing: 0.03em;
+}
+
+.tilted-hero-subtext {
+  max-width: 680px;
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  color: #D4D4D4;
+  line-height: 1.6;
+  margin: 0 auto 36px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+}
+
+.tilted-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 36px;
+}
+.tilted-hero-ctas a.btn-portal-cylinder {
+  flex: 1 1 210px;
+  padding: 16px 28px;
+  background: var(--red);
+  color: #FFFFFF;
+  border: 1px solid var(--red-accent);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  box-shadow: 0 8px 30px rgba(229, 9, 20, 0.45);
+  transition: all 0.2s ease;
+}
+.tilted-hero-ctas a.btn-portal-cylinder:hover {
+  background: #FF1E27;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgba(229, 9, 20, 0.75);
+  color: #FFFFFF;
+}
+.tilted-hero-ctas a.btn-estimate-cylinder {
+  flex: 1 1 190px;
+  padding: 16px 28px;
+  background: rgba(15, 15, 15, 0.9);
+  color: #FFFFFF;
+  border: 1px solid var(--line-red);
+  backdrop-filter: blur(8px);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+.tilted-hero-ctas a.btn-estimate-cylinder:hover {
+  background: #1F0D0E;
+  border-color: var(--red);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.tilted-telemetry-strip {
+  width: 100%;
+  max-width: 820px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: left;
+}
+@media (max-width: 640px) {
+  .tilted-telemetry-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+.tilted-telemetry-strip .t-label {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #888888;
+  margin-bottom: 4px;
+}
+.tilted-telemetry-strip .t-val {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #EDEDED;
+}
+.tilted-telemetry-strip .t-val.amber {
+  color: var(--amber);
+}
+
+/* ==========================================================================
    SECTIONS & LAYOUT
    ========================================================================== */
 section {
@@ -536,7 +866,7 @@ section.tight { padding: 48px 0; }
 }
 .vault-filter-btn {
   background: var(--bg-card);
-  border: 1px solid var(--line-strong);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   color: var(--bone-dim);
   font-family: var(--mono);
   font-size: 0.72rem;
@@ -546,25 +876,39 @@ section.tight { padding: 48px 0; }
   cursor: pointer;
   transition: all .2s ease;
 }
-.vault-filter-btn:hover, .vault-filter-btn.active {
-  background: rgba(229, 169, 60, 0.12);
-  border-color: var(--amber);
-  color: var(--amber);
+.vault-filter-btn:hover {
+  background: rgba(229, 9, 20, 0.15);
+  border-color: var(--red);
+  color: #FFFFFF;
+}
+.vault-filter-btn.active {
+  background: var(--red);
+  border-color: var(--red-accent);
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
 }
 
 .vault-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 2px;
   background: var(--line);
+  width: 100%;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1920px) {
+  .vault-grid { grid-template-columns: repeat(5, 1fr); }
+}
+@media (max-width: 1540px) {
+  .vault-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 1100px) {
   .vault-grid { grid-template-columns: repeat(3, 1fr); }
 }
-@media (max-width: 860px) {
+@media (max-width: 768px) {
   .vault-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 540px) {
+@media (max-width: 480px) {
   .vault-grid { grid-template-columns: 1fr; }
 }
 
@@ -605,26 +949,27 @@ section.tight { padding: 48px 0; }
 .vault-category-pill {
   position: absolute;
   top: 12px; left: 12px;
-  background: rgba(11, 11, 11, 0.88);
+  background: rgba(5, 5, 5, 0.9);
   backdrop-filter: blur(6px);
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--red);
   padding: 4px 10px;
   font-family: var(--mono);
   font-size: 0.62rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--amber);
+  color: var(--red);
   z-index: 10;
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
 }
 
 .vault-zoom-trigger {
   position: absolute;
   bottom: 12px; right: 12px;
   width: 32px; height: 32px;
-  background: rgba(11, 11, 11, 0.85);
+  background: rgba(5, 5, 5, 0.9);
   backdrop-filter: blur(4px);
-  border: 1px solid var(--line-strong);
-  color: var(--bone);
+  border: 1px solid var(--line-red);
+  color: #FFFFFF;
   display: flex; align-items: center; justify-content: center;
   font-size: 0.9rem;
   cursor: pointer;
@@ -632,9 +977,10 @@ section.tight { padding: 48px 0; }
   z-index: 10;
 }
 .vault-card:hover .vault-zoom-trigger {
-  background: var(--amber);
-  border-color: var(--amber);
-  color: #000;
+  background: var(--red);
+  border-color: var(--red-accent);
+  color: #FFFFFF;
+  box-shadow: 0 0 14px var(--red-glow);
 }
 
 .vault-body {
@@ -643,18 +989,20 @@ section.tight { padding: 48px 0; }
   flex-direction: column;
   flex: 1;
   gap: 12px;
+  background: #0D0D0D;
 }
 .vault-spec-id {
   font-family: var(--mono);
   font-size: 0.65rem;
   letter-spacing: 0.14em;
-  color: var(--hide-tan);
+  color: var(--red);
   text-transform: uppercase;
 }
 .vault-title {
   font-size: 1.3rem;
   margin: 0;
   line-height: 1.1;
+  color: #FFFFFF;
 }
 .vault-desc {
   font-size: 0.86rem;
@@ -663,7 +1011,7 @@ section.tight { padding: 48px 0; }
   line-height: 1.45;
 }
 .vault-specs-strip {
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding-top: 12px;
   margin-top: auto;
   display: flex;
@@ -690,6 +1038,15 @@ section.tight { padding: 48px 0; }
   flex: 1;
   padding: 9px 10px;
   font-size: 0.68rem;
+}
+.vault-actions .btn-portal {
+  background: var(--red);
+  border-color: var(--red-accent);
+  color: #FFFFFF;
+}
+.vault-actions .btn-portal:hover {
+  background: #FF1E27;
+  color: #FFFFFF;
 }
 
 /* ==========================================================================
@@ -806,16 +1163,17 @@ section.tight { padding: 48px 0; }
 .range-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 22px; height: 22px;
-  background: var(--amber);
+  background: var(--red);
   cursor: pointer;
   border: 2px solid #000;
-  box-shadow: 0 0 10px var(--amber-glow);
+  box-shadow: 0 0 12px var(--red-glow);
 }
 .range-slider::-moz-range-thumb {
   width: 22px; height: 22px;
-  background: var(--amber);
+  background: var(--red);
   cursor: pointer;
   border: 2px solid #000;
+  box-shadow: 0 0 12px var(--red-glow);
 }
 
 .slider-presets {
@@ -835,9 +1193,9 @@ section.tight { padding: 48px 0; }
   transition: all .15s ease;
 }
 .preset-btn:hover, .preset-btn.active {
-  border-color: var(--amber);
-  color: var(--amber);
-  background: rgba(229, 169, 60, 0.08);
+  border-color: var(--red);
+  color: #FFFFFF;
+  background: rgba(229, 9, 20, 0.15);
 }
 
 .selector-grid {
@@ -871,10 +1229,11 @@ section.tight { padding: 48px 0; }
   color: var(--bone-dim);
 }
 .select-chip:has(input:checked) {
-  border-color: var(--amber);
-  background: rgba(229, 169, 60, 0.08);
+  border-color: var(--red);
+  background: rgba(229, 9, 20, 0.12);
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.25);
 }
-.select-chip:has(input:checked) strong { color: var(--amber); }
+.select-chip:has(input:checked) strong { color: var(--red); }
 
 /* Estimator Output Card */
 .estimator-output {
@@ -955,15 +1314,15 @@ section.tight { padding: 48px 0; }
   transition: all .2s ease;
 }
 .ecosystem-node:hover {
-  border-left-color: var(--amber);
-  background: rgba(229, 169, 60, 0.03);
+  border-left-color: var(--red);
+  background: rgba(229, 9, 20, 0.06);
 }
 .ecosystem-node .node-url {
   font-family: var(--mono);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
-  color: var(--amber);
-  font-weight: 500;
+  color: var(--red);
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1039,14 +1398,14 @@ footer.site {
 
 .rfq-modal-dialog {
   background: var(--bg-surface);
-  border: 1px solid var(--line-amber);
+  border: 1px solid var(--red);
   width: 100%;
   max-width: 680px;
   max-height: 90vh;
   overflow-y: auto;
   padding: 40px;
   position: relative;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 24px 60px rgba(229, 9, 20, 0.25);
 }
 @media (max-width: 600px) {
   .rfq-modal-dialog { padding: 24px 18px; }
@@ -1059,20 +1418,21 @@ footer.site {
   font-size: 1.5rem; cursor: pointer;
   padding: 6px;
   line-height: 1;
+  transition: color 0.2s ease;
 }
-.rfq-close:hover, .lightbox-close:hover { color: var(--amber); }
+.rfq-close:hover, .lightbox-close:hover { color: var(--red); }
 
 .lightbox-dialog {
   background: var(--bg-surface);
-  border: 1px solid var(--line-strong);
-  max-width: 920px;
+  border: 1px solid var(--red-dim);
+  max-width: 1000px;
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  box-shadow: 0 24px 70px rgba(0,0,0,.9);
+  box-shadow: 0 24px 70px rgba(0,0,0,.95);
 }
 @media (max-width: 768px) {
   .lightbox-dialog { grid-template-columns: 1fr; }
@@ -1108,7 +1468,7 @@ footer.site {
   font-size: 0.68rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--amber);
+  color: var(--red);
   display: block;
   margin-bottom: 6px;
 }
@@ -1122,7 +1482,8 @@ footer.site {
   font-size: 0.92rem;
 }
 .rfq-field input:focus, .rfq-field select:focus, .rfq-field textarea:focus {
-  outline: none; border-color: var(--amber);
+  outline: none; border-color: var(--red);
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
 }
 .rfq-success-card {
   display: none;
@@ -1171,6 +1532,200 @@ footer.site {
     </div>
   </div>
 </header>
+
+<!-- ============ 21ST.DEV 3D CYLINDRICAL CURVED CAROUSEL HERO SECTION ============ -->
+<section class="tilted-hero-viewport" id="cylinderHero">
+  <!-- 3D Cylindrical Orbit Facets -->
+  <div class="tilted-cylinder-stage">
+    <div class="tilted-cylinder-carousel" id="tiltedCylinderTrack">
+      <!-- 16 Slices mapped in 3D Space -->
+      <div class="tilted-cylinder-tile" style="transform: rotateY(0deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80" alt="Double Rider Biker" loading="eager">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">FULL-GRAIN COWHIDE</span>
+          <span class="tilted-tile-title">Double Rider Biker</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(22.5deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=1000&q=80" alt="Cafe Racer Minimalist" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">BUFFALO PULL-UP</span>
+          <span class="tilted-tile-title">Cafe Racer Minimalist</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(45deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" alt="Belted Trench Coat" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">MILLED VEG-TAN</span>
+          <span class="tilted-tile-title">Belted Trench Coat</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(67.5deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80" alt="Shearling Aviator Flight" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">DENSE WOOL LINER</span>
+          <span class="tilted-tile-title">Shearling Aviator Flight</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(90deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80" alt="Tactical Utility Overshirt" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">NAPPA SHEEPSKIN</span>
+          <span class="tilted-tile-title">Tactical Utility Overshirt</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(112.5deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80" alt="Asymmetric Heavy Biker" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">GRADE A HIDE</span>
+          <span class="tilted-tile-title">Asymmetric Heavy Biker</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(135deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=1000&q=80" alt="Clean Mandarin Collar" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">PULL-UP LEATHER</span>
+          <span class="tilted-tile-title">Clean Mandarin Collar</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(157.5deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" alt="Architectural Long Duster" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">HIGH-FIBER TANNED</span>
+          <span class="tilted-tile-title">Architectural Long Duster</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(180deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80" alt="B-3 Flight Bomber" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">GENUINE SHEARLING</span>
+          <span class="tilted-tile-title">B-3 Flight Bomber</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(202.5deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80" alt="Minimalist Overshirt" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">TACTICAL POCKETS</span>
+          <span class="tilted-tile-title">Minimalist Overshirt</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(225deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80" alt="YKK Excella Biker" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">CUSTOM HARDWARE</span>
+          <span class="tilted-tile-title">YKK Excella Biker</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(247.5deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=1000&q=80" alt="Diamond Quilted Moto" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">HEAVY STITCH SPI</span>
+          <span class="tilted-tile-title">Diamond Quilted Moto</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(270deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1000&q=80" alt="Double Breasted Duster" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">RAW EDGE TAILORING</span>
+          <span class="tilted-tile-title">Double Breasted Duster</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(292.5deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1000&q=80" alt="Aviator Storm Flap" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">ANTIQUE BRASS</span>
+          <span class="tilted-tile-title">Aviator Storm Flap</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(315deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80" alt="Utility Leather Vest" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">RUGGED BENCHWORK</span>
+          <span class="tilted-tile-title">Utility Leather Vest</span>
+        </div>
+      </div>
+      <div class="tilted-cylinder-tile" style="transform: rotateY(337.5deg) translateZ(820px);">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80" alt="Double Rider Spec" loading="lazy">
+        <div class="tilted-tile-overlay"></div>
+        <div class="tilted-tile-caption">
+          <span class="tilted-tile-category">DHAKA FACILITY</span>
+          <span class="tilted-tile-title">Double Rider Spec</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fading Edge Masks -->
+  <div class="tilted-fader-edges"></div>
+
+  <!-- Overlay Content -->
+  <div class="tilted-hero-content">
+    <!-- Top Live Badge -->
+    <div class="tilted-hero-badge">
+      <div class="ping-wrapper">
+        <span class="ping-dot"></span>
+        <span class="ping-solid"></span>
+      </div>
+      <span class="badge-txt">DIRECT TANNERY INTEGRATION • MOQ 50 PCS</span>
+    </div>
+
+    <!-- Editorial Luxury Headline -->
+    <h1 class="tilted-hero-headline">
+      FROM HIDE TO HANGER,<br>
+      <span class="italic-sub">IN-HOUSE PRECISION.</span>
+    </h1>
+
+    <!-- Subtext -->
+    <p class="tilted-hero-subtext">
+      Curated full-grain cowhide, shearing liners, and custom CNC hardware built for private labels and global buyers. Direct OEM manufacturing from Dhaka tanneries to worldwide retailers.
+    </p>
+
+    <!-- Action CTAs -->
+    <div class="tilted-hero-ctas">
+      <a href="https://b2b.handsandhead.com/?source=hero_cylinder" target="_blank" rel="noopener noreferrer" class="btn-portal-cylinder">
+        ENTER B2B PORTAL ↗
+      </a>
+      <a href="#estimator" class="btn-estimate-cylinder">
+        ESTIMATE PRODUCTION
+      </a>
+    </div>
+
+    <!-- Telemetry Bar -->
+    <div class="tilted-telemetry-strip">
+      <div>
+        <div class="t-label">Base MOQ</div>
+        <div class="t-val">50 Units / Style</div>
+      </div>
+      <div>
+        <div class="t-label">Sample Turnaround</div>
+        <div class="t-val">7–10 Working Days</div>
+      </div>
+      <div>
+        <div class="t-label">Bulk Lead Time</div>
+        <div class="t-val">14–21 Days FOB</div>
+      </div>
+      <div>
+        <div class="t-label">Raw Tannery Origin</div>
+        <div class="t-val amber">Direct Dhaka Hub</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ HERO SLIDER (Previous Multi-Slide State with Text & Photos Restored) ============ -->
 <section class="hero-slider" id="heroSlider" data-count="7">
@@ -1334,7 +1889,7 @@ footer.site {
     </div>
 
     <!-- SLIDE 7: FACTORY FLOOR & CRAFT PHOTO SLIDE -->
-    <div class="hero-slide hero-slide-photo" style="background-image:url('assets/62656.jpg');">
+    <div class="hero-slide hero-slide-photo" style="background-image:url('assets/62556.jpg');">
       <div class="container">
         <div class="hero-slide-content">
           <span class="eyebrow">Direct Dhaka Facility</span>
@@ -2330,6 +2885,30 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.cur-year').forEach(el => {
     el.textContent = new Date().getFullYear();
   });
+
+  // ==========================================================================
+  // 21ST.DEV 3D CYLINDRICAL CURVED CAROUSEL DYNAMIC SIZING
+  // ==========================================================================
+  const cylinderViewport = document.getElementById('cylinderHero');
+  const cylinderTrack = document.getElementById('tiltedCylinderTrack');
+  if (cylinderViewport && cylinderTrack) {
+    const tiles = Array.from(cylinderTrack.querySelectorAll('.tilted-cylinder-tile'));
+    const SLICES = tiles.length || 16;
+    const curve = 75; // 75% curve factor
+
+    function updateCylinderLayout() {
+      const width = cylinderViewport.clientWidth || window.innerWidth;
+      // Calculate dynamic radius based on container width and curve factor
+      const radius = Math.max(520, Math.min(1150, (width / 2) * (100 / curve)));
+      tiles.forEach((tile, index) => {
+        const angle = (index * 360) / SLICES;
+        tile.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
+      });
+    }
+
+    updateCylinderLayout();
+    window.addEventListener('resize', updateCylinderLayout);
+  }
 
   // ==========================================================================
   // HERO SLIDER SYSTEM (Auto-play, Prev/Next Arrows, Indicator Dots)

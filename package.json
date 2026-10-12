@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@google/genai": "latest",
-    "express": "^4.21.2"
+    "clsx": "^2.1.1",
+    "express": "^4.21.2",
+    "lucide-react": "^1.55.0",
+    "tailwind-merge": "^3.7.0"
   }
 }
