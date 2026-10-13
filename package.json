@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "echo 'Static multi-page web application ready'",
-    "lint": "node --check server.js",
+    "lint": "tsc --noEmit && node --check server.js",
     "start": "node server.js"
   },
   "dependencies": {
@@ -15,5 +15,10 @@
     "express": "^4.21.2",
     "lucide-react": "^1.55.0",
     "tailwind-merge": "^3.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
   }
 }

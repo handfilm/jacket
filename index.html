@@ -191,96 +191,129 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ==========================================================================
-   HEADER & GLOBAL NAVIGATION
+   PEAK PERFORMANCE NORDIC HEADER & GLOBAL NAVIGATION
    ========================================================================== */
-header.site {
-  position: sticky; top: 0; z-index: 600;
-  background: rgba(11, 11, 11, 0.94);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--line);
+.top-ticker-bar {
+  background: #0B0E0C;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  padding: 7px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #B5B5B5;
+  letter-spacing: 0.1em;
 }
-
-.marquee-bar {
-  background: #060606;
-  border-bottom: 1px solid var(--line);
-  overflow: hidden;
-  white-space: nowrap;
+@media (max-width: 768px) {
+  .top-ticker-bar { padding: 6px 18px; }
 }
-.marquee-track {
+.ticker-live-indicator {
   display: inline-flex;
   align-items: center;
-  width: max-content;
-  padding: 8px 0;
-  animation: marquee-scroll 24s linear infinite;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.marquee-bar:hover .marquee-track { animation-play-state: paused; }
-.marquee-item {
+.ticker-beacon {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34D399;
+  box-shadow: 0 0 8px #34D399;
+  flex-shrink: 0;
+}
+.ticker-lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--bone-dim);
-  padding: 0 24px;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
 }
-.marquee-item b { color: var(--amber); font-weight: 500; }
-.marquee-sep { color: var(--amber); opacity: 0.6; }
+.ticker-lang-switch button {
+  background: transparent;
+  border: none;
+  color: #888888;
+  cursor: pointer;
+  padding: 2px 4px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  transition: color 0.2s ease;
+}
+.ticker-lang-switch button:hover { color: #FFFFFF; }
+.ticker-lang-switch button.active { color: #FFFFFF; font-weight: 700; border-bottom: 1px solid #FFFFFF; }
+.ticker-lang-sep { color: rgba(255, 255, 255, 0.2); }
 
-@keyframes marquee-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+header.site {
+  position: sticky;
+  top: 0;
+  z-index: 600;
+  background: rgba(9, 9, 9, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
-  flex-wrap: wrap;
-  row-gap: 14px;
+  padding: 16px 40px;
 }
-.logo {
-  font-family: var(--display);
-  font-weight: 800;
-  font-size: 1.8rem;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+@media (max-width: 768px) {
+  .navbar { padding: 14px 20px; }
+}
+
+.logo-peak {
   display: flex;
-  align-items: baseline;
-  gap: 2px;
+  flex-direction: column;
+  text-decoration: none;
 }
-.logo .x { color: var(--oxblood-br); }
-.logo small {
-  font-family: var(--mono);
-  font-size: 0.54rem;
-  letter-spacing: 0.22em;
-  color: var(--amber);
-  display: block;
+.logo-peak .brand-mark {
+  font-family: var(--body);
+  font-weight: 900;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
-  margin-top: 2px;
+  color: #FFFFFF;
+  line-height: 1;
+}
+.logo-peak .brand-sub {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #A3A3A3;
+  margin-top: 3px;
 }
 
 .navlinks {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 28px;
   font-family: var(--mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 .navlinks a {
   position: relative;
   padding: 6px 0;
-  color: var(--bone-dim);
-  transition: color .2s ease;
+  color: #A3A3A3;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
-.navlinks a:hover, .navlinks a.active { color: var(--bone); }
+.navlinks a:hover { color: #FFFFFF; }
+.navlinks a.active { color: #FFFFFF; }
 .navlinks a.active::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: -2px;
-  height: 2px;
-  background: var(--amber);
+  height: 1.5px;
+  background: #FFFFFF;
 }
 
 .nav-actions {
@@ -289,23 +322,112 @@ header.site {
   gap: 12px;
 }
 
-.lang-switch {
-  display: flex;
-  gap: 2px;
+.btn-search-trigger {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #D4D4D4;
   font-family: var(--mono);
-  font-size: 0.66rem;
-}
-.lang-switch button {
-  background: transparent;
-  border: 1px solid var(--line);
-  color: var(--bone-dim);
-  padding: 6px 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  padding: 7px 14px;
+  border-radius: 9999px;
   cursor: pointer;
-  text-transform: uppercase;
-  transition: all .2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
 }
-.lang-switch button:hover { border-color: var(--amber); color: var(--amber); }
-.lang-switch button.active { background: var(--amber); border-color: var(--amber); color: #000; font-weight:600; }
+.btn-search-trigger:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.currency-pill {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #A3A3A3;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 900px) {
+  .currency-pill { display: none; }
+}
+
+.btn-peak-pill-solid {
+  padding: 9px 20px;
+  border-radius: 9999px;
+  background: #FFFFFF;
+  color: #000000;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #FFFFFF;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.btn-peak-pill-solid:hover {
+  background: #E5E5E5;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+  color: #000;
+}
+
+.btn-peak-pill-glass {
+  padding: 13px 26px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(12px);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-peak-pill-glass:hover {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  color: #FFF;
+}
+
+.btn-peak-pill-outline {
+  padding: 13px 24px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.45);
+  color: #D4D4D4;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-peak-pill-outline:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
 
 .burger { display: none; }
 
@@ -314,14 +436,15 @@ header.site {
   .burger {
     display: block;
     background: none;
-    border: 1px solid var(--line-strong);
-    color: var(--bone);
-    padding: 9px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #FFFFFF;
+    padding: 8px 14px;
     font-family: var(--mono);
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     cursor: pointer;
+    border-radius: 9999px;
   }
   .navlinks.open {
     display: flex;
@@ -329,16 +452,14 @@ header.site {
     gap: 16px;
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: #0B0B0B;
-    border-bottom: 1px solid var(--line);
+    background: rgba(9, 9, 9, 0.98);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 24px 32px;
   }
 }
 @media (max-width: 640px) {
-  .lang-switch { display: none; }
-  .nav-actions .btn-secondary-spec { display: none; }
-  .nav-actions { width: 100%; justify-content: space-between; }
-  .btn-portal { flex: 1; text-align: center; }
+  .btn-search-trigger { display: none; }
+  .navbar { padding: 12px 16px; }
 }
 
 /* ==========================================================================
@@ -518,25 +639,33 @@ header.site {
 }
 
 /* ==========================================================================
-   21st.dev 3D CYLINDRICAL CURVED CAROUSEL HERO SECTION
+   PEAK PERFORMANCE 3D CYLINDRICAL KINETIC HORIZON VIEWPORT (60FPS GPU OPTIMIZED)
    ========================================================================== */
 .tilted-hero-viewport {
   position: relative;
   width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  max-height: 980px;
   overflow: hidden;
-  background: #050505;
+  background: #090909;
   color: #EDEDED;
   user-select: none;
-  min-height: 720px;
-  border-bottom: 2px solid var(--red-dim);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   perspective: 1600px;
   perspective-origin: 50% 50%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
 }
 @media (max-width: 768px) {
-  .tilted-hero-viewport { min-height: 640px; }
+  .tilted-hero-viewport {
+    height: auto;
+    min-height: 680px;
+    padding-bottom: 40px;
+  }
 }
 
 .tilted-cylinder-stage {
@@ -548,6 +677,9 @@ header.site {
   pointer-events: none;
   transform-style: preserve-3d;
   perspective-origin: 50% 50%;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .tilted-cylinder-carousel {
@@ -558,26 +690,32 @@ header.site {
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
-  animation: tiltedCylinderOrbit 28s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  animation: tiltedCylinderOrbit 51.2s linear infinite;
 }
 
 @keyframes tiltedCylinderOrbit {
-  0%   { transform: rotateX(8deg) rotateY(0deg) translateZ(-160px); }
-  100% { transform: rotateX(8deg) rotateY(360deg) translateZ(-160px); }
+  0%   { transform: rotateX(7deg) rotateY(0deg) translateZ(-160px); }
+  100% { transform: rotateX(7deg) rotateY(360deg) translateZ(-160px); }
 }
 
 .tilted-cylinder-tile {
   position: absolute;
   overflow: hidden;
-  border-radius: 4px;
-  border: 1px solid rgba(229, 9, 20, 0.35);
-  background: #0A0A0A;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85);
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #111111;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9);
   transform-style: preserve-3d;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+  contain: layout paint;
   width: 140px;
   height: 270px;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 @media (min-width: 768px) {
   .tilted-cylinder-tile {
@@ -587,8 +725,8 @@ header.site {
 }
 @media (min-width: 1200px) {
   .tilted-cylinder-tile {
-    width: 250px;
-    height: 460px;
+    width: 240px;
+    height: 440px;
   }
 }
 
@@ -599,11 +737,7 @@ header.site {
   object-position: center;
   filter: grayscale(85%) contrast(1.15) brightness(0.85);
   transform: scale(1.04);
-  transition: filter 0.4s ease, transform 0.4s ease;
-}
-.tilted-cylinder-tile:hover img {
-  filter: grayscale(0%) contrast(1.05) brightness(1);
-  transform: scale(1.08);
+  transition: opacity 0.3s ease;
 }
 
 .tilted-tile-overlay {
@@ -615,24 +749,30 @@ header.site {
 
 .tilted-tile-caption {
   position: absolute;
-  bottom: 12px;
-  left: 12px;
-  right: 12px;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
   text-align: left;
   pointer-events: none;
+  background: rgba(8, 8, 8, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 8px;
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
 }
 .tilted-tile-category {
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 8px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--red);
+  color: #A3A3A3;
   display: block;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
+  font-weight: 600;
 }
 .tilted-tile-title {
-  font-family: var(--body);
-  font-size: 12px;
+  font-family: var(--mono);
+  font-size: 10px;
   font-weight: 600;
   color: #FFFFFF;
   white-space: nowrap;
@@ -641,197 +781,1226 @@ header.site {
   display: block;
 }
 
-.tilted-fader-edges {
+.tilted-radial-vignette {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 10;
-  background:
-    linear-gradient(to right, #050505 0%, rgba(5,5,5,0.6) 8%, transparent 22%, transparent 78%, rgba(5,5,5,0.6) 92%, #050505 100%),
-    linear-gradient(to bottom, #050505 0%, rgba(5,5,5,0.7) 12%, transparent 30%, transparent 70%, rgba(5,5,5,0.95) 90%, #050505 100%);
+  background: radial-gradient(ellipse at center, rgba(9,9,9,0.5) 0%, rgba(9,9,9,0.92) 80%, #090909 100%);
 }
 
-.tilted-hero-content {
+/* Peak Performance Hero Layout Overlays */
+.hero-viewport-inner {
   position: relative;
-  z-index: 20;
-  max-width: 1200px;
+  z-index: 25;
   width: 100%;
+  height: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 60px 24px;
-  text-align: center;
+  padding: 32px 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  pointer-events: auto;
+  justify-content: space-between;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .hero-viewport-inner { padding: 24px 20px; }
 }
 
-.tilted-hero-badge {
+.hero-nordic-pill-wrap {
+  display: flex;
+  justify-content: center;
+  pointer-events: auto;
+  padding-top: 10px;
+}
+.hero-nordic-pill {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 7px 18px;
   border-radius: 9999px;
-  border: 1px solid rgba(229, 9, 20, 0.4);
-  background: rgba(18, 10, 10, 0.9);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 25px -5px rgba(229, 9, 20, 0.3);
-  margin-bottom: 24px;
-}
-.tilted-hero-badge .ping-wrapper {
-  position: relative;
-  display: flex;
-  width: 8px;
-  height: 8px;
-}
-.tilted-hero-badge .ping-dot {
-  position: absolute;
-  display: inline-flex;
-  width: 100%;
-  height: 100%;
-  border-radius: 9999px;
-  background-color: #E50914;
-  opacity: 0.85;
-  animation: pingDot 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-.tilted-hero-badge .ping-solid {
-  position: relative;
-  display: inline-flex;
-  border-radius: 9999px;
-  width: 8px;
-  height: 8px;
-  background-color: #E50914;
-}
-@keyframes pingDot {
-  75%, 100% { transform: scale(2); opacity: 0; }
-}
-.tilted-hero-badge span.badge-txt {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 6px 18px;
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #E5E5E5;
-  font-weight: 500;
+  color: #D4D4D4;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+.hero-nordic-pill .beacon-pulse {
+  position: relative;
+  display: flex;
+  width: 7px;
+  height: 7px;
+}
+.hero-nordic-pill .beacon-pulse::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #34D399;
+  opacity: 0.75;
+  animation: beaconPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+.hero-nordic-pill .beacon-pulse::after {
+  content: "";
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34D399;
+}
+@keyframes beaconPing {
+  75%, 100% { transform: scale(2.4); opacity: 0; }
 }
 
-.tilted-hero-headline {
-  font-family: var(--display);
-  font-size: clamp(2.6rem, 6.2vw, 5.2rem);
-  font-weight: 800;
+.hero-alpine-lockup {
+  max-width: 720px;
+  text-align: left;
+  pointer-events: auto;
+  padding-bottom: 48px;
+}
+@media (max-width: 768px) {
+  .hero-alpine-lockup { padding-bottom: 20px; }
+}
+
+.hero-category-tag {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  line-height: 0.96;
-  letter-spacing: 0.02em;
-  color: #FFFFFF;
-  margin: 0 0 20px;
-  text-shadow: 0 4px 30px rgba(0,0,0,0.8);
+  color: #E5A93C;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-weight: 600;
 }
-.tilted-hero-headline span.italic-sub {
-  font-family: var(--display);
-  font-weight: 700;
-  color: var(--bone);
-  letter-spacing: 0.03em;
+.hero-category-tag::before {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background: #E5A93C;
 }
 
-.tilted-hero-subtext {
-  max-width: 680px;
-  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+.hero-alpine-title {
+  font-family: var(--body);
+  font-size: clamp(2.6rem, 5.8vw, 5.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  line-height: 0.94;
+  color: #FFFFFF;
+  margin: 0 0 16px;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.9);
+}
+
+.hero-alpine-subtext {
+  font-family: var(--body);
+  font-size: clamp(0.92rem, 1.25vw, 1.05rem);
   color: #D4D4D4;
   line-height: 1.6;
-  margin: 0 auto 36px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+  margin: 0 0 28px;
+  max-width: 560px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
-.tilted-hero-ctas {
+.hero-alpine-ctas {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  justify-content: center;
+  gap: 12px;
   align-items: center;
-  width: 100%;
-  max-width: 480px;
-  margin-bottom: 36px;
-}
-.tilted-hero-ctas a.btn-portal-cylinder {
-  flex: 1 1 210px;
-  padding: 16px 28px;
-  background: var(--red);
-  color: #FFFFFF;
-  border: 1px solid var(--red-accent);
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-  box-shadow: 0 8px 30px rgba(229, 9, 20, 0.45);
-  transition: all 0.2s ease;
-}
-.tilted-hero-ctas a.btn-portal-cylinder:hover {
-  background: #FF1E27;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 36px rgba(229, 9, 20, 0.75);
-  color: #FFFFFF;
-}
-.tilted-hero-ctas a.btn-estimate-cylinder {
-  flex: 1 1 190px;
-  padding: 16px 28px;
-  background: rgba(15, 15, 15, 0.9);
-  color: #FFFFFF;
-  border: 1px solid var(--line-red);
-  backdrop-filter: blur(8px);
-  font-family: var(--mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-  transition: all 0.2s ease;
-}
-.tilted-hero-ctas a.btn-estimate-cylinder:hover {
-  background: #1F0D0E;
-  border-color: var(--red);
-  color: #FFFFFF;
-  transform: translateY(-2px);
 }
 
-.tilted-telemetry-strip {
-  width: 100%;
-  max-width: 820px;
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+/* ==========================================================================
+   TECHNICAL PRODUCT SHOWCASE: "SHOP ARCHIVAL LINE" (PEAK PERFORMANCE CAROUSEL)
+   ========================================================================== */
+.shop-archival-section {
+  background: #090909;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 96px 0;
+}
+.shop-archival-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  text-align: left;
+  gap: 20px;
+}
+@media (max-width: 1200px) {
+  .shop-archival-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 640px) {
-  .tilted-telemetry-strip {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
+  .shop-archival-grid { grid-template-columns: 1fr; }
 }
-.tilted-telemetry-strip .t-label {
+
+.product-card-peak {
+  background: #121212;
+  border: 1px solid #222222;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+.product-card-peak:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
+}
+
+.product-media-peak {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #000;
+}
+.product-media-peak img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: contrast(1.1) brightness(0.92);
+}
+.product-card-peak:hover .product-media-peak img {
+  transform: scale(1.05);
+  filter: contrast(1.12) brightness(1);
+}
+
+.product-badge-peak {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  padding: 4px 10px;
+  letter-spacing: 0.14em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.product-swatches-peak {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  gap: 7px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 5px 10px;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 5;
+}
+.swatch-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: transform 0.2s ease, outline 0.2s ease;
+}
+.swatch-dot:hover {
+  transform: scale(1.15);
+}
+.swatch-dot.active {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 1px;
+}
+
+.product-body-peak {
+  padding: 22px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+.product-body-peak h3 {
+  font-family: var(--body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.product-body-peak .spec-sub {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: #A3A3A3;
+  margin-bottom: 14px;
+}
+
+.product-pricing-peak {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 14px;
+}
+.product-pricing-peak .fob-val {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.product-pricing-peak .moq-val {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  color: #A3A3A3;
+  text-transform: uppercase;
+}
+
+.product-actions-peak {
+  display: flex;
+  gap: 8px;
+}
+.btn-product-spec {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.btn-product-spec:hover {
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+.btn-product-order {
+  flex: 1;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  color: #000000;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-product-order:hover {
+  background: #E5E5E5;
+}
+
+/* ==========================================================================
+   EDITORIAL 3-UP STORY TILES: "GUIDES & METHODOLOGY"
+   ========================================================================== */
+.methodology-section {
+  background: #060606;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 96px 0;
+}
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .methodology-grid { grid-template-columns: 1fr; }
+}
+
+.story-tile-peak {
+  position: relative;
+  min-height: 480px;
+  border: 1px solid #222222;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 36px 32px;
+  transition: all 0.3s ease;
+}
+.story-tile-peak:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+}
+.story-tile-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) contrast(1.15);
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+.story-tile-peak:hover .story-tile-bg {
+  transform: scale(1.05);
+}
+.story-tile-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 55%, rgba(0,0,0,0.95) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+.story-tile-content {
+  position: relative;
+  z-index: 3;
+}
+.story-tile-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #E5A93C;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.story-tile-title {
+  font-family: var(--body);
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+.story-tile-desc {
+  font-family: var(--body);
+  font-size: 0.9rem;
+  color: #D4D4D4;
+  line-height: 1.55;
+  margin: 0 0 24px;
+}
+.story-tile-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  color: #FFFFFF;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+.story-tile-pill:hover {
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #FFFFFF;
+}
+
+/* ==========================================================================
+   SEARCH MODAL DIALOG (PEAK UTILITY)
+   ========================================================================== */
+.search-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 24px 40px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.search-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.search-dialog-box {
+  width: 100%;
+  max-width: 680px;
+  background: #111111;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
+}
+.search-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.search-input-wrap input {
+  width: 100%;
+  background: #090909;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  font-family: var(--body);
+  font-size: 1.1rem;
+  padding: 14px 48px 14px 18px;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.search-input-wrap input:focus {
+  border-color: #FFFFFF;
+}
+.search-close-btn {
+  position: absolute;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: #888888;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 6px;
+}
+.search-close-btn:hover { color: #FFFFFF; }
+.search-results-list {
+  max-height: 380px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.search-result-item {
+  padding: 12px 14px;
+  background: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.search-result-item:hover {
+  background: #202020;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.search-result-item .item-title {
+  font-family: var(--body);
+  font-weight: 600;
+  color: #FFFFFF;
+  font-size: 0.92rem;
+}
+.search-result-item .item-cat {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: #E5A93C;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   INTERACTIVE TECH-PACK SLIDE-OVER DRAWER
+   ========================================================================== */
+.techpack-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.techpack-drawer-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.techpack-drawer-panel {
+  width: 100%;
+  max-width: 680px;
+  height: 100%;
+  background: #090909;
+  border-left: 2px solid var(--oxblood);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.95);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.techpack-drawer-backdrop.open .techpack-drawer-panel {
+  transform: translateX(0);
+}
+.techpack-header {
+  padding: 20px 28px;
+  background: #0C0C0C;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.techpack-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.techpack-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.techpack-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 8px var(--red);
+}
+.techpack-header h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.1;
+  color: #FFFFFF;
+}
+.techpack-close-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--bone-dim);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  padding: 8px 14px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: all 0.2s ease;
+}
+.techpack-close-btn:hover {
+  border-color: var(--red);
+  color: #FFF;
+  background: rgba(229, 9, 20, 0.1);
+}
+.techpack-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.techpack-hero-media {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: #000;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.techpack-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.15) brightness(0.9);
+}
+.techpack-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(9,9,9,0.95) 100%);
+  pointer-events: none;
+}
+.techpack-media-badge-left {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(10, 10, 10, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 10px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--bone);
+  letter-spacing: 0.12em;
+}
+.techpack-media-badge-right {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(18, 8, 8, 0.9);
+  border: 1px solid rgba(229, 9, 20, 0.5);
+  padding: 5px 10px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--red);
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+.techpack-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (max-width: 580px) {
+  .techpack-specs-grid { grid-template-columns: 1fr; }
+}
+.techpack-spec-card {
+  background: #121212;
+  border: 1px solid var(--line);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.techpack-spec-card .lbl {
   font-family: var(--mono);
   font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #888888;
-  margin-bottom: 4px;
-}
-.tilted-telemetry-strip .t-val {
-  font-family: var(--mono);
-  font-size: 0.88rem;
+  color: var(--red);
   font-weight: 600;
-  color: #EDEDED;
 }
-.tilted-telemetry-strip .t-val.amber {
-  color: var(--amber);
+.techpack-spec-card .val {
+  font-family: var(--body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #FFFFFF;
 }
+.techpack-spec-card .sub {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: var(--bone-muted);
+}
+.techpack-bom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  border: 1px solid var(--line);
+  background: #0E0E0E;
+}
+.techpack-bom-table th {
+  background: #161616;
+  padding: 9px 12px;
+  text-align: left;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--bone-dim);
+  border-bottom: 1px solid var(--line);
+}
+.techpack-bom-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  color: var(--bone-dim);
+}
+.techpack-bom-table tr:last-child td { border-bottom: none; }
+.techpack-bom-table td strong { color: #FFF; }
+.techpack-telemetry-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 14px;
+  background: #110808;
+  border: 1px solid rgba(229, 9, 20, 0.35);
+}
+@media (max-width: 580px) {
+  .techpack-telemetry-row { grid-template-columns: repeat(2, 1fr); }
+}
+.techpack-telemetry-row .item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.techpack-telemetry-row .item span {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  color: var(--bone-muted);
+}
+.techpack-telemetry-row .item strong {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: #FFF;
+}
+.techpack-telemetry-row .item strong.amber { color: var(--red); }
+.techpack-footer {
+  padding: 18px 28px;
+  background: #0C0C0C;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.techpack-footer .btn-print {
+  flex: 0 0 auto;
+  padding: 13px 18px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--bone);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+.techpack-footer .btn-print:hover {
+  border-color: #FFF;
+  background: rgba(255,255,255,0.06);
+}
+.techpack-footer .btn-sample-preorder {
+  flex: 1 1 200px;
+  padding: 13px 20px;
+  background: var(--red);
+  border: 1px solid var(--red-accent);
+  color: #FFF;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 8px 24px var(--red-glow);
+  transition: all 0.2s ease;
+}
+.techpack-footer .btn-sample-preorder:hover {
+  background: #FF1E27;
+  transform: translateY(-1px);
+}
+.techpack-footer .btn-bulk-rfq {
+  flex: 0 0 auto;
+  padding: 13px 18px;
+  background: #191212;
+  border: 1px solid var(--oxblood);
+  color: var(--bone);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+.techpack-footer .btn-bulk-rfq:hover {
+  border-color: var(--red);
+  background: #241414;
+  color: #FFF;
+}
+
+/* Print Styles for Clean Spec PDF Generation */
+@media print {
+  body * { visibility: hidden !important; }
+  .techpack-drawer-backdrop,
+  .techpack-drawer-backdrop * { visibility: visible !important; }
+  .techpack-drawer-backdrop {
+    position: absolute !important;
+    inset: 0 !important;
+    background: #FFF !important;
+    color: #000 !important;
+  }
+  .techpack-drawer-panel {
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: #FFF !important;
+    color: #000 !important;
+    transform: none !important;
+  }
+  .techpack-header, .techpack-spec-card, .techpack-bom-table th, .techpack-bom-table td, .techpack-telemetry-row {
+    background: #FFF !important;
+    color: #000 !important;
+    border-color: #CCC !important;
+  }
+  .techpack-spec-card .val, .techpack-header h2, .techpack-bom-table td strong {
+    color: #000 !important;
+  }
+  .techpack-footer, .techpack-close-btn { display: none !important; }
+}
+
+/* ==========================================================================
+   CIRCULAR EXTRACTION: HIDE & STEEL ACCESSORIES DIVISION
+   ========================================================================== */
+.accessories-section {
+  background: #090909;
+  border-bottom: 2px solid var(--oxblood);
+  padding: 96px 0;
+}
+.accessory-callout-banner {
+  background: linear-gradient(90deg, #180909 0%, #120808 60%, #0D0707 100%);
+  border: 1px solid var(--red-dim);
+  border-left: 4px solid var(--red);
+  padding: 24px 32px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.accessory-callout-text h4 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.accessory-callout-text p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--bone-dim);
+}
+.accessory-telemetry-pills {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.accessory-telemetry-pills .pill {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  padding: 8px 14px;
+  color: var(--bone);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.accessory-telemetry-pills .pill strong {
+  color: var(--red);
+}
+.accessories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) {
+  .accessories-grid { grid-template-columns: 1fr; }
+}
+.accessory-card {
+  background: #0E0E0E;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.accessory-card:hover {
+  border-color: var(--red);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 20px rgba(229, 9, 20, 0.15);
+}
+.accessory-card-media {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background: #050505;
+  overflow: hidden;
+}
+.accessory-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.15) brightness(0.85);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+.accessory-card:hover .accessory-card-media img {
+  filter: contrast(1.15) brightness(1);
+  transform: scale(1.04);
+}
+.accessory-card-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(14, 8, 8, 0.92);
+  border: 1px solid rgba(229, 9, 20, 0.5);
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  padding: 4px 8px;
+  letter-spacing: 0.14em;
+  color: var(--red);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.accessory-card-origin {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  padding: 4px 8px;
+  letter-spacing: 0.1em;
+  color: var(--bone);
+  text-transform: uppercase;
+}
+.accessory-card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.accessory-card-id {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  color: var(--bone-muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.accessory-card-body h3 {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  color: #FFFFFF;
+}
+.accessory-card-body p {
+  font-size: 0.88rem;
+  color: var(--bone-dim);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  flex: 1;
+}
+.accessory-specs-block {
+  background: #080808;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 14px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.accessory-specs-block .spec-row {
+  display: flex;
+  justify-content: space-between;
+}
+.accessory-specs-block .spec-row span { color: var(--bone-muted); }
+.accessory-specs-block .spec-row strong { color: var(--bone); }
+.accessory-card-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.btn-accessory-addon {
+  width: 100%;
+  padding: 13px;
+  background: #160D0D;
+  border: 1px solid var(--red-dim);
+  color: #FFFFFF;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.btn-accessory-addon:hover {
+  background: var(--red);
+  border-color: var(--red-accent);
+  box-shadow: 0 6px 20px var(--red-glow);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   DIRECT SPECIMEN DISPATCH PANEL (ESTIMATOR)
+   ========================================================================== */
+.specimen-dispatch-card {
+  margin-top: 24px;
+  background: #140A0A;
+  border: 1px solid var(--red-dim);
+  border-left: 4px solid var(--red);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+.specimen-dispatch-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.specimen-dispatch-kicker {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 600;
+}
+.specimen-turnaround-badge {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  padding: 3px 8px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.specimen-dispatch-card h4 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.specimen-dispatch-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #D4D4D4;
+  line-height: 1.55;
+}
+.btn-direct-specimen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 15px 22px;
+  background: var(--red);
+  border: 1px solid var(--red-accent);
+  color: #FFFFFF;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 10px 30px var(--red-glow);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-direct-specimen:hover {
+  background: #FF1E27;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 38px rgba(229, 9, 20, 0.8);
+  color: #FFFFFF;
+}
+.specimen-micro-telemetry {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--bone-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================================
+   PERSISTENT GLOBAL ECOSYSTEM DOCK
+   ========================================================================== */
+.ecosystem-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #080808;
+  border-top: 1px solid rgba(229, 9, 20, 0.65);
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.85);
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease;
+}
+.ecosystem-dock.minimized {
+  transform: translateY(calc(100% - 24px));
+}
+.ecosystem-telemetry-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.telemetry-beacon {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 8px var(--red);
+  flex-shrink: 0;
+  animation: beaconPulse 1.8s infinite;
+}
+@keyframes beaconPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+.ecosystem-telemetry-text {
+  color: #E0E0E0;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+.ecosystem-telemetry-text strong {
+  color: var(--red);
+}
+.ecosystem-pillars-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.pillar-link {
+  color: var(--bone-dim);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: color 0.2s ease;
+}
+.pillar-link:hover {
+  color: var(--red);
+}
+.pillar-link span.bracket {
+  color: var(--bone-muted);
+  font-size: 0.62rem;
+}
+.dock-toggle-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--bone-muted);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  padding: 2px 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.dock-toggle-btn:hover {
+  color: #FFF;
+  border-color: var(--red);
+}
+@media (max-width: 900px) {
+  .ecosystem-dock {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 16px;
+    gap: 6px;
+  }
+  .ecosystem-pillars-right {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
 
 /* ==========================================================================
    SECTIONS & LAYOUT
@@ -1496,36 +2665,48 @@ footer.site {
 <body>
 
 <!-- ============ HEADER & TOP TICKER ============ -->
+<!-- ============ PEAK PERFORMANCE GLOBAL HEADER & TOP TICKER BAR ============ -->
 <header class="site">
-  <div class="marquee-bar">
-    <div class="marquee-track">
-      <span class="marquee-item" data-i18n="topbar.brand_line">MADE IN BANGLADESH • MOQ FROM 50 UNITS</span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.moq_line">SAMPLE TO BULK TURNAROUND 14-21 DAYS • DIRECT TANNERY INTEGRATION</span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.brand_line">MADE IN BANGLADESH • MOQ FROM 50 UNITS</span><span class="marquee-sep">◆</span>
-      <span class="marquee-item" data-i18n="topbar.moq_line">SAMPLE TO BULK TURNAROUND 14-21 DAYS • DIRECT TANNERY INTEGRATION</span><span class="marquee-sep">◆</span>
+  <!-- Slim Top Ticker Bar -->
+  <div class="top-ticker-bar">
+    <div class="ticker-live-indicator">
+      <span class="ticker-beacon"></span>
+      <span>ACCEPTING SS27 PRIVATE LABEL PRODUCTION RUNS • PHYSICAL PROTOTYPES DISPATCHED IN 7–10 DAYS</span>
+    </div>
+    <div class="ticker-lang-switch" data-lang-mount>
+      <button type="button" data-lang-switch="en" class="active">EN</button>
+      <span class="ticker-lang-sep">|</span>
+      <button type="button" data-lang-switch="bn">বাংলা</button>
+      <span class="ticker-lang-sep">|</span>
+      <button type="button" data-lang-switch="jp">日本語</button>
+      <span class="ticker-lang-sep">|</span>
+      <button type="button" data-lang-switch="nl">NL</button>
+      <span class="ticker-lang-sep">|</span>
+      <button type="button" data-lang-switch="de">DE</button>
     </div>
   </div>
 
-  <div class="container navbar">
-    <a href="index.html" class="logo">
-      RAW<span class="x">x</span><small>Leather Jacket Div. · Sourcing Node</small>
+  <!-- Primary Sticky Navigation -->
+  <div class="navbar">
+    <a href="index.html" class="logo-peak">
+      <span class="brand-mark">RAWx ATELIER</span>
+      <span class="brand-sub">LEATHER DIVISION // DHAKA ATELIER</span>
     </a>
 
     <nav class="navlinks">
-      <a href="index.html" class="active" data-i18n="nav.home">HOME</a>
-      <a href="catalog.html" data-i18n="nav.catalog">CATALOG</a>
-      <a href="custom-orders.html" data-i18n="nav.custom">CUSTOM / OEM SPEC</a>
-      <a href="#how-we-work" data-i18n="nav.how_we_work">HOW WE WORK</a>
-      <a href="#detail-vault" data-i18n="nav.lookbook">DETAIL VAULT</a>
-      <a href="blog.html" data-i18n="nav.journal">JOURNAL</a>
+      <a href="#shop-archival" class="active">OUTERWEAR</a>
+      <a href="#detail-vault">BENCHWORK VAULT</a>
+      <a href="#hide-steel-accessories">HIDE &amp; STEEL</a>
+      <a href="#guides">PRODUCTION GUIDE</a>
+      <a href="blog.html">JOURNAL</a>
     </nav>
 
     <div class="nav-actions">
-      <div class="lang-switch" data-lang-mount></div>
-      <button type="button" class="btn btn-secondary-spec" id="headerRfqBtn" data-open-rfq data-i18n="nav.cta_quote">
-        REQUEST TECH PACK / SAMPLE
+      <button type="button" class="btn-search-trigger" id="quickSearchBtn" aria-label="Quick Search Archive">
+        <span>⌕</span> <span>SEARCH</span>
       </button>
-      <a href="https://b2b.handsandhead.com/?source=jacket_showroom" target="_blank" rel="noopener noreferrer" class="btn btn-portal" data-i18n="nav.portal">
+      <div class="currency-pill">USD $ • FOB DHAKA • MOQ 50</div>
+      <a href="https://b2b.handsandhead.com/?source=header_peak" target="_blank" rel="noopener noreferrer" class="btn-peak-pill-solid">
         ENTER B2B PORTAL ↗
       </a>
       <button class="burger" aria-label="Toggle Navigation">MENU</button>
@@ -1670,58 +2851,267 @@ footer.site {
     </div>
   </div>
 
-  <!-- Fading Edge Masks -->
-  <div class="tilted-fader-edges"></div>
+  <!-- Subtle Ambient Radial Vignette & Edge Masking -->
+  <div class="tilted-radial-vignette"></div>
 
-  <!-- Overlay Content -->
-  <div class="tilted-hero-content">
-    <!-- Top Live Badge -->
-    <div class="tilted-hero-badge">
-      <div class="ping-wrapper">
-        <span class="ping-dot"></span>
-        <span class="ping-solid"></span>
+  <!-- Hero Viewport Inner (Peak Performance Alpine signature layout) -->
+  <div class="hero-viewport-inner">
+    <!-- Top Floating Telemetry Pill (Nordic utility badge) -->
+    <div class="hero-nordic-pill-wrap">
+      <div class="hero-nordic-pill">
+        <span class="beacon-pulse"></span>
+        <span>DIRECT TANNERY INTEGRATION • MOQ 50 UNITS • DHAKA ATELIER</span>
       </div>
-      <span class="badge-txt">DIRECT TANNERY INTEGRATION • MOQ 50 PCS</span>
     </div>
 
-    <!-- Editorial Luxury Headline -->
-    <h1 class="tilted-hero-headline">
-      FROM HIDE TO HANGER,<br>
-      <span class="italic-sub">IN-HOUSE PRECISION.</span>
-    </h1>
+    <!-- Bottom-Left Editorial Text Lockup -->
+    <div class="hero-alpine-lockup">
+      <!-- Category Tag -->
+      <div class="hero-category-tag">
+        ARCHIVAL GRADE // 1.2MM COWHIDE &amp; SHEARLING
+      </div>
 
-    <!-- Subtext -->
-    <p class="tilted-hero-subtext">
-      Curated full-grain cowhide, shearing liners, and custom CNC hardware built for private labels and global buyers. Direct OEM manufacturing from Dhaka tanneries to worldwide retailers.
-    </p>
+      <!-- Massive Crisp Header -->
+      <h1 class="hero-alpine-title">
+        ENGINEERED FOR THE ELEMENTS.
+      </h1>
 
-    <!-- Action CTAs -->
-    <div class="tilted-hero-ctas">
-      <a href="https://b2b.handsandhead.com/?source=hero_cylinder" target="_blank" rel="noopener noreferrer" class="btn-portal-cylinder">
-        ENTER B2B PORTAL ↗
-      </a>
-      <a href="#estimator" class="btn-estimate-cylinder">
-        ESTIMATE PRODUCTION
-      </a>
+      <!-- Editorial Sub-line -->
+      <p class="hero-alpine-subtext">
+        Direct atelier-to-brand manufacturing. Uncompromised benchwork tolerances, custom CNC hardware, and zero intermediate markups.
+      </p>
+
+      <!-- Peak Performance Signature Rounded-Glass Action Pill Triggers -->
+      <div class="hero-alpine-ctas">
+        <a href="#shop-archival" class="btn-peak-pill-glass">
+          <span>→</span> EXPLORE ARCHIVE
+        </a>
+        <a href="https://b2b.handsandhead.com/?source=hero_peak" target="_blank" rel="noopener noreferrer" class="btn-peak-pill-solid" style="padding:13px 26px; font-size:0.74rem;">
+          <span>→</span> ENTER B2B PORTAL ↗
+        </a>
+        <a href="#estimator" class="btn-peak-pill-outline">
+          <span>→</span> SPECIFY PROTOTYPE
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECHNICAL PRODUCT SHOWCASE ("SHOP ARCHIVAL LINE") ============ -->
+<section id="shop-archival" class="shop-archival-section">
+  <div class="container">
+    <div class="section-head" style="margin-bottom: 48px;">
+      <div>
+        <span class="eyebrow">Archival Line // Technical Performance Outerwear</span>
+        <h2 style="margin-top:12px;">Shop Archival Line.</h2>
+      </div>
+      <p>
+        Precision-graded patterns cut from full-grain bovine, ovine, and buffalo hides. Tested to sub-zero tolerances with custom CNC hardware and zero intermediate markups.
+      </p>
     </div>
 
-    <!-- Telemetry Bar -->
-    <div class="tilted-telemetry-strip">
-      <div>
-        <div class="t-label">Base MOQ</div>
-        <div class="t-val">50 Units / Style</div>
+    <!-- 4-Column Fluid Product Card Grid -->
+    <div class="shop-archival-grid">
+      <!-- Card 1: Double Rider Biker -->
+      <div class="product-card-peak" data-product-style="RXL-01" data-title="Full-Grain Double Rider Biker 1.3mm">
+        <div class="product-media-peak">
+          <span class="product-badge-peak">NEW // STYLE RXL-01</span>
+          <img src="assets/62550.jpg" alt="Full-Grain Double Rider Biker 1.3mm" id="prodImg-RXL-01" loading="lazy">
+          <div class="product-swatches-peak">
+            <span class="swatch-dot active" style="background:#141414;" title="Matte Black" data-color="Matte Black" data-img="assets/62550.jpg"></span>
+            <span class="swatch-dot" style="background:#4A2E1B;" title="Distressed Pull-Up" data-color="Distressed Pull-Up" data-img="assets/62552.jpg"></span>
+            <span class="swatch-dot" style="background:#8A5229;" title="Vintage Whiskey" data-color="Vintage Whiskey" data-img="assets/62558.jpg"></span>
+            <span class="swatch-dot" style="background:#4A0E17;" title="Oxblood" data-color="Oxblood" data-img="assets/62555.jpg"></span>
+          </div>
+        </div>
+        <div class="product-body-peak">
+          <div>
+            <h3>Full-Grain Double Rider Biker 1.3mm</h3>
+            <div class="spec-sub" id="prodSpec-RXL-01">1.3MM DRUM-DYED COWHIDE // YKK EXCELLA #10</div>
+          </div>
+          <div>
+            <div class="product-pricing-peak">
+              <span class="fob-val">EST. FOB $56 - $68 / pc</span>
+              <span class="moq-val">MOQ 50 PCS</span>
+            </div>
+            <div class="product-actions-peak">
+              <button type="button" class="btn-product-spec" data-spec-trigger="Classic Asymmetric Double Rider Biker">
+                SPEC SHEET
+              </button>
+              <a href="https://b2b.handsandhead.com/checkout?item=sample&style=RXL-01" target="_blank" rel="noopener noreferrer" class="btn-product-order">
+                ORDER PROTOTYPE ↗
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="t-label">Sample Turnaround</div>
-        <div class="t-val">7–10 Working Days</div>
+
+      <!-- Card 2: Minimalist Cafe Racer -->
+      <div class="product-card-peak" data-product-style="RXL-02" data-title="Minimalist Stand-Collar Cafe Racer 1.1mm">
+        <div class="product-media-peak">
+          <span class="product-badge-peak">STYLE RXL-02</span>
+          <img src="assets/62552.jpg" alt="Minimalist Stand-Collar Cafe Racer 1.1mm" id="prodImg-RXL-02" loading="lazy">
+          <div class="product-swatches-peak">
+            <span class="swatch-dot active" style="background:#141414;" title="Matte Black" data-color="Matte Black" data-img="assets/62552.jpg"></span>
+            <span class="swatch-dot" style="background:#4A2E1B;" title="Distressed Pull-Up" data-color="Distressed Pull-Up" data-img="assets/62550.jpg"></span>
+            <span class="swatch-dot" style="background:#8A5229;" title="Vintage Whiskey" data-color="Vintage Whiskey" data-img="assets/62558.jpg"></span>
+            <span class="swatch-dot" style="background:#4A0E17;" title="Oxblood" data-color="Oxblood" data-img="assets/62555.jpg"></span>
+          </div>
+        </div>
+        <div class="product-body-peak">
+          <div>
+            <h3>Minimalist Stand-Collar Cafe Racer 1.1mm</h3>
+            <div class="spec-sub" id="prodSpec-RXL-02">1.1MM CALFSKIN // MANDARIN SNAP TAB</div>
+          </div>
+          <div>
+            <div class="product-pricing-peak">
+              <span class="fob-val">EST. FOB $52 - $64 / pc</span>
+              <span class="moq-val">MOQ 50 PCS</span>
+            </div>
+            <div class="product-actions-peak">
+              <button type="button" class="btn-product-spec" data-spec-trigger="Minimalist Stand-Collar Cafe Racer">
+                SPEC SHEET
+              </button>
+              <a href="https://b2b.handsandhead.com/checkout?item=sample&style=RXL-02" target="_blank" rel="noopener noreferrer" class="btn-product-order">
+                ORDER PROTOTYPE ↗
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <div class="t-label">Bulk Lead Time</div>
-        <div class="t-val">14–21 Days FOB</div>
+
+      <!-- Card 3: Shearling Aviator Flight -->
+      <div class="product-card-peak" data-product-style="RXL-03" data-title="Merino Wool B-3 Aviator Flight 1.4mm">
+        <div class="product-media-peak">
+          <span class="product-badge-peak">THERMAL CORE // RXL-03</span>
+          <img src="assets/62564.jpg" alt="Merino Wool B-3 Aviator Flight 1.4mm" id="prodImg-RXL-03" loading="lazy">
+          <div class="product-swatches-peak">
+            <span class="swatch-dot active" style="background:#4A2E1B;" title="Distressed Brown" data-color="Distressed Brown" data-img="assets/62564.jpg"></span>
+            <span class="swatch-dot" style="background:#141414;" title="Matte Black" data-color="Matte Black" data-img="assets/62556.jpg"></span>
+            <span class="swatch-dot" style="background:#8A5229;" title="Vintage Whiskey" data-color="Vintage Whiskey" data-img="assets/62558.jpg"></span>
+            <span class="swatch-dot" style="background:#C2B280;" title="Merino Fleece" data-color="Merino Fleece" data-img="assets/62654.jpg"></span>
+          </div>
+        </div>
+        <div class="product-body-peak">
+          <div>
+            <h3>Merino Wool B-3 Aviator Flight 1.4mm</h3>
+            <div class="spec-sub" id="prodSpec-RXL-03">15MM DENSE MERINO WOOL // OILED HIDE</div>
+          </div>
+          <div>
+            <div class="product-pricing-peak">
+              <span class="fob-val">EST. FOB $88 - $110 / pc</span>
+              <span class="moq-val">MOQ 30 PCS</span>
+            </div>
+            <div class="product-actions-peak">
+              <button type="button" class="btn-product-spec" data-spec-trigger="B-3 Heavy Shearling Flight Bomber">
+                SPEC SHEET
+              </button>
+              <a href="https://b2b.handsandhead.com/checkout?item=sample&style=RXL-03" target="_blank" rel="noopener noreferrer" class="btn-product-order">
+                ORDER PROTOTYPE ↗
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Card 4: Tactical Utility Overshirt -->
+      <div class="product-card-peak" data-product-style="RXL-04" data-title="Tactical Utility Overshirt 0.9mm Nappa">
+        <div class="product-media-peak">
+          <span class="product-badge-peak">STYLE RXL-04</span>
+          <img src="assets/62558.jpg" alt="Tactical Utility Overshirt 0.9mm Nappa" id="prodImg-RXL-04" loading="lazy">
+          <div class="product-swatches-peak">
+            <span class="swatch-dot active" style="background:#141414;" title="Matte Black" data-color="Matte Black" data-img="assets/62558.jpg"></span>
+            <span class="swatch-dot" style="background:#3B443B;" title="Tactical Olive" data-color="Tactical Olive" data-img="assets/62640.jpg"></span>
+            <span class="swatch-dot" style="background:#4A2E1B;" title="Distressed Pull-Up" data-color="Distressed Pull-Up" data-img="assets/62552.jpg"></span>
+            <span class="swatch-dot" style="background:#8A5229;" title="Vintage Whiskey" data-color="Vintage Whiskey" data-img="assets/62550.jpg"></span>
+          </div>
+        </div>
+        <div class="product-body-peak">
+          <div>
+            <h3>Tactical Utility Overshirt 0.9mm Nappa</h3>
+            <div class="spec-sub" id="prodSpec-RXL-04">0.9MM NAPPA SHEEPSKIN // DUAL BELLOWS</div>
+          </div>
+          <div>
+            <div class="product-pricing-peak">
+              <span class="fob-val">EST. FOB $48 - $58 / pc</span>
+              <span class="moq-val">MOQ 50 PCS</span>
+            </div>
+            <div class="product-actions-peak">
+              <button type="button" class="btn-product-spec" data-spec-trigger="Tactical Utility Leather Overshirt">
+                SPEC SHEET
+              </button>
+              <a href="https://b2b.handsandhead.com/checkout?item=sample&style=RXL-04" target="_blank" rel="noopener noreferrer" class="btn-product-order">
+                ORDER PROTOTYPE ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDITORIAL 3-UP STORY TILES ("GUIDES & METHODOLOGY") ============ -->
+<section id="guides" class="methodology-section">
+  <div class="container">
+    <div class="section-head" style="margin-bottom: 48px;">
       <div>
-        <div class="t-label">Raw Tannery Origin</div>
-        <div class="t-val amber">Direct Dhaka Hub</div>
+        <span class="eyebrow">Atelier Architecture // Manufacturing Ethos</span>
+        <h2 style="margin-top:12px;">Guides &amp; Methodology.</h2>
+      </div>
+      <p>
+        From our direct tannery drums in Dhaka to international port delivery — how RAWx Atelier executes high-tolerance outerwear benchwork.
+      </p>
+    </div>
+
+    <!-- 3-Column Editorial Grid -->
+    <div class="methodology-grid">
+      <!-- Tile 1: The Original Anchor Jacket -->
+      <div class="story-tile-peak">
+        <img src="assets/62550.jpg" alt="The Original Anchor Jacket Benchwork" class="story-tile-bg" loading="lazy">
+        <div class="story-tile-overlay"></div>
+        <div class="story-tile-content">
+          <div class="story-tile-tag">BENCHWORK METHOD // 01</div>
+          <h3 class="story-tile-title">THE ORIGINAL ANCHOR JACKET</h3>
+          <p class="story-tile-desc">
+            Pull-up hides cut to razor tolerances with double-felled structural seams, reinforced gussets, and heavy YKK Excella center tracks.
+          </p>
+          <button type="button" class="story-tile-pill" data-spec-trigger="Classic Asymmetric Double Rider Biker">
+            <span>→</span> READ BENCHWORK SPEC
+          </button>
+        </div>
+      </div>
+
+      <!-- Tile 2: When Leather Turns: Tannery Direct -->
+      <div class="story-tile-peak">
+        <img src="assets/62557.jpg" alt="When Leather Turns: Direct Dhaka Hub" class="story-tile-bg" loading="lazy">
+        <div class="story-tile-overlay"></div>
+        <div class="story-tile-content">
+          <div class="story-tile-tag">PROVENANCE &amp; TANNERY // 02</div>
+          <h3 class="story-tile-title">WHEN LEATHER TURNS: TANNERY DIRECT</h3>
+          <p class="story-tile-desc">
+            In-house tanning drums, chrome-free vegetable extraction, and zero intermediary markups direct from our dedicated Dhaka facility.
+          </p>
+          <a href="#how-we-work" class="story-tile-pill">
+            <span>→</span> EXPLORE TANNERY
+          </a>
+        </div>
+      </div>
+
+      <!-- Tile 3: Circular Extraction: Hide & Steel -->
+      <div class="story-tile-peak">
+        <img src="assets/62640.jpg" alt="Circular Extraction: Hide and Steel Accessories" class="story-tile-bg" loading="lazy">
+        <div class="story-tile-overlay"></div>
+        <div class="story-tile-content">
+          <div class="story-tile-tag">CIRCULAR RECLAMATION // 03</div>
+          <h3 class="story-tile-title">CIRCULAR EXTRACTION: HIDE &amp; STEEL</h3>
+          <p class="story-tile-desc">
+            Zero raw hide scrap policy. High-tensile edge remnants upcycled into CNC-machined 316L stainless steel luxury accessories.
+          </p>
+          <a href="#hide-steel-accessories" class="story-tile-pill">
+            <span>→</span> VIEW ACCESSORIES
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -2447,6 +3837,157 @@ footer.site {
   </div>
 </section>
 
+<!-- ============ CIRCULAR EXTRACTION: HIDE & STEEL ACCESSORIES DIVISION ============ -->
+<section id="hide-steel-accessories" class="accessories-section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Atelier Circularity // Zero-Waste Material Flow</span>
+        <h2 style="margin-top:12px;">Circular Extraction:<br>Hide &amp; Steel Accessories.</h2>
+      </div>
+      <p>
+        Upcycling high-tensile cutting scrap and perimeter grain remnants from our master outerwear lines into high-margin luxury accessories engineered with CNC-milled 316L stainless steel and solid brass.
+      </p>
+    </div>
+
+    <!-- Key Value Callout Banner -->
+    <div class="accessory-callout-banner">
+      <div class="accessory-callout-text">
+        <h4>Zero Raw Hide Waste. 100% Structural Margin.</h4>
+        <p>
+          Available as co-branded private-label packaging or standalone retail lines (MOQ: 100 units). Maximize container cubic volume and capture retail upsell margins on every jacket production run.
+        </p>
+      </div>
+      <div class="accessory-telemetry-pills">
+        <div class="pill">EFFICIENCY: <strong>94.8% HIDE YIELD</strong></div>
+        <div class="pill">HARDWARE: <strong>CNC 316L STEEL</strong></div>
+        <div class="pill">MARGIN UPLIFT: <strong>+42% BASKET</strong></div>
+        <div class="pill">MINIMUM LOT: <strong>100 UNITS MOQ</strong></div>
+      </div>
+    </div>
+
+    <!-- 3 High-Contrast Product Cards -->
+    <div class="accessories-grid">
+      <!-- Card 1: Modular Cuffs & Double-Wrap Bracelets -->
+      <div class="accessory-card" data-accessory-id="ACC-CUFF-01" data-accessory-title="Modular Cuffs &amp; Double-Wrap Bracelets">
+        <div class="accessory-card-media">
+          <img src="assets/62640.jpg" alt="Modular Cuffs and Double-Wrap Bracelets" loading="lazy">
+          <span class="accessory-card-category">CNC HARDWARE INTEGRATION</span>
+          <span class="accessory-card-origin">Dhaka Cutting Floor Off-Cuts</span>
+        </div>
+        <div class="accessory-card-body">
+          <span class="accessory-card-id">ACC-01 // MODULAR BRACELET</span>
+          <h3>Modular Cuffs &amp; Double-Wrap Bracelets</h3>
+          <p>
+            Cut from 1.4mm buffalo pull-up edge remnants; paired with custom CNC-machined 316L marine-grade stainless steel magnetic interlock clasps with laser-etched brand serial numbering.
+          </p>
+          <div class="accessory-specs-block">
+            <div class="spec-row">
+              <span>Leather Origin</span>
+              <strong>1.4mm Heavy Buffalo Pull-Up</strong>
+            </div>
+            <div class="spec-row">
+              <span>Clasp Material</span>
+              <strong>CNC 316L Stainless Steel Magnetic</strong>
+            </div>
+            <div class="spec-row">
+              <span>Edge Finish</span>
+              <strong>Hand-Beveled &amp; Burnished Wax</strong>
+            </div>
+            <div class="spec-row">
+              <span>Packaging MOQ</span>
+              <strong>100 Units / Matte Embossed Box</strong>
+            </div>
+          </div>
+          <div class="accessory-card-actions">
+            <button type="button" class="btn-accessory-addon" data-accessory-trigger="Modular Cuffs &amp; Double-Wrap Bracelets (ACC-01)">
+              Request Accessory Add-on +
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Leather Field Notebook Covers -->
+      <div class="accessory-card" data-accessory-id="ACC-BOOK-02" data-accessory-title="Leather Field Notebook Covers">
+        <div class="accessory-card-media">
+          <img src="assets/62653.jpg" alt="Leather Field Notebook Covers" loading="lazy">
+          <span class="accessory-card-category">ATELIER STATIONERY GOODS</span>
+          <span class="accessory-card-origin">Tannery Flank Remnants</span>
+        </div>
+        <div class="accessory-card-body">
+          <span class="accessory-card-id">ACC-02 // FIELD NOTEBOOK</span>
+          <h3>Leather Field Notebook Covers</h3>
+          <p>
+            Formed from outer perimeter hide cuts with unbroken natural grain density; engineered for 3.5×5.5" pocket field journals with interior debossed card slots and leather pen sheath.
+          </p>
+          <div class="accessory-specs-block">
+            <div class="spec-row">
+              <span>Leather Origin</span>
+              <strong>1.2–1.3mm Vegetable-Tanned Cowhide</strong>
+            </div>
+            <div class="spec-row">
+              <span>Stitch Spec</span>
+              <strong>7 SPI Waxed Linen Saddle Stitch</strong>
+            </div>
+            <div class="spec-row">
+              <span>Branding</span>
+              <strong>Blind Heat Deboss / Metallic Foil</strong>
+            </div>
+            <div class="spec-row">
+              <span>Packaging MOQ</span>
+              <strong>100 Units / Cotton Dust Bags</strong>
+            </div>
+          </div>
+          <div class="accessory-card-actions">
+            <button type="button" class="btn-accessory-addon" data-accessory-trigger="Leather Field Notebook Covers (ACC-02)">
+              Request Accessory Add-on +
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Heavy Hide Cord Organizers 3-Pack -->
+      <div class="accessory-card" data-accessory-id="ACC-CORD-03" data-accessory-title="Heavy Cord Organizers (3-Pack)">
+        <div class="accessory-card-media">
+          <img src="assets/62561.jpg" alt="Heavy Hide Cord Organizers 3-Pack" loading="lazy">
+          <span class="accessory-card-category">DESKWARE &amp; COMMUTE GEAR</span>
+          <span class="accessory-card-origin">Collar &amp; Pocket Trim Scraps</span>
+        </div>
+        <div class="accessory-card-body">
+          <span class="accessory-card-id">ACC-03 // CORD ORGANIZERS</span>
+          <h3>Solid Brass &amp; Hide Cord Organizers</h3>
+          <p>
+            Die-cut geometric wraps with heavy solid brass snap caps, engineered to organize heavy braided audio cables, studio power cords, and travel tech packs with raw tactile authority.
+          </p>
+          <div class="accessory-specs-block">
+            <div class="spec-row">
+              <span>Leather Origin</span>
+              <strong>1.1mm Drum-Dyed Cowhide Scraps</strong>
+            </div>
+            <div class="spec-row">
+              <span>Hardware</span>
+              <strong>Solid Brass Heavy-Duty Snap Caps</strong>
+            </div>
+            <div class="spec-row">
+              <span>Core Structure</span>
+              <strong>Reinforced Anti-Stretch Fiber Core</strong>
+            </div>
+            <div class="spec-row">
+              <span>Packaging MOQ</span>
+              <strong>150 Sets (3-Pack) / Retail Cards</strong>
+            </div>
+          </div>
+          <div class="accessory-card-actions">
+            <button type="button" class="btn-accessory-addon" data-accessory-trigger="Solid Brass &amp; Hide Cord Organizers 3-Pack (ACC-03)">
+              Request Accessory Add-on +
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ DEEP PRODUCTION GUIDE: FROM HIDE TO HANGER ============ -->
 <section id="how-we-work" class="workflow-section">
   <div class="container">
@@ -2648,6 +4189,26 @@ footer.site {
             <span class="lbl">Estimated Total Lot Value</span>
             <span class="amt" id="totalLotDisplay">$12,400 – $14,800</span>
           </div>
+
+          <!-- DIRECT SPECIMEN DISPATCH PANEL -->
+          <div class="specimen-dispatch-card">
+            <div class="specimen-dispatch-header">
+              <span class="specimen-dispatch-kicker">FAST-TRACK PROTOCOL // EXPRESS BENCHWORK</span>
+              <span class="specimen-turnaround-badge">7–10 DAYS TO YOUR DOOR</span>
+            </div>
+            <h4>FAST-TRACK PHYSICAL PROTOTYPE</h4>
+            <p>
+              Skip bulk negotiation. Receive an unbranded, full-grain physical production sample in your hands within 7–10 working days.
+            </p>
+            <a href="https://b2b.handsandhead.com/sample-order?ref=jacket_showroom" target="_blank" rel="noopener noreferrer" class="btn btn-direct-specimen">
+              ORDER BENCHWORK SAMPLE ($180 FLAT FOB) ↗
+            </a>
+            <div class="specimen-micro-telemetry">
+              <span>COURIER: DHL EXPRESS AIR</span>
+              <span>CREDIT: 100% REBATED AGAINST BULK PO</span>
+              <span>AUDIT: AQL 2.5 INCLUDED</span>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -2763,6 +4324,126 @@ footer.site {
   </div>
 </footer>
 
+<!-- ============ PERSISTENT GLOBAL ECOSYSTEM STATUS DOCK ============ -->
+<div class="ecosystem-dock" id="ecosystemDock" role="region" aria-label="Ecosystem Live Telemetry">
+  <div class="ecosystem-telemetry-left">
+    <span class="telemetry-beacon" aria-hidden="true"></span>
+    <span class="ecosystem-telemetry-text">
+      <strong>FACILITY: DHAKA, BD</strong> • CAPACITY: 1,500 UNITS/MO • ACCEPTING SS27 PRIVATE LABEL POs
+    </span>
+  </div>
+  <div class="ecosystem-pillars-right">
+    <a href="https://handsandhead.com" target="_blank" rel="noopener noreferrer" class="pillar-link">
+      HANDSANDHEAD.COM <span class="bracket">[Brand &amp; Atelier Identity]</span>
+    </a>
+    <a href="https://21dev.handsandhead.com" target="_blank" rel="noopener noreferrer" class="pillar-link">
+      21DEV.HANDSANDHEAD.COM <span class="bracket">[Digital Systems &amp; Generative Architecture]</span>
+    </a>
+    <a href="https://b2b.handsandhead.com" target="_blank" rel="noopener noreferrer" class="pillar-link" style="color:var(--red); font-weight:700;">
+      B2B.HANDSANDHEAD.COM <span class="bracket">[Direct Factory Terminal &amp; Enterprise Sourcing]</span>
+    </a>
+    <button type="button" class="dock-toggle-btn" id="dockToggleBtn" aria-label="Toggle Ecosystem Telemetry Dock">_</button>
+  </div>
+</div>
+
+<!-- ============ INTERACTIVE SLIDE-OVER TECH-PACK DRAWER ============ -->
+<div class="techpack-drawer-backdrop" id="techPackDrawer" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="techpack-drawer-panel" id="techPackPanel">
+    <div class="techpack-header">
+      <div class="techpack-header-left">
+        <span class="techpack-tag" id="tpTag">FACTORY SPECIFICATION ARCHIVE // RAW-BK-01</span>
+        <h2 id="tpTitle">Classic Double Rider Biker</h2>
+      </div>
+      <button type="button" class="techpack-close-btn" id="tpCloseBtn" aria-label="Close Tech-Pack Drawer">[ESC ✕]</button>
+    </div>
+
+    <div class="techpack-body" id="tpBody">
+      <!-- Media preview with CAD watermark -->
+      <div class="techpack-hero-media">
+        <img id="tpImg" src="assets/62550.jpg" alt="Specimen Spec Image">
+        <div class="techpack-media-overlay"></div>
+        <span class="techpack-media-badge-left" id="tpBenchRef">CAD BENCH REF // RAW-BK-01</span>
+        <span class="techpack-media-badge-right">DHAKA BENCH VERIFIED</span>
+      </div>
+
+      <!-- 4 Manufacturing Specifications Cards -->
+      <div class="techpack-specs-grid">
+        <div class="techpack-spec-card">
+          <span class="lbl">Leather Grade &amp; Thickness</span>
+          <span class="val" id="tpLeather">1.3mm Full-Grain Cowhide</span>
+          <span class="sub">Drum-dyed pull-up finish, tensile strength &gt; 180N</span>
+        </div>
+        <div class="techpack-spec-card">
+          <span class="lbl">Hardware &amp; Zipper Spec</span>
+          <span class="val" id="tpHardware">YKK Excella #10 Antique Brass</span>
+          <span class="sub">Dual-way center track, 316L stainless snap caps</span>
+        </div>
+        <div class="techpack-spec-card">
+          <span class="lbl">Construction &amp; Stitch Tolerances</span>
+          <span class="val" id="tpConstruction">7-8 SPI / Bonded Nylon Tex-90</span>
+          <span class="sub">Double-felled load seams, bar-tacked stress points</span>
+        </div>
+        <div class="techpack-spec-card">
+          <span class="lbl">Interior Lining &amp; Insulation</span>
+          <span class="val" id="tpLining">280 GSM Japanese Cupro</span>
+          <span class="sub">Breathable anti-static glide, reinforced chest facing</span>
+        </div>
+      </div>
+
+      <!-- Bill of Materials (BOM) Table -->
+      <div>
+        <div class="eyebrow" style="margin-bottom:12px;">ENGINEERING BILL OF MATERIALS (BOM)</div>
+        <table class="techpack-bom-table" id="tpBomTable">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Specification</th>
+              <th>Avg Yield</th>
+              <th style="text-align:right;">Origin</th>
+            </tr>
+          </thead>
+          <tbody id="tpBomBody">
+            <!-- Dynamically populated in JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Factory Telemetry Strip -->
+      <div class="techpack-telemetry-row">
+        <div class="item">
+          <span>Seam Variance</span>
+          <strong id="tpVariance">±1.0 mm</strong>
+        </div>
+        <div class="item">
+          <span>QC Audit Gate</span>
+          <strong id="tpQc">AQL 2.5 Major</strong>
+        </div>
+        <div class="item">
+          <span>Prototype Turn</span>
+          <strong class="amber" id="tpSampleTurn">7–10 Working Days</strong>
+        </div>
+        <div class="item">
+          <span>Minimum Order</span>
+          <strong id="tpMoq">50 Units / Style</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div class="techpack-footer">
+      <button type="button" class="btn-print" id="tpPrintBtn">
+        ⎙ Download Spec PDF / Print Tech-Sheet
+      </button>
+      <a href="https://b2b.handsandhead.com/checkout?item=sample&style=RAW-BK-01" target="_blank" rel="noopener noreferrer" class="btn-sample-preorder" id="tpPreorderBtn">
+        Pre-Order Specimen Prototype ($180 Flat) ↗
+      </a>
+      <button type="button" class="btn-bulk-rfq" id="tpBulkRfqBtn">
+        Launch Bulk RFQ ↓
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- ============ FULL-SCREEN MACRO LIGHTBOX ============ -->
 <div class="lightbox-backdrop" id="macroLightbox" role="dialog" aria-modal="true">
   <div class="lightbox-dialog">
@@ -2866,6 +4547,17 @@ footer.site {
       </a>
     </div>
   </div>
+<!-- ============ QUICK SEARCH ARCHIVE MODAL ============ -->
+<div class="search-modal-backdrop" id="searchModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="search-dialog-box">
+    <div class="search-input-wrap">
+      <input type="text" id="searchInput" placeholder="Search archive (e.g. Biker, Cafe Racer, Shearling, Trench, 1.3mm, YKK Excella)..." autocomplete="off">
+      <button type="button" class="search-close-btn" id="searchCloseBtn" aria-label="Close search">[ESC ✕]</button>
+    </div>
+    <div class="search-results-list" id="searchResultsList">
+      <!-- Populated dynamically via JS -->
+    </div>
+  </div>
 </div>
 
 <!-- ============ CLIENT INTERACTIVITY SCRIPTS ============ -->
@@ -2887,7 +4579,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 21ST.DEV 3D CYLINDRICAL CURVED CAROUSEL DYNAMIC SIZING
+  // 21ST.DEV 3D CYLINDRICAL CURVED CAROUSEL DYNAMIC SIZING (60FPS GPU OPTIMIZED)
   // ==========================================================================
   const cylinderViewport = document.getElementById('cylinderHero');
   const cylinderTrack = document.getElementById('tiltedCylinderTrack');
@@ -2895,19 +4587,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const tiles = Array.from(cylinderTrack.querySelectorAll('.tilted-cylinder-tile'));
     const SLICES = tiles.length || 16;
     const curve = 75; // 75% curve factor
+    let rAf = null;
 
     function updateCylinderLayout() {
-      const width = cylinderViewport.clientWidth || window.innerWidth;
-      // Calculate dynamic radius based on container width and curve factor
-      const radius = Math.max(520, Math.min(1150, (width / 2) * (100 / curve)));
-      tiles.forEach((tile, index) => {
-        const angle = (index * 360) / SLICES;
-        tile.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
+      if (rAf) cancelAnimationFrame(rAf);
+      rAf = requestAnimationFrame(() => {
+        const width = cylinderViewport.clientWidth || window.innerWidth;
+        // Dynamic radius calculated for fluid zero-collision horizon
+        const radius = Math.max(520, Math.min(1150, (width / 2) * (100 / curve)));
+        tiles.forEach((tile, index) => {
+          const angle = (index * 360) / SLICES;
+          tile.style.transform = `rotateY(${angle}deg) translateZ(${radius}px)`;
+        });
       });
     }
 
     updateCylinderLayout();
-    window.addEventListener('resize', updateCylinderLayout);
+    window.addEventListener('resize', updateCylinderLayout, { passive: true });
   }
 
   // ==========================================================================
@@ -3038,7 +4734,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lightboxSpecBtn.onclick = () => {
       closeLightbox();
-      openRfqModal(title);
+      const specId = `RAW-${cat.substring(0,2).toUpperCase()}-SPEC`;
+      openTechPackDrawer({
+        id: specId,
+        title: title,
+        img: img,
+        cat: cat.toLowerCase(),
+        leather: '1.2–1.4mm Heavy Full-Grain Leather (Custom Drum-Dyed)',
+        hardware: 'YKK Excella #8/#10 antique brass/matte black dual-way zippers, 316L stainless steel snap caps',
+        construction: '7-8 Stitches Per Inch (SPI), bonded nylon Tex-90 thread, double-felled seams at stress points',
+        lining: '280 GSM Japanese cupro or diamond-quilted insulated thermal lining'
+      });
     };
 
     const b2bUrl = new URL('https://b2b.handsandhead.com/rfq');
@@ -3111,12 +4817,390 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => openRfqModal());
   });
 
-  document.querySelectorAll('[data-spec-trigger]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const style = btn.getAttribute('data-spec-trigger');
-      openRfqModal(style);
+  // ==========================================================================
+  // INTERACTIVE TECH-PACK SLIDE-OVER DRAWER LOGIC
+  // ==========================================================================
+  const techPackDrawer = document.getElementById('techPackDrawer');
+  const tpCloseBtn = document.getElementById('tpCloseBtn');
+  const tpTag = document.getElementById('tpTag');
+  const tpTitle = document.getElementById('tpTitle');
+  const tpImg = document.getElementById('tpImg');
+  const tpBenchRef = document.getElementById('tpBenchRef');
+  const tpLeather = document.getElementById('tpLeather');
+  const tpHardware = document.getElementById('tpHardware');
+  const tpConstruction = document.getElementById('tpConstruction');
+  const tpLining = document.getElementById('tpLining');
+  const tpBomBody = document.getElementById('tpBomBody');
+  const tpVariance = document.getElementById('tpVariance');
+  const tpQc = document.getElementById('tpQc');
+  const tpSampleTurn = document.getElementById('tpSampleTurn');
+  const tpMoq = document.getElementById('tpMoq');
+  const tpPreorderBtn = document.getElementById('tpPreorderBtn');
+  const tpPrintBtn = document.getElementById('tpPrintBtn');
+  const tpBulkRfqBtn = document.getElementById('tpBulkRfqBtn');
+
+  function openTechPackDrawer(data) {
+    if (!techPackDrawer) return;
+
+    const styleId = data.id || 'RAW-BK-01';
+    if (tpTag) tpTag.textContent = `FACTORY SPECIFICATION ARCHIVE // ${styleId}`;
+    if (tpTitle) tpTitle.textContent = data.title || 'Classic Outerwear Specimen';
+    if (tpImg) tpImg.src = data.img || 'assets/62550.jpg';
+    if (tpBenchRef) tpBenchRef.textContent = `CAD BENCH REF // ${styleId}`;
+    if (tpLeather) tpLeather.textContent = data.leather || '1.2–1.4mm Heavy Full-Grain Buffalo Pull-Up';
+    if (tpHardware) tpHardware.textContent = data.hardware || 'YKK Excella #8/#10 antique brass/matte black dual-way zippers, 316L stainless steel snap caps';
+    if (tpConstruction) tpConstruction.textContent = data.construction || '7-8 Stitches Per Inch (SPI), bonded nylon Tex-90 thread, double-felled seams at stress points';
+    if (tpLining) tpLining.textContent = data.lining || '280 GSM Japanese cupro or diamond-quilted insulated thermal lining';
+
+    if (tpBomBody) {
+      const bomItems = data.bom || [
+        { comp: 'Shell Hide', spec: data.leather || '1.3mm Full-Grain Cowhide', yield: '38–42 sq ft', origin: 'Dhaka Hub' },
+        { comp: 'Closure & Pockets', spec: data.hardware || 'YKK Excella #10 Antique Brass', yield: '1 complete set', origin: 'YKK Industrial' },
+        { comp: 'Structural Seams', spec: 'Tex-90 Bonded Nylon Thread, 7-8 SPI', yield: '180m / garment', origin: 'A&E Dhaka' },
+        { comp: 'Lining / Interlining', spec: data.lining || '280 GSM Japanese Cupro Glide', yield: '2.2 linear meters', origin: 'Tier-1 Mill' },
+      ];
+      tpBomBody.innerHTML = bomItems.map(item => `
+        <tr>
+          <td><strong>${item.comp}</strong></td>
+          <td>${item.spec}</td>
+          <td>${item.yield}</td>
+          <td style="text-align:right; color:var(--red); font-weight:600;">${item.origin}</td>
+        </tr>
+      `).join('');
+    }
+
+    if (tpVariance) tpVariance.textContent = data.variance || '±1.0 mm';
+    if (tpQc) tpQc.textContent = data.qc || 'AQL 2.5 Major';
+    if (tpSampleTurn) tpSampleTurn.textContent = data.turn || '7–10 Working Days';
+    if (tpMoq) tpMoq.textContent = data.moq || '50 Units / Style';
+
+    if (tpPreorderBtn) {
+      tpPreorderBtn.href = `https://b2b.handsandhead.com/checkout?item=sample&style=${encodeURIComponent(styleId)}`;
+    }
+
+    techPackDrawer.classList.add('open');
+    techPackDrawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeTechPackDrawer() {
+    if (!techPackDrawer) return;
+    techPackDrawer.classList.remove('open');
+    techPackDrawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (tpCloseBtn) {
+    tpCloseBtn.addEventListener('click', closeTechPackDrawer);
+  }
+
+  if (techPackDrawer) {
+    techPackDrawer.addEventListener('click', (e) => {
+      if (e.target === techPackDrawer) closeTechPackDrawer();
+    });
+  }
+
+  if (tpPrintBtn) {
+    tpPrintBtn.addEventListener('click', () => {
+      window.print();
+    });
+  }
+
+  if (tpBulkRfqBtn) {
+    tpBulkRfqBtn.addEventListener('click', () => {
+      closeTechPackDrawer();
+      const estimatorEl = document.getElementById('estimator');
+      if (estimatorEl) {
+        estimatorEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
+
+  // Wire all "SPEC THIS" buttons in the Archival Vault to open the interactive Tech-Pack Drawer
+  document.querySelectorAll('#vaultGrid .vault-card').forEach((card, index) => {
+    const specBtn = card.querySelector('.btn-secondary-spec');
+    if (!specBtn) return;
+
+    specBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const title = card.getAttribute('data-title') || specBtn.getAttribute('data-spec-trigger') || 'Outerwear Specimen';
+      const img = card.getAttribute('data-img') || 'assets/62550.jpg';
+      const cat = card.getAttribute('data-cat') || 'biker';
+      const specId = `RAW-${cat.substring(0,2).toUpperCase()}-${String(index + 1).padStart(2, '0')}`;
+
+      // Detailed industrial manufacturing specifications tailored by category
+      let leather = '1.3mm Heavy Full-Grain Cowhide (Pull-Up Finish)';
+      let hardware = 'YKK Excella #10 antique brass/matte black dual-way zippers, 316L stainless steel snap caps';
+      let construction = '7-8 Stitches Per Inch (SPI), bonded nylon Tex-90 thread, double-felled seams at stress points';
+      let lining = '280 GSM Japanese cupro breathable anti-static glide lining';
+
+      if (cat === 'shearling') {
+        leather = '1.3–1.4mm Oiled Distressed Hide + 15mm Genuine Merino Shearling';
+        hardware = 'YKK Excella #10 heavy brass dual-way zippers, roller throat-latch buckles';
+        lining = 'Natural high-density shearling wool fleece insulation (-20°C rated)';
+      } else if (cat === 'vest') {
+        leather = '1.2–1.4mm Heavy Full-Grain Buffalo Pull-Up';
+        hardware = 'Dual quick-release tactical steel chest buckles, YKK #8 gunmetal dual-way zips';
+        lining = '280 GSM Japanese cupro lining with internal holster/pocket reinforcements';
+      } else if (cat === 'trench') {
+        leather = '1.2mm Vegetable-Tanned Milled Cowhide';
+        hardware = 'Hand-carved solid horn buttons, covered leather roller belt buckle';
+        lining = '280 GSM Japanese cupro throughout with deep split back vent facing';
+      } else if (cat === 'bomber') {
+        leather = '0.9mm Vegetable-Tanned Nappa Sheepskin / 1.1mm Drum-Dyed Calfskin';
+        hardware = 'YKK Excella #8 matte black dual-way zippers, enameled brass snap caps';
+        lining = 'Diamond-quilted insulated thermal lining (120 GSM thermal core)';
+      }
+
+      openTechPackDrawer({
+        id: specId,
+        title,
+        img,
+        cat,
+        leather,
+        hardware,
+        construction,
+        lining,
+        variance: '±1.0 mm',
+        qc: 'AQL 2.5 Major',
+        turn: '7–10 Working Days',
+        moq: cat === 'shearling' ? '30 Units / Style' : '50 Units / Style'
+      });
     });
   });
+
+  // ==========================================================================
+  // PEAK PERFORMANCE INTERACTIVE MATERIAL SWATCH CONTROLS
+  // ==========================================================================
+  document.querySelectorAll('.product-card-peak').forEach(card => {
+    const swatches = card.querySelectorAll('.swatch-dot');
+    const imgEl = card.querySelector('.product-media-peak img');
+    const specSub = card.querySelector('.spec-sub');
+    const initialText = specSub ? specSub.textContent : '';
+
+    swatches.forEach(swatch => {
+      swatch.addEventListener('click', (e) => {
+        e.stopPropagation();
+        swatches.forEach(s => s.classList.remove('active'));
+        swatch.classList.add('active');
+
+        const newImg = swatch.getAttribute('data-img');
+        const colorName = swatch.getAttribute('data-color') || '';
+        if (imgEl && newImg) {
+          imgEl.src = newImg;
+        }
+        if (specSub) {
+          const suffix = initialText.includes('//') ? initialText.split('//').slice(1).join('//').trim() : initialText;
+          specSub.textContent = `${colorName.toUpperCase()} // ${suffix}`;
+        }
+      });
+    });
+  });
+
+  // Universal data-spec-trigger handler for shop-archival and methodology story tiles
+  document.querySelectorAll('#shop-archival [data-spec-trigger], #guides [data-spec-trigger]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const triggerName = btn.getAttribute('data-spec-trigger') || 'Outerwear Benchmark Spec';
+      let specId = 'RAW-RXL-SPEC';
+      let img = 'assets/62550.jpg';
+      let cat = 'biker';
+      let leather = '1.3mm Heavy Full-Grain Cowhide (Drum-Dyed)';
+      let hardware = 'YKK Excella #10 antique brass/matte black dual-way zippers, 316L stainless steel snap caps';
+      let construction = '7-8 Stitches Per Inch (SPI), bonded nylon Tex-90 thread, double-felled seams at stress points';
+      let lining = '280 GSM Japanese cupro breathable glide lining';
+
+      if (triggerName.toLowerCase().includes('shearling') || triggerName.toLowerCase().includes('aviator') || triggerName.toLowerCase().includes('b-3')) {
+        specId = 'RAW-SH-03';
+        img = 'assets/62564.jpg';
+        cat = 'shearling';
+        leather = '1.4mm Oiled Distressed Hide + 15mm Genuine Merino Wool';
+        hardware = 'YKK Excella #10 heavy brass dual-way zippers, forged roller throat buckles';
+        lining = 'Natural high-density merino shearling wool fleece insulation (-20°C rated)';
+      } else if (triggerName.toLowerCase().includes('cafe racer') || triggerName.toLowerCase().includes('stand-collar')) {
+        specId = 'RAW-CR-02';
+        img = 'assets/62552.jpg';
+        cat = 'biker';
+        leather = '1.1mm Supple Calfskin / Buffalo Pull-Up';
+        hardware = 'YKK Excella #8 matte black zippers, mandarin snap tab';
+        lining = '280 GSM Japanese cupro anti-static lining';
+      } else if (triggerName.toLowerCase().includes('overshirt') || triggerName.toLowerCase().includes('tactical')) {
+        specId = 'RAW-OV-04';
+        img = 'assets/62558.jpg';
+        cat = 'vest';
+        leather = '0.9mm Vegetable-Tanned Nappa Sheepskin';
+        hardware = 'Dual bellows snap flaps, enameled tactical brass snaps';
+        lining = 'Unlined raw flesh-side velvet nap with reinforced chest facings';
+      }
+
+      openTechPackDrawer({
+        id: specId,
+        title: triggerName,
+        img,
+        cat,
+        leather,
+        hardware,
+        construction,
+        lining,
+        variance: '±1.0 mm',
+        qc: 'AQL 2.5 Major',
+        turn: '7–10 Working Days',
+        moq: cat === 'shearling' ? '30 Units / Style' : '50 Units / Style'
+      });
+    });
+  });
+
+  // ==========================================================================
+  // PEAK UTILITY QUICK SEARCH MODAL
+  // ==========================================================================
+  const searchModal = document.getElementById('searchModal');
+  const quickSearchBtn = document.getElementById('quickSearchBtn');
+  const searchCloseBtn = document.getElementById('searchCloseBtn');
+  const searchInput = document.getElementById('searchInput');
+  const searchResultsList = document.getElementById('searchResultsList');
+
+  // Indexed searchable items from vault cards + shop cards
+  const searchableCatalog = [
+    { id: 'RXL-01', title: 'Full-Grain Double Rider Biker 1.3mm', cat: 'BIKER', img: 'assets/62550.jpg', spec: '1.3mm Cowhide • YKK Excella #10', target: '#shop-archival' },
+    { id: 'RXL-02', title: 'Minimalist Stand-Collar Cafe Racer 1.1mm', cat: 'RACER', img: 'assets/62552.jpg', spec: '1.1mm Calfskin • Mandarin Snap Tab', target: '#shop-archival' },
+    { id: 'RXL-03', title: 'Merino Wool B-3 Aviator Flight 1.4mm', cat: 'SHEARLING', img: 'assets/62564.jpg', spec: '15mm Merino Wool • Sub-Zero Rated', target: '#shop-archival' },
+    { id: 'RXL-04', title: 'Tactical Utility Overshirt 0.9mm Nappa', cat: 'OVERSHIRT', img: 'assets/62558.jpg', spec: '0.9mm Nappa • Dual Bellows', target: '#shop-archival' },
+    { id: 'VAULT-01', title: 'Classic Asymmetric Double Rider Biker', cat: 'BIKER', img: 'assets/62550.jpg', spec: '1.3mm Cowhide • Full Roller Buckle', target: '#detail-vault' },
+    { id: 'VAULT-02', title: "Women's Cropped Moto & Varsity", cat: 'BIKER', img: 'assets/62551.jpg', spec: '1.1mm Lambskin • Princess Seams', target: '#detail-vault' },
+    { id: 'VAULT-03', title: 'Minimalist Stand-Collar Cafe Racer', cat: 'RACER', img: 'assets/62552.jpg', spec: '1.1mm Calfskin • Articulated Sleeves', target: '#detail-vault' },
+    { id: 'VAULT-04', title: 'MA-1 Industrial Flight Jacket', cat: 'BOMBER', img: 'assets/62555.jpg', spec: 'Oil-Tanned Hide • Wool Rib Knit', target: '#detail-vault' },
+    { id: 'VAULT-05', title: 'Belted Leather Trench & Duster Coat', cat: 'TRENCH', img: 'assets/62557.jpg', spec: '1.2mm Veg-Tan • Storm Flaps', target: '#detail-vault' },
+    { id: 'VAULT-06', title: 'B-3 Heavy Shearling Flight Bomber', cat: 'SHEARLING', img: 'assets/62564.jpg', spec: '15mm Merino • Antique Brass Buckles', target: '#detail-vault' },
+    { id: 'ACC-01', title: 'Modular Cuffs & Double-Wrap Bracelets', cat: 'ACCESSORY', img: 'assets/62640.jpg', spec: 'CNC 316L Stainless Clasps • Scrap Yield', target: '#hide-steel-accessories' },
+    { id: 'ACC-02', title: 'Leather Field Notebook Covers', cat: 'ACCESSORY', img: 'assets/62653.jpg', spec: '1.2mm Veg-Tan Flank • 7 SPI Saddle Stitch', target: '#hide-steel-accessories' },
+  ];
+
+  function renderSearchResults(query = '') {
+    if (!searchResultsList) return;
+    const q = query.trim().toLowerCase();
+    const filtered = q
+      ? searchableCatalog.filter(item => 
+          item.title.toLowerCase().includes(q) || 
+          item.cat.toLowerCase().includes(q) || 
+          item.spec.toLowerCase().includes(q) ||
+          item.id.toLowerCase().includes(q)
+        )
+      : searchableCatalog.slice(0, 8);
+
+    if (filtered.length === 0) {
+      searchResultsList.innerHTML = `
+        <div style="padding:24px; text-align:center; color:#888; font-family:var(--mono); font-size:0.8rem;">
+          No direct pattern matches found for "${query}". Try searching "biker", "shearling", "1.3mm", or "YKK".
+        </div>
+      `;
+      return;
+    }
+
+    searchResultsList.innerHTML = filtered.map(item => `
+      <div class="search-result-item" data-search-id="${item.id}" data-search-title="${item.title}" data-search-img="${item.img}" data-search-cat="${item.cat}">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="${item.img}" alt="${item.title}" style="width:40px; height:40px; object-fit:cover; border-radius:2px; border:1px solid rgba(255,255,255,0.1);">
+          <div>
+            <div class="item-title">${item.title}</div>
+            <div style="font-family:var(--mono); font-size:0.68rem; color:#A3A3A3; margin-top:2px;">${item.spec}</div>
+          </div>
+        </div>
+        <div style="text-align:right;">
+          <span class="item-cat">${item.cat}</span>
+          <span style="font-family:var(--mono); font-size:0.62rem; color:var(--red); display:block; margin-top:3px; font-weight:600;">OPEN SPEC ↗</span>
+        </div>
+      </div>
+    `).join('');
+
+    searchResultsList.querySelectorAll('.search-result-item').forEach(itemEl => {
+      itemEl.addEventListener('click', () => {
+        closeSearchModal();
+        const title = itemEl.getAttribute('data-search-title');
+        const img = itemEl.getAttribute('data-search-img');
+        const cat = itemEl.getAttribute('data-search-cat')?.toLowerCase() || 'biker';
+        const id = itemEl.getAttribute('data-search-id') || 'RAW-01';
+
+        openTechPackDrawer({
+          id,
+          title,
+          img,
+          cat,
+          leather: '1.2–1.4mm Heavy Full-Grain Leather (Custom Drum-Dyed)',
+          hardware: 'YKK Excella #8/#10 antique brass/matte black dual-way zippers, 316L stainless steel snap caps',
+          construction: '7-8 Stitches Per Inch (SPI), bonded nylon Tex-90 thread, double-felled seams at stress points',
+          lining: '280 GSM Japanese cupro or diamond-quilted insulated thermal lining'
+        });
+      });
+    });
+  }
+
+  function openSearchModal() {
+    if (!searchModal) return;
+    searchModal.classList.add('open');
+    searchModal.setAttribute('aria-hidden', 'false');
+    renderSearchResults('');
+    if (searchInput) {
+      searchInput.value = '';
+      setTimeout(() => searchInput.focus(), 50);
+    }
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSearchModal() {
+    if (!searchModal) return;
+    searchModal.classList.remove('open');
+    searchModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  if (quickSearchBtn) quickSearchBtn.addEventListener('click', openSearchModal);
+  if (searchCloseBtn) searchCloseBtn.addEventListener('click', closeSearchModal);
+  if (searchModal) {
+    searchModal.addEventListener('click', (e) => {
+      if (e.target === searchModal) closeSearchModal();
+    });
+  }
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      renderSearchResults(e.target.value);
+    });
+  }
+
+  // Wire Accessory Add-on Buttons
+  document.querySelectorAll('[data-accessory-trigger]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = btn.closest('.accessory-card');
+      const title = card?.getAttribute('data-accessory-title') || btn.getAttribute('data-accessory-trigger');
+      const accId = card?.getAttribute('data-accessory-id') || 'ACC-01';
+      const img = card?.querySelector('img')?.getAttribute('src') || 'assets/62640.jpg';
+
+      openTechPackDrawer({
+        id: accId,
+        title: title,
+        img: img,
+        cat: 'accessory',
+        leather: 'Upcycled 1.4mm Buffalo Pull-Up & 1.3mm Veg-Tan Hide Off-Cuts',
+        hardware: 'CNC-machined 316L stainless steel magnetic clasps & solid brass snaps',
+        construction: '7-8 SPI saddle-stitched bonded thread, hand-beveled wax burnished edges',
+        lining: 'Unlined raw flesh-side polished natural grain',
+        variance: '±0.5 mm',
+        qc: '100% Bench Inspected',
+        turn: '5–7 Working Days',
+        moq: '100 Units / Packaged Lot'
+      });
+    });
+  });
+
+  // Persistent Ecosystem Dock Toggle
+  const dockToggleBtn = document.getElementById('dockToggleBtn');
+  const ecosystemDock = document.getElementById('ecosystemDock');
+  if (dockToggleBtn && ecosystemDock) {
+    dockToggleBtn.addEventListener('click', () => {
+      ecosystemDock.classList.toggle('minimized');
+      dockToggleBtn.textContent = ecosystemDock.classList.contains('minimized') ? '▲' : '_';
+    });
+  }
 
   if (rfqCloseBtn) rfqCloseBtn.addEventListener('click', closeRfqModal);
 
@@ -3128,6 +5212,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
+      if (searchModal && searchModal.classList.contains('open')) closeSearchModal();
+      if (techPackDrawer && techPackDrawer.classList.contains('open')) closeTechPackDrawer();
       if (rfqModal && rfqModal.classList.contains('open')) closeRfqModal();
       if (macroLightbox && macroLightbox.classList.contains('open')) closeLightbox();
     }
